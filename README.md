@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/git-banner.png" alt="Kauan Horvath - Turning Chaos into Code" width="100%">
+</p>
+
 # Turning Chaos into Code
 
 This repository is a systematic log of my journey through software engineering and logic. 
