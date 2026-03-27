@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+
+# Pastas de rascunhos e temporários
+temp-codes/
+codigos-no-pc/
+
+# Arquivos de sistema/IDE
+.vscode/
