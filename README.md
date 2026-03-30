@@ -4,7 +4,7 @@ This repository is a systematic log of my journey through software engineering, 
 
 ## 📂 Project Structure
 
-I organized into specific directories to separate production-ready logic from daily learning:
+Organized into specific directories to maintain a clear distinction between production-ready logic and daily learning:
 
 * **`/python/care-projects`**: End-to-end applications, refined tools, and portfolio-ready solutions. 
     * *Example: Investment Calculators, RPG Engines, and Systems in development.*
@@ -19,10 +19,11 @@ Every script in the `care-projects` folder follows a strict documentation standa
 - **Failures**: Technical hurdles and how they were solved (The "Right Version" logic).
 
 
-Now, the scripts in the `raw-sketches` folder not always follows a strict documentation standard, where we have some different sub-folders and purposes:
-- **assets**: Here i'm learning how to link design material to coding like HTML, or else, as well learning how to strictly organize folders in a professional setting.
-- **fundamentals**: Here lays my actual studying process, were i experiment, or play and have fun, not concerned about the growing or structure itself. 
-- **notes**: Quick notebook for my crisis, insights, or just sharing thoughts alongside my development.
+While `raw-sketches` may not always follow a strict documentation standard, it serves diverse purposes through its sub-folders:
+
+- **assets**: Where I explore the intersection of design and code (HTML/CSS) while mastering professional folder architecture.
+- **fundamentals**: The core of my study process—experimentation and sandbox testing focused on logic, not just structure. 
+- **notes**: A quick-access notebook for insights, technical challenges, and reflections during development.
 
 ## 🛠️ Tech Stack
 - **Language:** Python 3.x
