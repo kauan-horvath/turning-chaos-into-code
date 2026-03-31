@@ -34,7 +34,7 @@ def showcasing_os_snippet():
     """
     Shortcut: .cls
     Purpose: Cross-platform terminal clearing.
-    See logic: python/fundamental/temp-codes/snippets-showcase.md
+    See logic: python/fundamentals/snippets/snippets-showcase.md
     """
     # This command handles both Windows (nt) and Unix-based systems
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -44,7 +44,7 @@ def showcasing_fprint_snippet():
     """
     Shortcut: .fprint
     Purpose: Linear flow (Label -> Key -> Value) with auto-mirroring.
-    See logic: python/fundamental/temp-codes/snippets-showcase.md
+    See logic: python/fundamentals/snippets/snippets-showcase.md
     """
     # Example variables created via snippet
     esposa = "Marjorie"
@@ -57,7 +57,7 @@ def showcasing_rawdoc_snippet():
     """
     Shortcut: .rawdoc
     Purpose: Generates full documentation scaffold and boilerplate.
-    See logic: python/fundamental/temp-codes/snippets-showcase.md
+    See logic: python/fundamentals/snippets/snippets-showcase.md
     """
     print(" [INFO] .rawdoc: Injected full structure (Docstring + Imports + Main Loop) ")
 
