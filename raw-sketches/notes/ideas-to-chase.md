@@ -18,6 +18,7 @@
 
 ## 🏆 Completed Milestones
 - [?] Webscraping for job application (Python + Selenium)
+  - [ ] develop a virtual envinronment for professionalism (Venv)
 - [x] Discover and implement a Linter for my git
 - [x] Git Metadata Protocol (Commit Backdating Mastery)
 - [x] Develop and implement snippets at VS Code
