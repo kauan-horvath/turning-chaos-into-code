@@ -143,5 +143,3 @@ A quick utility for maintaining a clean output. It detects the operating system 
 > *"Give me six hours to chop down a tree and I will spend the first four **sharpening the axe**."* — **Abraham Lincoln**
 
 By automating the structural parts of coding, I free up mental bandwidth to focus on complex logic and visual design. These snippets represent the bridge between **rigorous engineering** and **aesthetic efficiency**.
-
->> Estimated time: 2.5 hours of learning and architecture compilation

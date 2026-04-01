@@ -1,14 +1,17 @@
-### 🛡️ Lint Showcase: Automação de Qualidade (CI)
-Implementei um fluxo de **Integração Contínua (CI)** utilizando **GitHub Actions** para garantir a integridade do código Python.
+### 🛡️ Lint Showcase: Quality Assurance Automation (CI)
 
-* **O que faz:** Toda vez que um novo código é enviado (`push`), um robô (ambiente Ubuntu) é acionado para verificar erros de sintaxe e padrões de escrita.
-* **Ferramenta:** `Flake8` (Linter).
-* **Objetivo:** Manter o repositório livre de erros básicos e garantir que o projeto siga boas práticas de desenvolvimento moderno, sem esforço manual.
+I implemented a **Continuous Integration (CI)** workflow using **GitHub Actions** to ensure the integrity of the Python code.
 
----
+  * **How it works:** Every time new code is **pushed**, an automated runner (Ubuntu environment) is triggered to check for syntax errors and coding patterns.
+  * **Tool:** `Flake8` (Linter).
+  * **Objective:** To keep the repository free of basic errors and ensure the project follows modern development best practices without manual effort.
 
-**Dica rápida:** Se quiser deixar o seu `README.md` com cara de projeto profissional de verdade, você pode adicionar este "badge" (selo) no topo do arquivo. Ele atualiza sozinho para **"passing"** (verde) sempre que o teste passar:
+Example: ![Histórico de Build](../../../assets/lint-contrast-workflow.png)
+
+-----
+
+**Quick Tip:** If you want to make your `README.md` look like a truly professional project, you can add this "badge" to the top of your file. It automatically updates to **"passing"** (green) whenever the test succeeds:
 
 ```markdown
-![Lint Status](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO/actions/workflows/lint.yml/badge.svg)
+![Lint Status](https://github.com/YOUR-USERNAME/REPO-NAME/actions/workflows/lint.yml/badge.svg)
 ```

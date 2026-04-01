@@ -5,7 +5,8 @@
 ---
 
 ## 🛠️ Skills & Future Projects
-- [ ] Webscraping for job application (Python + Selenium)
+
+- [ ] Developing a cryptographer CLI tool (Fernet and argparse)
 - [ ] AI concierge for my personal portfolio
 - [ ] Webdev for a high-end portfolio landing page
 - [ ] Personal Letterboxd reviews sync for cultural perspective
@@ -16,6 +17,7 @@
 ---
 
 ## 🏆 Completed Milestones
+- [?] Webscraping for job application (Python + Selenium)
 - [x] Discover and implement a Linter for my git
 - [x] Git Metadata Protocol (Commit Backdating Mastery)
 - [x] Develop and implement snippets at VS Code
