@@ -16,9 +16,10 @@
 ---
 
 ## 🏆 Completed Milestones
-- [x] Advance and finally finish "The Farmer Was Replaced"
-- [x] Develop and implement snippets at VS Code
+- [x] Discover and implement a Linter for my git
 - [x] Git Metadata Protocol (Commit Backdating Mastery)
+- [x] Develop and implement snippets at VS Code
+
 
 ---
 

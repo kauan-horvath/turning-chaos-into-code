@@ -1,3 +1,5 @@
+![Lint Status](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint.yml/badge.svg)
+
 # Turning Chaos into Code 🌪️ ➡️ 💻
 
 This repository is a systematic log of my journey through software engineering, logic, and automation. It serves as a central hub for my Python projects, daily experiments, and technical evolution.
