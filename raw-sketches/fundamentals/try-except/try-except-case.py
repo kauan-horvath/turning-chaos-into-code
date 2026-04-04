@@ -60,19 +60,9 @@ def finally_function():
     finally:
         print("No matter what youve wrote finally always come")
 
-def accessing_data():
-    try:
-        # Isso faz o Python descobrir onde o SCRIPT está e procurar o TXT na mesma pasta
-        diretorio_do_script = os.path.dirname(os.path.abspath(__file__))
-        caminho_real = os.path.join(diretorio_do_script, "try-except-data.txt")
-        
-        file = open(caminho_real, "r")
-    except:
-        pass
-
 # MAIN LOOP
 
 if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
-    #block_div0()
+    block_div0()
     finally_function()
