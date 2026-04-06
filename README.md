@@ -1,36 +1,54 @@
+## 📈 Course Progress
+
+### 01 - Automation & Data
+![Python](https://img.shields.io/static/v1?label=Python&message=24%25&color=orange&logo=python&logoColor=white)
+![Access Ortega](https://img.shields.io/badge/Access_Ortega-67%25-blue?logo=autocad&logoColor=white&style=flat)
+![Access Vasconcelos](https://img.shields.io/badge/Access_Vasconcelos-28%25-orange?logo=autocad&logoColor=white&style=flat)
+
+![VBA Excel](https://img.shields.io/badge/VBA_Excel-0%25-lightgrey?logo=infinityfree&logoColor=white&style=flat)
+
+### 02 - Web Stack
+![HTML5 & CSS3](https://img.shields.io/badge/HTML5_%26_CSS3-0%25-lightgrey?logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-0%25-lightgrey?logo=javascript&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-0%25-lightgrey?logo=angular&logoColor=white)
+
+### 🛡️ Quality & Safety
 ![Lint Status](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint.yml/badge.svg)
 
 # Turning Chaos into Code 🌪️ ➡️ 💻
 
-This repository is a systematic log of my journey through software engineering, logic, and automation. It serves as a central hub for my Python projects, daily experiments, and technical evolution.
+This repository is a systematic log of my journey through software engineering, logic, and automation. It serves as a central hub for my technical evolution, balancing the "speedrun" of learning with the precision of refined projects.
 
 ## 📂 Project Structure
 
-Organized into specific directories to maintain a clear distinction between production-ready logic and daily learning:
+The architecture is designed for **scalability**, separating raw learning from production-ready logic:
 
-* **`/python/care-projects`**: End-to-end applications, refined tools, and portfolio-ready solutions. 
-    * *Example: Investment Calculators, RPG Engines, and Systems in development.*
-* **`/python/raw-sketches`**: Daily logs, fundamental logic tests, and conceptual sketches using my standard documentation template.
-* **`/python/raw-sketches/easter-eggs`**: Creative snippets and personal coding experiments for aesthetic purposes on my READMEs.
+  * **[`/care-projects`](https://www.google.com/search?q=./care-projects)**: The "Crown Jewels." End-to-end applications and portfolio-ready solutions.
+      * *Highlights: Investment Calculators, RPG Engines, and specialized tools.*
+  * **[`/knowledge-run`](https://www.google.com/search?q=./knowledge-run)**: The "Speedrun Arena." Structured study logs divided by domain (Automation, Web Stack, Database).
+      * *Contains: The core learning path from Udemy and other premium sources.*
+  * **[`/experimenting`](https://www.google.com/search?q=./experimenting)**: The Laboratory. Sandbox testing, snippets, and trial-and-error using my **Blank Model** standardization.
+  * **[`/notes`](https://www.google.com/search?q=./knowledge-run/notes)**: The Think Tank. Technical reflections, architecture dilemmas (like the Dunning-Kruger effect), and decision logs.
 
 ## 🚀 The Methodology
 
-Every script in the `care-projects` folder follows a strict documentation standard, tracking:
-- **Milestones**: Goals for the session.
-- **Progress**: What was achieved.
-- **Failures**: Technical hurdles and how they were solved (The "Right Version" logic).
+I follow a **70/30 Rule**: 70% of my time is dedicated to structured, challenging growth, while 30% is reserved for wild experimentation in the `sandbox`.
 
+### Documentation Standard:
 
-While `raw-sketches` may not always follow a strict documentation standard, it serves diverse purposes through its sub-folders:
+Every significant step follows a strict tracking pattern:
 
-- **assets**: Where I explore the intersection of design and code (HTML/CSS) while mastering professional folder architecture.
-- **fundamentals**: The core of my study process—experimentation and sandbox testing focused on logic, not just structure. 
-- **notes**: A quick-access notebook for insights, technical challenges, and reflections during development.
+  - **Milestones**: Defining the scope to prevent aimless coding.
+  - **Progress**: Celebrating small victories to maintain momentum.
+  - **Failures**: Documenting the "Right Version" to turn mistakes into permanent knowledge.
 
 ## 🛠️ Tech Stack
-- **Language:** Python 3.x
-- **Environment:** VS Code / Windows (Local Dev)
-- **Version Control:** Git & GitHub
 
----
+  - **Core Language:** Python 3.12+
+  - **Web Stack:** HTML5, CSS3, JavaScript (Node.js), Angular.
+  - **Data & Automation:** VBA, Excel Macros, Microsoft Access.
+  - **Tools:** VS Code, Git/GitHub, Flake8 (Linting).
+
+-----
+
 *“Simplicity is the soul of efficiency.”*
