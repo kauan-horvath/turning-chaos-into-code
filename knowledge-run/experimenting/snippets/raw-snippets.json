@@ -1,0 +1,71 @@
+{
+    "_comment": "This is a demonstration of the original file.",
+    "projeto": "snippets showcase",
+    "status": "deveoping more snippets i'll try to keep it updated with the best ones i find and create",
+
+	"Clear Terminal": {
+    "prefix": ".cls",
+    "body": [
+      "os.system('cls' if os.name == 'nt' else 'clear')$0"
+    ],
+    "description": "Limpa o terminal de forma completa ou cross-platform"
+  },
+  
+
+	"Formatted Print (Linear Flow)": {
+	"prefix": ".fprint",
+	"body": [
+		"${2:key} = ${3:value}",
+		"${5:key} = ${6:value}",
+		"print(f\"${1:Label}: {${2:key}} | ${4:Label}: {${5:key}} \")$0"
+	],
+	"description": "Ordem: Label -> Key -> Value (Repete para 2 variáveis)"
+	},
+
+
+	"Rigor Document Standard (Blank)": {
+	"prefix": ".rawdoc",
+	"body": [
+		"\"\"\"",
+		"####################",
+		"# ${1:TITLE}",
+		"####################",
+		"",
+		"DATE - ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DAY}",
+		"",
+		"MILESTONES:",
+		"- ${2:MILE1} [ ]",
+		"- ${3:MILE2} [ ]",
+		"- ${4:MILE3} [ ]",
+		"",
+		"PROGRESS:",
+		"${5:WHAT} - ${6:SHORT EXPLAIN}",
+		"",
+		"FAILURES:",
+		"${7:WHAT} - ${8:SHORT EXPLAIN}",
+		"\tRIGHT VERSION: ${9:Explain fix}",
+		"\"\"\"",
+		"",
+		"####################################",
+		"import os",
+		"",
+		"CONST = ${10:None}",
+		"",
+		"context = {}",
+		"",
+		"# FUNCTIONS",
+		"",
+		"def aux_function():",
+		"\tpass",
+		"",
+		"def logic_function():",
+		"\tpass",
+		"",
+		"# MAIN LOOP",
+		"",
+		"if __name__ == \"__main__\":",
+		"\t${0:pass}"
+	],
+	"description": "Gera o scaffold completo: Documentação + Boilerplate de Código"
+	}
+}
