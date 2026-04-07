@@ -2,7 +2,7 @@
 
 ### 01 - Automation & Data
 ![Python](https://img.shields.io/static/v1?label=Python&message=24%25&color=orange&logo=python&logoColor=white)
-![Access Ortega](https://img.shields.io/badge/Access_Ortega-67%25-blue?logo=autocad&logoColor=white&style=flat)
+[![Access Ortega](https://img.shields.io/badge/Access_Ortega-100%25-green?logo=autocad&logoColor=white&style=flat)](https://github.com/kauan-horvath/turning-chaos-into-code/blob/main/assets/certificates/microsoft-access-completion.pdf)
 ![Access Vasconcelos](https://img.shields.io/badge/Access_Vasconcelos-28%25-orange?logo=autocad&logoColor=white&style=flat)
 
 ![VBA Excel](https://img.shields.io/badge/VBA_Excel-0%25-lightgrey?logo=infinityfree&logoColor=white&style=flat)
