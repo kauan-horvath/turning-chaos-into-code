@@ -56,3 +56,6 @@ Ferramenta de automação para executar ações sequenciais.
 # 🚀 Project Development
 See the advancements through:  
 `care-projects/access-table-development/creating-a-database.md`
+
+# TODO: [REVIEW-DATE: 2026-04-08] Praticar queries.
+# TODO: [REVIEW-DATE: 2026-04-15] Praticar queries.

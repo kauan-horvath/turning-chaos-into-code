@@ -10,3 +10,4 @@ codigos-no-pc/
 
 # Arquivos de sistema/IDE
 .vscode/
+.github/credentials/

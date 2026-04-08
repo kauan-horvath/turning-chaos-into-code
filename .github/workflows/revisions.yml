@@ -1,0 +1,27 @@
+name: Alarme de Revisão Diária
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependências
+        run: pip install pyyaml google-api-python-client google-auth-httplib2 google-auth-oauthlib
+
+      - name: Rodar script de verificação
+        env:
+          # Use exatamente o nome que você colocou na Secret do GitHub
+          GOOGLE_CALENDAR_CREDENTIAL: ${{ secrets.GOOGLE_CALENDAR_CREDENTIAL }}
+        run: python .github/scripts/check-revisions.py
