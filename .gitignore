@@ -11,3 +11,4 @@ codigos-no-pc/
 # Arquivos de sistema/IDE
 .vscode/
 .github/credentials/
+assets/ai_concierge/main.py
