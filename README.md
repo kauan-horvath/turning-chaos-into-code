@@ -14,6 +14,7 @@
 
 ### 🛡️ Quality & Safety
 ![Lint Status](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint.yml/badge.svg)
+[![Cisco Learn-A-Ton 25](https://img.shields.io/badge/Cisco_2025-100%25-#green?logo=Cisco&logoColor=white&style=flat)](assets\certificates\Learn-A-Thon_2025_certificate_kauanhorvath_completion.pdf)
 
 # Turning Chaos into Code 🌪️ ➡️ 💻
 
