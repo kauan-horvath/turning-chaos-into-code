@@ -97,22 +97,31 @@ ofertafinal = terry_crews + latrell_spencer #retorna 50000
 - **Local**: Dentro da função, inacessível fora dela.
 - **Global Keyword**: Usado para criar ou modificar uma variável global dentro do escopo local.
 
-```python
-a = "MUITO incrível" # Var Global
+``` python 
+# Escopo Joanesburgo [Escopo Global]
+wikus = "Humano" # Var Global
 
 #--------------------------------------------------------
-def my_function(): # ambiente local
-    global c
-    a = "muito útil"  # Var Local (não afeta a 'a' lá de fora)
-    c = "maravilhosa" # Forçada a global
+def entrar_distrito_9(): # Onde é contaminado [Escopo Local]
+    global new_wikus
 
-    print("Python é " + a) # Usa a local: "muito útil"
+    wikus = "Contaminado"   # Var Local 
+    #(A mutação não altera ainda como o mundo o vê)
+    
+    if wikus == "Contaminado":
+        # Fazer a transformação de contaminado para prawn
+        new_wikus = "Prawn"
+        # Forçada a global (Para ser acessível fora do D9)
+
+    print("No Distrito 9 o Wikus é: " + wikus) # Usa a local
 #---------------------------------------------------------
 
-my_function()
-print("você é " + a) # Usa a global: "MUITO incrível"
-print("você é " + c) # Acessa 'c' pois foi forçada a global
-```
+entrar_distrito_9()
+
+# Escopo Joanesburgo
+print("Para Joanesburgo ele ainda consta como: " + wikus)      # Usa a global: "Humano"
+print("Mas a forma que sobrou para o mundo foi: " + new_wikus) # Acessa a global forçada
+````
 
 #### 6. Perguntas do Teste:
 1. Variável criada no momento da atribuição? **True**
