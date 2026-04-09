@@ -2,6 +2,12 @@
 ## 📑 [Setup e Ambiente de Desenvolvimento]
 > **Status:** 🟢 Concluída | **Data:** 07/04/2026
 
+#### 🌐 Navegação rápida
+| **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
+| :--- | :--- |
+| &#8657; **Anterior** | [Introdução](./intro-visao-geral.md) |
+| &#8659; **Próximo** | [Primeiros passos](./sintaxe-primeiros-passos.md) |
+
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)

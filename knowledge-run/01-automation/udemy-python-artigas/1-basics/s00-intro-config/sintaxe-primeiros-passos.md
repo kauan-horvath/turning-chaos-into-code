@@ -2,6 +2,13 @@
 ## 📑 [Primeiros Passos e Sintaxes]
 > **Status:** 🟢 Concluída | **Data:** 07/04/2026
 
+
+#### 🌐 Navegação rápida
+| **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
+| :--- | :--- |
+| &#8657; **Anterior** | [Visão Geral](../s00-intro-config\intro-visao-geral.md) |
+| &#8659; **Próximo** | [Tipos primitivos 1](../s01-data-manipulation/tipos-dados-1.md) |
+
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)

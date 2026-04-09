@@ -1,6 +1,12 @@
 # 📂 Seção 01: [Manipulação de Dados]
-## 📑 [Tipos primitivos]
+## 📑 [Tipos primitivos 1]
 > **Status:** 🟡 Em andamento | **Data:** 08/04/2026
+
+#### 🌐 Navegação rápida
+| **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
+| :--- | :--- |
+| &#8657; **Anterior** | [Primeiros Passos](../s00-intro-config\sintaxe-primeiros-passos.md) |
+| &#8659; **Próximo** | [Tipos primitivos 2](./tipos-dados-2.md) |
 
 ---
 
