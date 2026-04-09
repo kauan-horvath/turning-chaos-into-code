@@ -11,6 +11,7 @@
 - [✅] **[Vídeo 10](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408518#notes):** [Valores de Saída] — *(11min)*
 - [✅] **[Vídeo 11](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408528#notes):** [Escopo Global e Local] — *(20min)*
 - [✅] **[Teste](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346070#notes):** [Quick Followup] — *(0 min)*
+- [✅] **[Exercício](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/29393200#notes):** [Exercício de Armazenamento] — *(10 min)*
 
 > **Nota rápida:** [O Professor acaba provando como variáveis e tipos primitivos são conhecimentos muito próximos]
 
@@ -121,12 +122,48 @@ entrar_distrito_9()
 # Escopo Joanesburgo
 print("Para Joanesburgo ele ainda consta como: " + wikus)      # Usa a global: "Humano"
 print("Mas a forma que sobrou para o mundo foi: " + new_wikus) # Acessa a global forçada
-````
+
+```
 
 #### 6. Perguntas do Teste:
 1. Variável criada no momento da atribuição? **True**
 2. Nomes compostos podem conter espaços? **False**
 3. Python é Case Sensitive? **True**
 
+#### 7. Exercício
+```python
+  #Criar um diretorio, e o script armazenamento.py
+
+  """tarefas:
+  - Declarar uma variável [✅]
+    - Sobreponha o valor de uma var [✅]
+  - Atribuir valores à variaveis [✅]
+  - Atribuir valor com incremento [✅]
+  - Atribua a soma de vars como valor de outra [✅]
+  """
+  # 1. Declaração e Atribuição inicial
+  D = 2
+  print("O valor inicial de D é:", D)
+
+  # 1.2 Sobrepondo o valor de D
+  D = 0
+  print("O valor sobreposto de D é:", D)
+
+
+  # 2. Atribuindo valores a outras variáveis
+  A = 2
+  B = 3
+  C = 5
+  print("A:", A, "| B:", B, "| C:", C)
+
+  # 3. Sobrepondo o valor (Lógica de incremento: C recebe ele mesmo + 1)
+  C = C + 1 
+  print("O valor atualizado de C (C + 1) é:", C)
+
+  # 4. Atribuindo a soma de variáveis a outra
+  D = A + C
+  print("O valor final de D (A + C) é:", D)
+```
 ---
+
 # TODO: [REVIEW-DATE: 2026-04-10] Review very basic functions

@@ -1,7 +1,9 @@
 # 🚀 Projeto: Gestão de Clientes
 
 ### 1. Modelagem da Tabela (`Tab_clientes`)
-* **1.1.** Criação de máscaras e valores padrão.
+* **1.1.** Criação de máscaras e valores padrão. [✅]
+    - adicionado mascara de telefone em tab_clientes
+    - valor padrão em sexo como "sexo"
 * **1.2.** Formatação e refinamento dos campos.
 
 ### 2. Interface de Usuário (`Form_clientes`)
@@ -48,4 +50,7 @@ Para obter a idade exata considerando anos bissextos:
 ```sql
 Idade = (Data() - [DataNascimento]) / 365.25
 ```
+
+
+[!construtor de expresões](Link do Suporte de Construtor de Expressões):(https://support.microsoft.com/pt-br/topic/usar-o-construtor-de-express%C3%B5es-56214db9-8b54-44f3-bc19-2a55427b5d4c)
 # TODO: [REVIEW-DATE: 2026-08-04] Start Access Project
