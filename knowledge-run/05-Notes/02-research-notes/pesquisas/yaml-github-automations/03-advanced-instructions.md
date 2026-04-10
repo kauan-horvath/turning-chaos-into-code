@@ -1,11 +1,11 @@
 # Aula de YAML e Automação com Python - Parte 3: Avançado
 
-### 1. Âncoras (`&`) e Aliases (`*`)
+## 1. Âncoras (`&`) e Aliases (`*`)
 O YAML permite que você defina um bloco de dados uma única vez e o reutilize em outros lugares. Isso evita repetição (princípio DRY - *Don't Repeat Yourself*).
 
-*   **`&` (Anchor):** Marca um bloco de dados com um nome.
-*   **`*` (Alias):** Referencia o bloco marcado anteriormente.
-*   **`<<:` (Merge Key):** Permite "copiar" o conteúdo de uma âncora e adicionar ou sobrescrever campos específicos.
+*  **`&` (Anchor):** Marca um bloco de dados com um nome.
+*  **`*` (Alias):** Referencia o bloco marcado anteriormente.
+*  **`<<:` (Merge Key):** Permite "copiar" o conteúdo de uma âncora e adicionar ou sobrescrever campos específicos.
 
 **Exemplo de `setup.yml`:**
 ```yaml

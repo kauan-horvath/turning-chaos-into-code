@@ -1,3 +1,4 @@
+# Pastas de arquivos base
 __pycache__/
 *.py[cod]
 .venv/
@@ -6,7 +7,7 @@ __pycache__/
 
 # Pastas de rascunhos e temporários
 temp-codes/
-codigos-no-pc/
+log-chats/
 
 # Arquivos de sistema/IDE
 .vscode/
