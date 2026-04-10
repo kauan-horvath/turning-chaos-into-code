@@ -31,7 +31,7 @@ def buscar_revisoes_futuras():
                                 if m:
                                     data_rev = datetime.strptime(m.group(1), '%Y-%m-%d').date()
                                     # Ajuste: Apenas datas estritamente após hoje
-                                    if data_rev > hoje:
+                                    if data_rev >= hoje:
                                         desc = m.group(2).strip()
                                         revisoes.append({
                                             'summary': f'Revisão: {desc} ({nome_arquivo})',

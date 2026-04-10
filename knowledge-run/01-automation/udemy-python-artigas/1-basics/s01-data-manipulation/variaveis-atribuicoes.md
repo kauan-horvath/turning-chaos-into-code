@@ -164,6 +164,19 @@ print("Mas a forma que sobrou para o mundo foi: " + new_wikus) # Acessa a global
   D = A + C
   print("O valor final de D (A + C) é:", D)
 ```
----
+#### 8. Revisões:
+  ```python
+      #Previous revisions
+      #[LAST-DATE: 2026-04-10] Review very basic functions
+      '''
+      https://gemini.google.com/share/94fe8611337a
+      Pedi uma prova com ia aproveitamento de: 80% (revisão em 1 semana)
+      teste se posso apagar o questionario # permitido!'''
+````
 
-# TODO: [REVIEW-DATE: 2026-04-10] Review very basic functions
+Resultado revisão:
+
+- Regras de Nomenclatura e Tipagem Dinâmica: Você tem um excelente entendimento das regras básicas para criar variáveis no Python, incluindo o uso do padrão Snakecase e as restrições de formatação. Além disso, dominou os conceitos de tipagem dinâmica, conversão de tipos (casting) e o uso da função type().
+- Operações com Coleções e Tratamento de Erros: Você demonstrou grande clareza sobre como descompactar elementos de listas em múltiplas variáveis simultaneamente e conseguiu identificar corretamente as exceções geradas pelo interpretador (como ValueError e erros de tipagem) em operações inválidas.
+
+# TODO: [REVIEW-DATE: 2026-04-17] Refazer prova de operadores simples
