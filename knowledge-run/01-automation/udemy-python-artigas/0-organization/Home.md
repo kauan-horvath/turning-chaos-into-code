@@ -7,8 +7,8 @@
 
 **[ s01 - Manipulação de Dados ]**
 * [✅] [**Seção 4:** Variáveis e Atribuições](../1-basics/s01-data-manipulation/variaveis-atribuicoes.md)
-* [ ] [**Seção 6:** Tipos de Dados Primitivos](../1-basics/s01-data-manipulation/tipos-dados-1.md)
-* [ ] [**Seção 8:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/operadores-logica.md)
+* [✅] [**Seção 6:** Tipos de Dados Primitivos](../1-basics/s01-data-manipulation/tipos-dados-1.md)
+* [✅] [**Seção 8:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/operadores-logica.md)
 * [ ] [**Seção 17:** Entrada e Saída de Dados (I/O)](../1-basics/s01-data-manipulation/entrada-saida-dados.md)
 * [ ] [**Seção 5:** **Training 01:** Praticando Atribuições e Operadores](../1-basics/s01-data-manipulation/training-01.md)
 

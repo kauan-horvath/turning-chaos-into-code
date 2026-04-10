@@ -6,7 +6,7 @@
 | **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
 | :--- | :--- |
 | &#8657; **Anterior** | [Primeiros Passos](../s00-intro-config\sintaxe-primeiros-passos.md) |
-| &#8659; **Próximo** | [Tipos primitivos 2](./tipos-dados-2.md) |
+| &#8659; **Próximo** | [Operadores](./operadores-logica.md) |
 
 ---
 
