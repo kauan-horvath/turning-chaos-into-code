@@ -6,9 +6,9 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](./00-access-Home.md) |
+| **🏠 HOME** | [Retornar ao Início](./00-access-vasconcelos-home.md) |
 | :--- | :--- |
-| &#8657; **Anterior** | [Home](./00-access-Home.md) |
+| &#8657; **Anterior** | [Home](./00-access-python-artigas-home.md) |
 | &#8659; **Próximo** | [Interface](./02-interface.md) |
 
 ---

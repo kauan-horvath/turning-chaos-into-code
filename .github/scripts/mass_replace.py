@@ -2,12 +2,9 @@ import os
 
 # 1. MAPEAMENTO DE CORREÇÕES
 REPLACEMENTS = {
-    "intro-visao-geral.md": "01-intro-visao-geral.md",
-    "sintaxe-primeiros-passos.md": "02-sintaxe-primeiros-passos.md",
-    "./previous": "../s00-into-config/02-sintaxe-primeiros-passos.md",
-    "./next": "./04-tipos-dados.md",
+    ">>00-access-python-artigas-home.md":"00-access-vasconcelos-home.md",
+    
 }
-
 # 2. CONFIGURAÇÕES
 TARGET_DIRECTORY = "./knowledge-run"
 EXTENSIONS = (".md",)

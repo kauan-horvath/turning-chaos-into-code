@@ -6,7 +6,7 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](../../0-organization/Home.md) |
+| **🏠 HOME** | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :--- | :--- |
 | &#8657; **Anterior** | [Introdução](./01-intro-visao-geral.md) |
 | &#8659; **Próximo** | [Primeiros passos](./02-sintaxe-primeiros-passos.md) |

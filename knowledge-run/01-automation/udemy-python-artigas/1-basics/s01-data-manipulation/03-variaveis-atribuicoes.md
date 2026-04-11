@@ -2,7 +2,7 @@
 ## 📑 [Variaveis e Atribuições]
 > **Status:** 🟢 Concluída | **Data:** 08/04/2026
 
-| **🏠 HOME** | [Retornar ao Início](../../0-organization/Home.md) |
+| **🏠 HOME** | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :--- | :--- |
 | &#8657; **Anterior** | [Introdução](../s00-into-config/02-sintaxe-primeiros-passos.md) |
 | &#8659; **Próximo** | [Primeiros passos](./04-tipos-dados.md) |

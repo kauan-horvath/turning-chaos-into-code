@@ -5,10 +5,10 @@
 Today, I was about to start my study session when, on a whim, I decided to build a navigation system to interlink my course modules. Since I am at the very beginning of this journey, I figured: **the sooner, the better.** This is the result of that "small" task:
 
 #### 🌐 Fast Navigation
-| **🏠 HOME** | [Return Home ](../01-automation\udemy-python-artigas\0-organization\Home.md) |
+| **🏠 HOME** | [Return Home ](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md) |
 | :--- | :--- |
-| &#8657; **Anterior** | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\Home.md) |
-| &#8659; **Próximo** | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\Home.md) |
+| &#8657; **Anterior** | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md) |
+| &#8659; **Próximo** | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md) |
 *Note: For testing purposes, all links currently target the main Home file.*
 
 -----

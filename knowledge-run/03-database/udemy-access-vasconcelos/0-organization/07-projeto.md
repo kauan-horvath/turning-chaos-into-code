@@ -6,10 +6,10 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](./00-access-Home.md) |
+| **🏠 HOME** | [Retornar ao Início](./00-access-vasconcelos-home.md) |
 | :--- | :--- |
 | &#8657; **Anterior** | [Integração](./06-integracao.md) |
-| &#8659; **Próximo** | [Home](./00-access-Home.md) |
+| &#8659; **Próximo** | [Home](./00-access-python-artigas-home.md) |
 
 ---
 

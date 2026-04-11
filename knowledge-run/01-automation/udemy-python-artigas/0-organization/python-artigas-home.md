@@ -10,8 +10,8 @@
 
 * [✅] [**Seção 03:** Variáveis e Atribuições](../1-basics/s01-data-manipulation/03-variaveis-atribuicoes.md)
 * [✅] [**Seção 04:** Tipos de Dados Primitivos](../1-basics/s01-data-manipulation/04-tipos-dados.md)
-* [✅] [**Seção 05:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/05-operadores-logica.md)
-* [✅] [**Seção 05.2:** Entrada e Saída de Dados (I/O)](../1-basics/s01-data-manipulation/05-operadores-logica.md)
+* [✅] [**Seção 05:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/05-05-operadores-logicos.md)
+* [✅] [**Seção 05.2:** Entrada e Saída de Dados (I/O)](../1-basics/s01-data-manipulation/05-05-operadores-logicos.md)
 * [ ] [**Seção 5:** **Training 01:** Praticando Atribuições e Operadores](../1-basics/s01-data-manipulation/training-01.md)
 
 **[ s02 - Coleções de Dados ]**

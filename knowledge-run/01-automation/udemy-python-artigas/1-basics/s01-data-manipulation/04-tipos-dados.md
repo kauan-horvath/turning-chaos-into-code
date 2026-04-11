@@ -6,10 +6,10 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](../../0-organization/Home.md) |
+| **🏠 HOME** | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :--- | :--- | :--- |
 | &#8657; **Anterior** | [Primeiros Passos](../s00-intro-config\02-sintaxe-primeiros-passos.md) |
-| &#8659; **Próximo** | [Operadores](./operadores-logica.md) |
+| &#8659; **Próximo** | [Operadores](./05-operadores-logicos.md) |
 
 ---
 

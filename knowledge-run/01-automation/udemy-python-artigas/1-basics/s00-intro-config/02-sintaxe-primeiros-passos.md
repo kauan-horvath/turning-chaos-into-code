@@ -6,7 +6,7 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
+| **🏠 HOME** | [Retornar ao Início ](../../0-organization/python-artigas-home.md) |
 | :--- | :--- |
 | &#8657; **Anterior** | [Visão Geral](../s00-intro-config\01-intro-visao-geral.md) |
 | &#8659; **Próximo** | [Tipos primitivos 1](../s01-data-manipulation/04-tipos-dados.md) |
