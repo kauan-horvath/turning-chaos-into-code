@@ -7,14 +7,23 @@ from datetime import date, datetime
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
+# ================= GPS DINÂMICO (NOVO) =================
+# Calcula a raiz do projeto automaticamente, independente do terminal
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..'))
+# =======================================================
+
 # ================= CONFIGURAÇÕES =================
-DIRETORIOS_PARA_BUSCA = ['knowledge-run', 'care-projects']
+DIRETORIOS_PARA_BUSCA = [
+    os.path.join(PROJECT_ROOT, 'knowledge-run'), 
+    os.path.join(PROJECT_ROOT, 'care-projects')
+]
 # Nova REGEX: Captura data BR e o título entre :: ::
 REGEX_REVIEW = r"::to-review::\s*(\d{2}-\d{2}-\d{4})\s*::(.*)::"
 CALENDAR_ID = 'kauanhorvath1996@gmail.com' 
 # =================================================
 
-DIRETORIOS = ['knowledge-run', 'care-projects']
+DIRETORIOS = DIRETORIOS_PARA_BUSCA
 
 # Captura: # TODO: [REVIEW-DATE: YYYY-MM-DD] TEXTO
 PADRAO_ANTIGO = r"#\s*TODO:\s*\[REVIEW-DATE:\s*(\d{4})-(\d{2})-(\d{2})\]\s*(.*)"
@@ -95,15 +104,14 @@ def buscar_revisoes():
     return revisoes
 
 def processar_agenda():
-    # ... (Sua lógica de autenticação permanece igual) ...
     creds_json = os.environ.get('GOOGLE_CALENDAR_CREDENTIAL') or os.environ.get('GOOGLE_CALENDAR_CREDENTIALS')
     if creds_json:
         info = json.loads(creds_json)
         creds = service_account.Credentials.from_service_account_info(info)
-    
     else:
         # ======= CORREÇÃO APLICADA AQUI 👇 =======
-        caminho_local = '.private/credentials/credential-googlecalendar.json'
+        # Agora ele usa o GPS absoluto para achar a pasta, sem erro!
+        caminho_local = os.path.join(PROJECT_ROOT, '.private', 'credentials', 'credential-googlecalendar.json')
         # =========================================
         creds = service_account.Credentials.from_service_account_file(caminho_local)
 
@@ -113,7 +121,6 @@ def processar_agenda():
     tarefas = buscar_revisoes()
     
     # 2. ORDENAÇÃO: Da data mais próxima para a mais distante
-    # Usamos date_iso porque o formato YYYY-MM-DD permite ordenação direta por string
     tarefas.sort(key=lambda x: x['date_iso'])
     
     hoje = date.today()
@@ -156,7 +163,6 @@ def processar_agenda():
                 prefixo = f"• {status_label}    - [{t['date_br']}]"
 
             # OUTPUT REFINADO EM DUAS LINHAS
-            # t['title'] deve vir da sua função buscar_revisoes() modificada anteriormente
             print(f" {prefixo} - {t['summary']}")
             print(f"    file: ({t.get('file', 'N/A')}) | folder: ({t.get('folder', 'N/A')})")
 
