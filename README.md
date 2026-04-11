@@ -1,22 +1,24 @@
-## 📈 Course Progress
+# 📈 Course Progress
 
 ### 01 - Automation & Data
 ![Python](https://img.shields.io/static/v1?label=Python&message=24%25&color=orange&logo=python&logoColor=white)
 [![Access Ortega](https://img.shields.io/badge/Access_Ortega-100%25-green?logo=autocad&logoColor=white&style=flat)](https://github.com/kauan-horvath/turning-chaos-into-code/blob/main/assets/certificates/microsoft-access-completion.pdf)
 ![Access Vasconcelos](https://img.shields.io/badge/Access_Vasconcelos-45%25-orange?logo=autocad&logoColor=white&style=flat)
-
 ![VBA Excel](https://img.shields.io/badge/VBA_Excel-0%25-lightgrey?logo=infinityfree&logoColor=white&style=flat)
 
-### 02 - Web Stack
+### 02 - Web Stack 
 ![HTML5 & CSS3](https://img.shields.io/badge/HTML5_%26_CSS3-0%25-lightgrey?logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-0%25-lightgrey?logo=javascript&logoColor=white)
 ![Angular](https://img.shields.io/badge/Angular-0%25-lightgrey?logo=angular&logoColor=white)
 
-### 🛡️ Quality & Safety
-![Lint Status](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint.yml/badge.svg)
-[![Cisco Learn-A-Ton 25](https://img.shields.io/badge/Cisco_Learn--A--Ton_2025-100%25-1BA0D7?logo=Cisco&logoColor=white&style=flat)](https://github.com/kauan-horvath/turning-chaos-into-code/blob/main/assets/certificates/Learn-A-Thon_2025_certificate_kauanhorvath_completion.pdf)
 
-# Turning Chaos into Code 🌪️ ➡️ 💻
+### 03 - Professional Proficiency & Quality
+[![English Advanced](https://img.shields.io/badge/English_C1_Advanced-100%25-E040FB?logo=googletranslate&logoColor=white&style=flat)](https://cert.efset.org/en/SZGV5D)&nbsp;
+[![Coursera UX](https://img.shields.io/badge/Coursera_UX_Design-100%25-0056D2?logo=coursera&logoColor=white&style=flat)](https://github.com/kauan-horvath/turning-chaos-into-code/blob/main/assets/certificates/Coursera-UX-fundamentals.pdf)&nbsp;
+[![Cisco Learn-A-Ton 25](https://img.shields.io/badge/Cisco_Learn--A--Ton_2025-100%25-1BA0D7?logo=Cisco&logoColor=white&style=flat)](https://github.com/kauan-horvath/turning-chaos-into-code/blob/main/assets/certificates/Learn-A-Thon_2025_certificate_kauanhorvath_completion.pdf)&nbsp;
+
+
+# Turning Chaos into Code 💻
 
 This repository is a systematic log of my journey through software engineering, logic, and automation. It serves as a central hub for my technical evolution, balancing the "speedrun" of learning with the precision of refined projects.
 

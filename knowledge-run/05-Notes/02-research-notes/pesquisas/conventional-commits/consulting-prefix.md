@@ -1,6 +1,6 @@
 
 # 🛠️ Os Tipos Mais Comuns
-feat: add navigation table to modules
+
 | Prefixo | Quando usar? | Exemplo |
 | :--- | :--- | :--- |
 | **`feat:`** | Uma **nova funcionalidade** (Feature). | `feat: add navigation table to modules` |
