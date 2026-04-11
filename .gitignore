@@ -10,6 +10,6 @@ temp-codes/
 log-chats/
 
 # Arquivos de sistema/IDE
-.vscode/
-.github/credentials/
-.github/office_pirate/
+.private/
+.private/credentials/
+.private/office_pirate/

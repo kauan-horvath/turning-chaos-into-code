@@ -22,6 +22,5 @@ jobs:
 
       - name: Rodar script de verificação
         env:
-          # Use exatamente o nome que você colocou na Secret do GitHub
           GOOGLE_CALENDAR_CREDENTIAL: ${{ secrets.GOOGLE_CALENDAR_CREDENTIAL }}
-        run: python .github/scripts/check-revisions.py
+        run: python .vscode/scripts/check-revisions.py

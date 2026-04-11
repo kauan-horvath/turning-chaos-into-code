@@ -100,8 +100,11 @@ def processar_agenda():
     if creds_json:
         info = json.loads(creds_json)
         creds = service_account.Credentials.from_service_account_info(info)
+    
     else:
-        caminho_local = '.github/credentials/credential-googlecalendar.json'
+        # ======= CORREÇÃO APLICADA AQUI 👇 =======
+        caminho_local = '.private/credentials/credential-googlecalendar.json'
+        # =========================================
         creds = service_account.Credentials.from_service_account_file(caminho_local)
 
     service = build('calendar', 'v3', credentials=creds)
@@ -163,4 +166,3 @@ if __name__ == "__main__":
     os.system("cls" if os.name =="nt" else "clear")
     #migrar_tags()
     processar_agenda()
-    
