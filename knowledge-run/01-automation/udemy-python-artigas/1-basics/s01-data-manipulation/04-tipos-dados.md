@@ -1,16 +1,20 @@
 # 📂 Seção 01: [Manipulação de Dados]
+
 ## 📑 [Tipos primitivos 1]
+
 > **Status:** 🟢 Concluido | **Data:** 09/04/2026
 
-#### 🌐 Navegação rápida
-| **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
-| :--- | :--- |
-| &#8657; **Anterior** | [Primeiros Passos](../s00-intro-config\sintaxe-primeiros-passos.md) |
+### 🌐 Navegação rápida
+
+| **🏠 HOME** | [Retornar ao Início](../../0-organization/Home.md) |
+| :--- | :--- | :--- |
+| &#8657; **Anterior** | [Primeiros Passos](../s00-intro-config\02-sintaxe-primeiros-passos.md) |
 | &#8659; **Próximo** | [Operadores](./operadores-logica.md) |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
+
 - [✅] **[Vídeo 13](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408604#content):** [Todos os tipos primitivos] — *(10min)*
 - [✅] **[Vídeo 14](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408616#content):** [Inteiros] — *(17min)*
 - [✅] **[Vídeo 15](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408622#content):** [Casting] — *(10min)*
@@ -30,19 +34,20 @@
 ---
 
 ### 📝 Anotações e Conceitos Chave
+
 #### 1. [Overview dos tipos]
+
 - O professor passa brevemente por cada tipo:
-  * **[str] String:** Texto e caracteres
-  * **[int] [float] [complex] Numéricos:** Números e matemática
-  * **[bool] Booleanos:** Valores de True or False
-  --
-  * **[list] [tuple] [range] Sequência:** listas e armazenamento
-  * **[dict] Mapeamento:** orgnização e chaves 
-  --
-  * **[set] [frozenset] Conjuntos:** não faço ideia
-  * **[bytes] [bytearray] [memoryview] Binários:** não faço ideia
+  **[str] String:** Texto e caracteres
+  **[int] [float] [complex] Numéricos:** Números e matemática
+  **[bool] Booleanos:** Valores de True or False
+  **[list] [tuple] [range] Sequência:** listas e armazenamento
+  **[dict] Mapeamento:** orgnização e chaves
+  **[set] [frozenset] Conjuntos:** não faço ideia
+  **[bytes] [bytearray] [memoryview] Binários:** não faço ideia
 
 - Exemplo de sintaxe ou regra:
+
 ```python
   #Output de cada tipo
   string_var = "um texto" #incluindo o espaço
@@ -70,7 +75,9 @@
     str(), int(), float(), complex(), bool(), list(), tuple(), range(), dict(), set(), frozenset(), bytes(), bytearray(), memoryview(bytes())]
     #note nem todos os valores são intercambiáveis, transformar um [int em bool] = [5 != True]
 ```
+
 #### 2. [Números]
+
 - informa sobre a existência de **numeros negativos**.
 - informa sobre a **sintaxe de "."** para float.
 - informa sobre a **notação científica** [35e3].
@@ -80,8 +87,8 @@
   - **funções de construtor:** int(), float() etc
   - menciona um pouco sobre os **erros de casting**, pois input incorretos geram ValueError
 - informa sobre a geração de **random numbers**.
-
 - Exemplo de sintaxe ou regra:
+
 ```python
   #usando random
   import random
@@ -94,6 +101,7 @@
   float(media_boletim) #6.0
   #str("seis") erro ausencia de num literal
 ```
+
 #### 3. [Strings]
 
 - informa sobre o **uso de aspas:**
@@ -108,6 +116,7 @@
 - **UTIL:** cheCa se uma frase esta presente dentro do string com o **metodo in**.
 
 - Exemplo de sintaxe ou regra:
+
 ```python
 
   #acessando a matriz da string
@@ -150,9 +159,10 @@
 ```
 
 ##### 3.1 [Fatiar Strings]
-- informa sobre o uso de **index** para fatiar strings.
 
+- informa sobre o uso de **index** para fatiar strings.
 - Exemplo de sintaxe ou regra:
+
 ```python
   #acessando pedaços de strings
   abcdario = "ABCDEFGHIJK"
@@ -163,10 +173,12 @@
 ```
 
 ##### 3.2 [Modificar Strings]
+
 - **Concatenação (+):** informa que não podemos concatenar string + num.
 - **Imutabilidade:** informa que os metodos criam cópia e não modificam o original.
 
 **Principais Metodos:**
+
 - **.upper():** reorna tudo maiusculo.
 - **.lower():** retorn minusculo.
 - **.strip():** remove espaços do começo e final.
@@ -174,6 +186,7 @@
 - **.split():** o texto entre o separador fornecido se torna uma lista.
 
 - Exemplo de sintaxe ou regra:
+
 ```python
   #acessando pedaços de strings
   sussuro = "me vê um tadalafila.."
@@ -191,11 +204,13 @@
 ```
 
 ##### 3.3 [Formato de Strings]
-  - informa sobre o **método format():** semelhante ao fstring mas é metodo .format().
-  - informa sobre o **index** das entradas de dados no format:
-    - **CUIDADO COM OFFBYONE:** {0},{1}
+
+- informa sobre o **método format():** semelhante ao fstring mas é metodo .format().
+- informa sobre o **index** das entradas de dados no format:
+  - **CUIDADO COM OFFBYONE:** {0},{1}
 
   - Exemplo de Sintaxe ou regra:  
+
 ``` python
       #exemplo de uso do ponto format
       qtd_beijos = 2
@@ -211,6 +226,7 @@
 ```
 
 ##### 3.4 [Caracteres Especiais]
+
 - informa que usar alguns simbolos dao erro na string:
   - **\\"**: retorna as aspas literais.
   - **\\\\**: retorna uma barra invertida literal.
@@ -223,22 +239,26 @@
   - **\\123**: retorna um caractere literal a partir de um código Otal \x110 = H.
 
 - Exemplo de Sintaxe ou regra:
+
 ``` python
     #uso do caractere especial
 
     é_bilada_cino = "eu disse que era \"SABOR\" Mulher"
     print("Toguro diz: " + é_bilada_cino) #retorna "Toguro diz: eu disse que era SABOR Mulher"
 ```
+
 #### 4. [Booleanos]
+
 - informa que são valores de resultados de **expressões lógicas** e servem para inúmeras funcções e cenários.
 - informa como funciona o **casting de bool():**
-  - só retorna **False** se: 
+  - só retorna **False** se:
     - string, list, etc = "" Vazios
     - int, floar, etc = 0
 - informa sobre o **retorno bool** de funções.
 - informa sobre a funct **isinstance()**.
 
 - Exemplo de sintaxe ou regra:
+
 ```python
   #obtendo valor bool
   meu_carro = 10
@@ -262,10 +282,12 @@
 ```
 
 #### 5. Teste e Exercícios
+
 1. Em Python, o tipo de dados é definido quando você atribui um valor a uma variável. = **True**
 2. Em Python int, float e complex são variáveis de tipo númerico. = **True**
 
 - Exemplo de sintaxe ou regra:
+  
 ```python
   #EXERCICIO 1 - Calcula Triplo
   braco = 1
@@ -287,4 +309,23 @@
   massa_buraco_negro = int(tamanho_sua_mãe) * int(tamanho_da_lua)
   print(f"A multiplicação é: {massa_buraco_negro}")
 ```
-# TODO: [REVIEW-DATE: 2026-04-11] Revisão de tipos 
+
+[LAST-DATE: 2026-04-11] Revisão de tipos
+
+[Questionário](https://gemini.google.com/share/089bc530f8bd)
+  #Aproveitamento de 81% - revisão média
+
+````python
+    '''
+      - Pontos fortes
+        - Manipulação e Métodos de Strings: Você demonstrou domínio excelente sobre métodos como `.strip()`, `.upper()`, `.replace()` e fatiamento negativo, além de compreender a imutabilidade das strings e o uso de caracteres de escape.
+        - Tipagem e Conversão Numérica: Excelente compreensão sobre tipos numéricos complexos, erros de tipo em concatenações sem casting e o comportamento da função `int()` ao truncar números decimais.
+        - Operadores Lógicos e Formatação: Identificou corretamente o uso de operadores de associação (`not in`) e a indexação de argumentos no método `.format()`.
+      - Áreas a melhorar
+        - Lógica de Booleanos em Coleções: Lembre-se que em Python, coleções (listas, tuplas, etc.) são consideradas `True` se não estiverem vazias. No caso de `bool([0])`, o resultado é `True` porque a lista contém um elemento, mesmo que o elemento seja zero.
+        - Sintaxe de Fatiamento (Slicing): Ao omitir o valor antes dos dois pontos em `[:6]`, o Python sempre inicia o fatiamento a partir do índice 0, e não do índice 1.
+        - Estruturas de Dados (Sets vs Dicts): Ambos utilizam chaves `{}` na sintaxe, mas a diferença fundamental é estrutural: dicionários exigem pares `chave: valor`, enquanto sets contêm apenas valores únicos.
+      '''
+  ````
+
+::to-review:: 18-04-2026 ::Tipos Primitivos::

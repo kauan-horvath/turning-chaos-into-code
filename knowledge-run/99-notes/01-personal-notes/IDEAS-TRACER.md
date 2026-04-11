@@ -1,40 +1,60 @@
-# 🧠 Idea-to-Chase: Roadmap
+# 🧠 Ideas-Tracer: Roadmap
 
-*Here I'll pinpoint all the future ideas I wanna chase in order to grow cases and skills with enough time, and never forget what I once desired.*
+*Pinpointing future technical frontiers while documenting the evolution of my personal infrastructure.*
 
 ---
 
 ## 🛠️ Skills & Future Projects
 
-- [ ] Developing a cryptographer CLI tool (Fernet and argparse)
-- [ ] AI concierge for my personal portfolio
-- [ ] Webdev for a high-end portfolio landing page
-  - [ ] Implement a graveyard for showcasing huge failures
-- [ ] Advanced Google Colab for cloud-based engineering
-- [ ] Mobile app development for architectural know-how
-- [ ] Master how to access other files
+- [ ] **The Failure Graveyard**: A dedicated showcase for logic dead-ends and lessons learned.
+- [ ] **Advanced Google Colab**: Scaling local automations for cloud-based engineering.
+- [ ] **Cryptographer CLI**: Building a secure data tool with Fernet and argparse.
+- [ ] **Mobile Architecture**: Developing a mobile app for architectural know-how.
 
 ---
 
 ## 🏆 Completed Milestones
-- [?] Webscraping for job application (Python + Selenium)
-  - [x] Learn how to web scrape static websistes with Bs4
-  - [ ] develop a virtual envinronment for survivalism (Venv)
-- [x] Discover and implement a Linter for my git
-- [x] Git Metadata Protocol
-- [x] High-end HTML/CSS for GitHub profile aesthetics
-  -[ ] Develop a data-driven design for colour palette
-- [x] Develop and implement snippets at VS Code
-- [x] Personal Letterboxd reviews sync for cultural perspective
+
+- [x] **Productivity & Automation** (New!)
+  - [x] Spaced Repetition System: Python script integrated with Google Calendar API.
+  - [x] Repository Navigation: Standardized breadcrumb & table structure.
+  - [x] Custom Metadata Protocol: Implementing `::to-review::` tags.
+
+- [x] **Snippets for VS Code**
+  - [x] Develop and implement boilerplate snippets.
+  - [ ] Showcase the most effective ones in the Lab.
+
+- [x] **GitHub & Git Flow**
+  - [x] Apply conditional tags for semantic commits.
+  - [x] Standardize directory architecture (Study/Experiment/Design).
+  - [ ] Finalize "Projects" folder structure.
+
+- [x] **Webscraping & Environments**
+  - [x] Static scraping with BeautifulSoup4.
+  - [ ] Standardize Virtual Environments (Venv) for all scripts.
+  - [ ] Explore dynamic scraping with Selenium.
+
+- [x] **Interface & Branding**
+  - [x] High-end HTML/CSS GitHub Profile.
+  - [x] AI Concierge for personal portfolio (API implemented).
+  - [ ] Fix render bugs and finalize UI.
 
 ---
 
-## 💡 Raw Brainstorming (Sketches)
-- 
-- 
+## 💡 Study Achievements
+
+- [x] **Offensive Learning Streak**: Consistent daily output and blocks.
+  - [x] Udemy: Starter pack completed.
+  - [ ] Coursera: Financial planning for professional certs.
+
+- [x] **Skill Roadmap**: Automations > Webstack > Data > Discovery.
+
+- [x] **Certification Showcase**:
+  - [x] Displaying foundational technical badges.
+  - [ ] Upgrade to senior/professional level certificates.
 
 ---
 
 <p align="right">
-  <i>"Design is how it works."</i>
+  <i>"Design is not just what it looks like. Design is how it works."</i>
 </p>

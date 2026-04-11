@@ -2,7 +2,10 @@
 ## 📑 [Variaveis e Atribuições]
 > **Status:** 🟢 Concluída | **Data:** 08/04/2026
 
----
+| **🏠 HOME** | [Retornar ao Início](../../0-organization/Home.md) |
+| :--- | :--- |
+| &#8657; **Anterior** | [Introdução](../s00-into-config/02-sintaxe-primeiros-passos.md) |
+| &#8659; **Próximo** | [Primeiros passos](./04-tipos-dados.md) |
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 - [✅] **[Vídeo 07](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408398#notes):** [Apresentando variáveis] — *(16min)*
@@ -179,4 +182,4 @@ Resultado revisão:
 - Regras de Nomenclatura e Tipagem Dinâmica: Você tem um excelente entendimento das regras básicas para criar variáveis no Python, incluindo o uso do padrão Snakecase e as restrições de formatação. Além disso, dominou os conceitos de tipagem dinâmica, conversão de tipos (casting) e o uso da função type().
 - Operações com Coleções e Tratamento de Erros: Você demonstrou grande clareza sobre como descompactar elementos de listas em múltiplas variáveis simultaneamente e conseguiu identificar corretamente as exceções geradas pelo interpretador (como ValueError e erros de tipagem) em operações inválidas.
 
-# TODO: [REVIEW-DATE: 2026-04-17] Refazer prova de operadores simples
+::to-review:: 17-04-2026 ::Refazer prova de operadores simples::

@@ -1,18 +1,21 @@
-### **Nível 1: Básico (Lógica e Fundamentos)**
+# **Nível 1: Básico (Lógica e Fundamentos)**
 
 **[ s00 - Introdução e Configuração ]**
-* [✅] [**Seção 1:** Boas-vindas e Visão Geral do Curso](../1-basics/s00-intro-config/intro-visao-geral.md)
-* [✅] [**Seção 2:** Setup: Instalação e Configuração do Ambiente](../1-basics/s00-intro-config/intro-visao-geral.md)
-* [✅] [**Seção 3:** Primeiros Passos: Sintaxe e Convenções](../1-basics/s00-intro-config/sintaxe-primeiros-passos.md)
+
+* [✅] [**Seção 01:** Boas-vindas e Visão Geral do Curso](../1-basics/s00-intro-config/01-intro-visao-geral.md)
+* [✅] [**Seção 01.2:** Setup: Instalação e Configuração do Ambiente](../1-basics/s00-intro-config/01-intro-visao-geral.md)
+* [✅] [**Seção 02:** Primeiros Passos: Sintaxe e Convenções](../1-basics/s00-intro-config/02-sintaxe-primeiros-passos.md)
 
 **[ s01 - Manipulação de Dados ]**
-* [✅] [**Seção 4:** Variáveis e Atribuições](../1-basics/s01-data-manipulation/variaveis-atribuicoes.md)
-* [✅] [**Seção 6:** Tipos de Dados Primitivos](../1-basics/s01-data-manipulation/tipos-dados-1.md)
-* [✅] [**Seção 8:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/operadores-logica.md)
-* [ ] [**Seção 17:** Entrada e Saída de Dados (I/O)](../1-basics/s01-data-manipulation/entrada-saida-dados.md)
+
+* [✅] [**Seção 03:** Variáveis e Atribuições](../1-basics/s01-data-manipulation/03-variaveis-atribuicoes.md)
+* [✅] [**Seção 04:** Tipos de Dados Primitivos](../1-basics/s01-data-manipulation/04-tipos-dados.md)
+* [✅] [**Seção 05:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/05-operadores-logica.md)
+* [✅] [**Seção 05.2:** Entrada e Saída de Dados (I/O)](../1-basics/s01-data-manipulation/05-operadores-logica.md)
 * [ ] [**Seção 5:** **Training 01:** Praticando Atribuições e Operadores](../1-basics/s01-data-manipulation/training-01.md)
 
 **[ s02 - Coleções de Dados ]**
+
 * [ ] [**Seção 9:** Listas: Manipulação e Métodos](../1-basics/s02-data-colection/colecoes-listas.md)
 * [ ] [**Seção 10:** Tuplas: Imutabilidade e Performance](../1-basics/s02-data-colection/colecoes-tuplas.md)
 * [ ] [**Seção 11:** Sets: Conjuntos e Operações Matemáticas](../1-basics/s02-data-colection/colecoes-sets.md)
@@ -21,6 +24,7 @@
 * [ ] [**Seção 7:** **Training 02:** Desafios com Coleções](../1-basics/s02-data-colection/training-02.md)
 
 **[ s03 - Controle de Fluxo e Modularização ]**
+
 * [ ] [**Seção 13:** Estruturas Condicionais (If, Else, Elif)](../1-basics/s03-modularization/condicionais-if-else.md)
 * [ ] [**Seção 14:** Estruturas de Repetição (While, For)](../1-basics/s03-modularization/loops-repeticao.md)
 * [ ] [**Seção 16:** Funções e Parâmetros](../1-basics/s03-modularization/funcoes-parametros.md)
@@ -29,14 +33,16 @@
 
 ---
 
-### **Nível 2: Intermediário (Arquitetura e Bibliotecas Padrão)**
+## **Nível 2: Intermediário (Arquitetura e Bibliotecas Padrão)**
 
 **[ s04 - Estruturas Avançadas ]**
+
 * [ ] [**Seção 19:** POO: Classes, Objetos e Pilares](../2-intermediate/s04-advanced-structures/poo-fundamentos.md)
 * [ ] [**Seção 20:** Iteradores e Geradores: Otimizando Loops](../2-intermediate/s04-advanced-structures/iteradores-geradores.md)
 * [ ] [**Seção 22:** Organização de Código: Módulos e Packages](../2-intermediate/s04-advanced-structures/modulos-packages.md)
 
 **[ s05 - Utilitários e Tratamento de Dados ]**
+
 * [ ] [**Seção 27:** Gerenciamento de Dependências com PIP](../2-intermediate/s05-data-treatment/pip-dependencias.md)
 * [ ] [**Seção 28:** Tratamento de Exceções e Debugging (Try/Except)](../2-intermediate/s05-data-treatment/erros-excecoes.md)
 * [ ] [**Seção 23:** Manipulação de Datas e Fusos Horários](../2-intermediate/s05-data-treatment/datas-horarios.md)
@@ -48,9 +54,10 @@
 
 ---
 
-### **Nível 3: Avançado (Interface, Dados e Web)**
+## **Nível 3: Avançado (Interface, Dados e Web)**
 
 **[ s06 - Interfaces Gráficas (GUI) com Tkinter ]**
+
 * [ ] [**Seção 31:** Tkinter: Fundamentos e Janela Principal](../3-advanced/s06-GUI-tkinter/gui-tkinter-intro.md)
 * [ ] [**Seção 32:** Layout Manager: Gerenciadores de Geometria](../3-advanced/s06-GUI-tkinter/gui-tkinter-layout.md)
 * [ ] [**Seção 33:** Componentes: Widgets e a Biblioteca Ttk](../3-advanced/s06-GUI-tkinter/gui-tkinter-widgets.md)
@@ -63,6 +70,7 @@
 * [ ] [**Seção 43:** CRUD: Interface Gráfica conectada ao Banco de Dados](../3-advanced/s06-GUI-tkinter/gui-tkinter-crud.md)
 
 **[ s07 - Ciência de Dados e Automação ]**
+
 * [ ] [**Seção 40:** Visualização de Dados com Matplotlib](../3-advanced/s07-datascience-automation/ds-matplotlib.md)
 * [ ] [**Seção 42:** Processamento Numérico com NumPy](../3-advanced/s07-datascience-automation/ds-numpy-intro.md)
 * [ ] [**Seção 44:** Geração de Dados Aleatórios e Simulações](../3-advanced/s07-datascience-automation/ds-numpy-random.md)
@@ -74,4 +82,5 @@
 * [ ] [**Seção 47:** **PROJETO FINAL:** App de Cotações (API + GUI + Gráficos)](../3-advanced/s07-datascience-automation/projeto-final-cotacao.md)
 
 **[ s08 - Web Framework ]**
+
 * [ ] [**Seção 50:** Django: Introdução ao Desenvolvimento Web Moderno](../3-advanced/s08-web-framework/django-web-intro.md)

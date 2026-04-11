@@ -24,4 +24,3 @@ A estrutura ideal é:
 ## 💡 Por que usar isso agora?
 
 Como você está organizando sua **Wiki de estudos**, usar `docs:` para seus arquivos Markdown e `feat:` quando criar um script Python novo vai deixar seu GitHub com uma cara de **perfil profissional**. Recrutadores amam ver um repositório que segue o padrão *Conventional Commits*.
-

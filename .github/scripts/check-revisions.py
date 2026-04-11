@@ -1,3 +1,4 @@
+# =================== THIS CODE IS AI GENERATED ==============
 import os
 import re
 import yaml
@@ -8,108 +9,158 @@ from googleapiclient.discovery import build
 
 # ================= CONFIGURAÇÕES =================
 DIRETORIOS_PARA_BUSCA = ['knowledge-run', 'care-projects']
-REGEX_REVIEW = r"\[REVIEW-DATE:\s*(\d{4}-\d{2}-\d{2})\]\s*(.*)"
+# Nova REGEX: Captura data BR e o título entre :: ::
+REGEX_REVIEW = r"::to-review::\s*(\d{2}-\d{2}-\d{4})\s*::(.*)::"
 CALENDAR_ID = 'kauanhorvath1996@gmail.com' 
 # =================================================
 
-def buscar_revisoes_futuras():
-    revisoes = []
-    hoje = date.today()
+DIRETORIOS = ['knowledge-run', 'care-projects']
 
-    # 1. Busca nos Arquivos (Markdown, Python, etc)
-    for diretorio in DIRETORIOS_PARA_BUSCA:
+# Captura: # TODO: [REVIEW-DATE: YYYY-MM-DD] TEXTO
+PADRAO_ANTIGO = r"#\s*TODO:\s*\[REVIEW-DATE:\s*(\d{4})-(\d{2})-(\d{2})\]\s*(.*)"
+
+# Transforma em: ::to-review:: DD-MM-YYYY ::TEXTO::
+# \3 = dia, \2 = mês, \1 = ano, \4 = título
+NOVO_FORMATO = r"::to-review:: \3-\2-\1 ::\4::" 
+
+def migrar_tags():
+    print("🛠️  Iniciando migração para o padrão ::to-review::...")
+    arquivos_alterados = 0
+    tags_convertidas = 0
+
+    for diretorio in DIRETORIOS:
         if not os.path.exists(diretorio): continue
-        for root, dirs, files in os.walk(diretorio):
+        for root, _, files in os.walk(diretorio):
             for file in files:
                 if file.endswith(('.py', '.md', '.sql', '.vba')):
                     path = os.path.join(root, file)
-                    nome_arquivo = os.path.basename(path) # <--- Ajuste: Apenas o nome
+                    with open(path, 'r', encoding='utf-8', errors='ignore') as f:
+                        linhas = f.readlines()
+                    
+                    novas_linhas = []
+                    mudou_arquivo = False
+                    
+                    for linha in linhas:
+                        if re.search(PADRAO_ANTIGO, linha):
+                            nova_linha = re.sub(PADRAO_ANTIGO, NOVO_FORMATO, linha)
+                            novas_linhas.append(nova_linha)
+                            tags_convertidas += 1
+                            mudou_arquivo = True
+                        else:
+                            novas_linhas.append(linha)
+                    
+                    if mudou_arquivo:
+                        with open(path, 'w', encoding='utf-8') as f:
+                            f.writelines(novas_linhas)
+                        print(f"✅ Atualizado: {file}")
+                        arquivos_alterados += 1
+
+    print(f"\n✨ Sucesso! {tags_convertidas} tags em {arquivos_alterados} arquivos foram migradas.")
+
+def buscar_revisoes():
+    revisoes = []
+    hoje = date.today()
+
+    for diretorio in DIRETORIOS_PARA_BUSCA:
+        if not os.path.exists(diretorio): continue
+        for root, _, files in os.walk(diretorio):
+            for file in files:
+                if file.endswith(('.py', '.md', '.sql', '.vba')):
+                    path = os.path.join(root, file)
+                    nome_arquivo = os.path.basename(path)
+                    nome_pasta = os.path.basename(root)
+
                     try:
                         with open(path, 'r', encoding='utf-8', errors='ignore') as f:
                             for line in f:
                                 m = re.search(REGEX_REVIEW, line)
                                 if m:
-                                    data_rev = datetime.strptime(m.group(1), '%Y-%m-%d').date()
-                                    # Ajuste: Apenas datas estritamente após hoje
-                                    if data_rev >= hoje:
-                                        desc = m.group(2).strip()
-                                        revisoes.append({
-                                            'summary': f'Revisão: {desc} ({nome_arquivo})',
-                                            'date': m.group(1)
-                                        })
+                                    data_br = m.group(1)
+                                    data_rev = datetime.strptime(data_br, '%d-%m-%Y').date()
+                                    desc = m.group(2).strip()
+                                    
+                                    # Lógica de status
+                                    status = "hoje" if data_rev == hoje else ("atrasado" if data_rev < hoje else "futuro")
+                                    
+                                    revisoes.append({
+                                        'title': desc, # Título limpo
+                                        'summary': f'Revisão: {desc}', # Para o Google Calendar
+                                        'date_br': data_br,
+                                        'date_iso': data_rev.strftime('%Y-%m-%d'),
+                                        'status': status,
+                                        'file': nome_arquivo,
+                                        'folder': nome_pasta
+                                    })
                     except Exception: continue
-
-    # 2. Busca no YAML (revisions.yml)
-    if os.path.exists('revisions.yml'):
-        with open('revisions.yml', 'r', encoding='utf-8') as f:
-            tarefas = yaml.safe_load(f) or []
-            for t in tarefas:
-                try:
-                    data_rev = datetime.strptime(str(t.get('revisar_em')), '%Y-%m-%d').date()
-                    if data_rev > hoje:
-                        revisoes.append({
-                            'summary': f"🔸 {t['projeto']}: {t.get('detalhes', 'Revisar')}",
-                            'date': str(t.get('revisar_em'))
-                        })
-                except Exception: continue
-    
     return revisoes
 
-def evento_ja_existe(service, summary, data):
-    """Verifica se o evento já existe na agenda para evitar duplicidade"""
-    t_min = f"{data}T00:00:00Z"
-    t_max = f"{data}T23:59:59Z"
-    
-    events_result = service.events().list(
-        calendarId=CALENDAR_ID,
-        timeMin=t_min,
-        timeMax=t_max,
-        q=summary, 
-        singleEvents=True
-    ).execute()
-    
-    return len(events_result.get('items', [])) > 0
-
 def processar_agenda():
-    # Autenticação (GitHub Secrets ou Local)
+    # ... (Sua lógica de autenticação permanece igual) ...
     creds_json = os.environ.get('GOOGLE_CALENDAR_CREDENTIAL') or os.environ.get('GOOGLE_CALENDAR_CREDENTIALS')
-    
     if creds_json:
         info = json.loads(creds_json)
         creds = service_account.Credentials.from_service_account_info(info)
     else:
         caminho_local = '.github/credentials/credential-googlecalendar.json'
-        if not os.path.exists(caminho_local):
-            print(f"❌ Erro: Credenciais locais não encontradas em {caminho_local}")
-            return
         creds = service_account.Credentials.from_service_account_file(caminho_local)
 
     service = build('calendar', 'v3', credentials=creds)
-    tarefas = buscar_revisoes_futuras()
+    
+    # 1. Busca as revisões
+    tarefas = buscar_revisoes()
+    
+    # 2. ORDENAÇÃO: Da data mais próxima para a mais distante
+    # Usamos date_iso porque o formato YYYY-MM-DD permite ordenação direta por string
+    tarefas.sort(key=lambda x: x['date_iso'])
+    
+    hoje = date.today()
 
-    if not tarefas:
-        print("✅ Tudo em dia! Nenhuma revisão futura detectada (ignorado o dia de hoje).")
-        return
+    print(f"\n{'='*75}")
+    print(f"📊 DASHBOARD DE REVISÕES HORVATH - {hoje.strftime('%d/%m/%Y')}")
+    print(f"{'='*75}")
 
-    print(f"🔍 Analisando {len(tarefas)} possíveis revisões...")
-    for t in tarefas:
-        # Checagem de redundância
-        if evento_ja_existe(service, t['summary'], t['date']):
-            print(f"⏭️  Pulando (já existe): {t['summary']} para {t['date']}")
-            continue
+    # Mantemos a separação por blocos, mas cada bloco estará ordenado por data
+    for categoria in ["atrasado", "hoje", "futuro"]:
+        itens = [t for t in tarefas if t['status'] == categoria]
+        if not itens: continue
 
-        event = {
-            'summary': t['summary'],
-            'description': 'Automação Horvath: Agendamento antecipado.',
-            'start': {'date': t['date'], 'timeZone': 'America/Sao_Paulo'},
-            'end': {'date': t['date'], 'timeZone': 'America/Sao_Paulo'},
-        }
+        header = "🚨 ATRASADOS (Ignorados pelo agendador)" if categoria == "atrasado" \
+                 else ("📅 PARA HOJE" if categoria == "hoje" else "🚀 PRÓXIMAS REVISÕES")
+        print(f"\n{header}:")
+        
+        for t in itens:
+            if categoria == "futuro":
+                try:
+                    t_min = f"{t['date_iso']}T00:00:00Z"
+                    t_max = f"{t['date_iso']}T23:59:59Z"
+                    existente = service.events().list(calendarId=CALENDAR_ID, timeMin=t_min, timeMax=t_max, q=t['summary']).execute()
+                    
+                    if not existente.get('items', []):
+                        event = {
+                            'summary': t['summary'],
+                            'start': {'date': t['date_iso'], 'timeZone': 'America/Sao_Paulo'},
+                            'end': {'date': t['date_iso'], 'timeZone': 'America/Sao_Paulo'},
+                        }
+                        service.events().insert(calendarId=CALENDAR_ID, body=event).execute()
+                        prefixo = f"✅ AGENDADO  - [{t['date_br']}]"
+                    else:
+                        prefixo = f"⏭️  EXISTENTE - [{t['date_br']}]"
+                except Exception as e:
+                    prefixo = f"❌ ERRO       - [{t['date_br']}]"
+            else:
+                # Exibe o status (Atrasado ou Hoje) seguido da data
+                status_label = "ATRASADO" if categoria == "atrasado" else "HOJE"
+                prefixo = f"• {status_label}    - [{t['date_br']}]"
 
-        try:
-            service.events().insert(calendarId=CALENDAR_ID, body=event).execute()
-            print(f"✅ Agendado: {t['summary']} para {t['date']}")
-        except Exception as e:
-            print(f"❌ Erro ao agendar {t['summary']}: {e}")
+            # OUTPUT REFINADO EM DUAS LINHAS
+            # t['title'] deve vir da sua função buscar_revisoes() modificada anteriormente
+            print(f" {prefixo} - {t['summary']}")
+            print(f"    file: ({t.get('file', 'N/A')}) | folder: ({t.get('folder', 'N/A')})")
+
+    print(f"\n{'='*75}\n")
 
 if __name__ == "__main__":
+    os.system("cls" if os.name =="nt" else "clear")
+    #migrar_tags()
     processar_agenda()
+    

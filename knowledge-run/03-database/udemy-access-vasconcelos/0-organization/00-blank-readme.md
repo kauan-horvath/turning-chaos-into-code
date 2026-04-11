@@ -8,7 +8,7 @@
 
 | **🏠 HOME** | [Retornar ao Início](./00-access-Home.md) |
 | :--- | :--- |
-| &#8657; **Anterior** | [Tipos primitivos 1](./tipos-dados-1.md) |
+| &#8657; **Anterior** | [Tipos primitivos 1](./04-tipos-dados.md) |
 | &#8659; **Próximo** | [PROXIMO](./arquivo2.md) |
 
 ---

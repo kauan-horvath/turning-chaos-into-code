@@ -1,17 +1,20 @@
 # 📂 Seção 00: Introdução e Configuração
+
 ## 📑 [Primeiros Passos e Sintaxes]
+
 > **Status:** 🟢 Concluída | **Data:** 07/04/2026
 
+### 🌐 Navegação rápida
 
-#### 🌐 Navegação rápida
 | **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
 | :--- | :--- |
-| &#8657; **Anterior** | [Visão Geral](../s00-intro-config\intro-visao-geral.md) |
-| &#8659; **Próximo** | [Tipos primitivos 1](../s01-data-manipulation/tipos-dados-1.md) |
+| &#8657; **Anterior** | [Visão Geral](../s00-intro-config\01-intro-visao-geral.md) |
+| &#8659; **Próximo** | [Tipos primitivos 1](../s01-data-manipulation/04-tipos-dados.md) |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
+
 - [✅] **[Vídeo 05](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408364#notes):** [Sintaxe Básica] — *(12min)*
 - [✅] **[Vídeo 06](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408386#notes):** [Comentários de código fonte] — *(10min)*
 
@@ -20,12 +23,14 @@
 ---
 
 ### 📝 Anotações e Conceitos Chave
+
 #### [Código básico]
+
 - **Indentação em Python:** Demonstrando que sem indentação o código não é lido corretamente (gera `IndentationError`).
 - **Booleanos e Expressões lógicas:** Demonstrando que o resultado `True` ou `False` impede ou permite o avanço do código.
 - **Sintaxe de comentários em Python:** Apresentou as duas formas de comentar um código, usando `#` ou aspas triplas `"""`.
-
 - Exemplo de sintaxe ou regra:
+
 ```python
 # Vídeo 05 e 06:
 if 5 > 20:

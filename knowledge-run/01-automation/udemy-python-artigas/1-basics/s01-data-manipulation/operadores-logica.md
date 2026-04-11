@@ -8,7 +8,7 @@
 
 | **🏠 HOME** | [Retornar ao Início](../../0-organization/Home.md) |
 | :--- | :--- |
-| &#8657; **Anterior** | [Tipos primitivos 1](./tipos-dados-1.md) |
+| &#8657; **Anterior** | [Tipos primitivos 1](./04-tipos-dados.md) |
 | &#8659; **Próximo** | [PROXIMO](./arquivo2.md) |
 
 ---
@@ -21,6 +21,7 @@
 - [✅] **[Vídeo 28](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409124#content):** [Operadores Lógicos] — *(10min)*
 - [✅] **[Vídeo 29](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409144#content):** [Operadores de Identidade] — *(10min)*
 - [✅] **[Vídeo 30](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409178#content):** [Operadores de Associação] — *(5min)*
+- [✅] **[Vídeo 83](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28794116#content):** [Entrada de Dados do Usuário] — *(5min)*
 - [✅] **[Teste]([LINKDOVIDEO](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346078#content)):** [Teste] — *(Duração)*
 
 > **Nota rápida:** [Um conjunto de definições e funções para os operadores, o básico nunca deve ser negligênciado]
@@ -154,9 +155,22 @@
     Investigando = ("carcomido" in na_borsa_da_marvada) #retorna False porque é o mesmo objeto
     Confirmando = ("cuidado" not in na_borsa_da_marvada) #retorna True porque consta la dentro e não era pra constar O.O)
 
+#### 5. Input e Entrada de Dados
+
+- Informa sobre o método de Input().
+- EXPLICAÇÃO.
+- Exemplo de sintaxe ou regra:
+
+```python
+  #Exemplo de Input
+  nome = input("Qual seu nome?")
+  print("Seu nome é " + var)
+
+```
+
 #### 5. [Teste]
 
 1. Operadores aritméticos são usados para realizar operações matemáticas | True
 2. O operador '=' é um operador de comparação de igualdade | False
 
-# TODO: [REVIEW-DATE: 2026-04-12] Revisão de Operadores Lógicos
+::to-review:: 12-04-2026 ::Operadores Lógicos::

@@ -1,16 +1,20 @@
 # 📂 Seção 00: Introdução e Configuração
+
 ## 📑 [Setup e Ambiente de Desenvolvimento]
+
 > **Status:** 🟢 Concluída | **Data:** 07/04/2026
 
-#### 🌐 Navegação rápida
-| **🏠 HOME** | [Retornar ao Início ](../../0-organization/Home.md) |
+### 🌐 Navegação rápida
+
+| **🏠 HOME** | [Retornar ao Início](../../0-organization/Home.md) |
 | :--- | :--- |
-| &#8657; **Anterior** | [Introdução](./intro-visao-geral.md) |
-| &#8659; **Próximo** | [Primeiros passos](./sintaxe-primeiros-passos.md) |
+| &#8657; **Anterior** | [Introdução](./01-intro-visao-geral.md) |
+| &#8659; **Próximo** | [Primeiros passos](./02-sintaxe-primeiros-passos.md) |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
+
 - [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/30733888#notes):** [Apresentações] — *(5min)*
 - [✅] **[Arquivo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/30733888#notes):** [Adição de ChangeLog] — *(0min)*
 - [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408326#notes):** [Instalando Python e primeiro programa] — *(16min)*
@@ -21,12 +25,15 @@
 ---
 
 ### 📝 Anotações e Conceitos Chave
+
 #### [Instalações]
+
 - **Instrutor:** Gabriel Artigas
 - **Duração do Curso:** [+40h]
 - **Última Atualização:** 2025
 
 **Primeiro Teste (Sem IDE):**
+
 ```python
 for i in range(10):
     print("Hello World")
@@ -48,8 +55,10 @@ for i in range(10):
   - Adicionar pastas e diretórios ao Workspace para facilitar o trabalho.
 
 ---
+
 #### 🔍 Research & Extras
-- **O que é um Changelog?** 
+
+- **O que é um Changelog?**
   > Um registro cronológico de todas as alterações notáveis feitas em um projeto (novos recursos, correções de bugs, melhorias). Útil para quem usa ou desenvolve o software entender o que mudou entre uma versão e outra.
 
-# TODO: [REVIEW-DATE: 2026-04-09] REVISÃO: Apenas procedimentos básicos de instalação.
+::last-review:: 11-04-2026 ::Only reformated the mkd::
