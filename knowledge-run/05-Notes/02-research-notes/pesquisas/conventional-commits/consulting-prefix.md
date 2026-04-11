@@ -1,6 +1,6 @@
 
-### 🛠️ Os Tipos Mais Comuns
-
+# 🛠️ Os Tipos Mais Comuns
+feat: add navigation table to modules
 | Prefixo | Quando usar? | Exemplo |
 | :--- | :--- | :--- |
 | **`feat:`** | Uma **nova funcionalidade** (Feature). | `feat: add navigation table to modules` |
@@ -12,15 +12,16 @@
 
 ---
 
-### 📝 A Regra de Ouro (Estrutura)
+## 📝 A Regra de Ouro (Estrutura)
 
 A estrutura ideal é:
 `<tipo>: <descrição curta em letras minúsculas>`
 
-1.  **Use o imperativo:** Em inglês, escreva como se estivesse dando uma ordem ao código (Ex: `add` em vez de `added`, `fix` em vez de `fixed`).
-2.  **Seja direto:** O commit deve responder à pergunta: *"Se eu aplicar este commit, o que ele fará no projeto?"*.
+1. **Use o imperativo:** Em inglês, escreva como se estivesse dando uma ordem ao código (Ex: `add` em vez de `added`, `fix` em vez de `fixed`).
+2. **Seja direto:** O commit deve responder à pergunta: *"Se eu aplicar este commit, o que ele fará no projeto?"*.
     * *Resposta:* "Adicionará (add) navegação rápida".
 
-### 💡 Por que usar isso agora?
+## 💡 Por que usar isso agora?
+
 Como você está organizando sua **Wiki de estudos**, usar `docs:` para seus arquivos Markdown e `feat:` quando criar um script Python novo vai deixar seu GitHub com uma cara de **perfil profissional**. Recrutadores amam ver um repositório que segue o padrão *Conventional Commits*.
 
