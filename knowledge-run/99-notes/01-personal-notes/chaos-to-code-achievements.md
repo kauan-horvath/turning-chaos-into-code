@@ -10,7 +10,7 @@ Tenho o orgulho de apresentar dois avanços significativos na infraestrutura do 
 
 ![Navigation](https://raw.githubusercontent.com/kauan-horvath/turning-chaos-into-code/main/assets/designs/code-outcomes/Final-result-fast-navigation.png)
 
-* **Impacto:** Implementado em todos os fluxos de trabalho, permitindo trânsito fluido entre disciplinas como Economia, Semiótica e Engenharia.
+- **Impacto:** Implementado em todos os fluxos de trabalho, permitindo trânsito fluido entre disciplinas como Economia, Semiótica e Engenharia.
 
 ---
 
@@ -22,8 +22,8 @@ Tenho o orgulho de apresentar dois avanços significativos na infraestrutura do 
 
 ![Revision](https://raw.githubusercontent.com/kauan-horvath/turning-chaos-into-code/main/assets/designs/code-outcomes/outcome_daily-revision.png)
 
-* **Metodologia:** Embora gerado com auxílio em Python, a arquitetura da solução e a lógica de evitar conflitos com Markdown através da sintaxe de *double-colon* são de minha autoria.
-* **Impacto:** Ciclo de revisão com "manutenção zero". O sistema garante que nada saia do radar.
+- **Metodologia:** Embora gerado com auxílio em Python, a arquitetura da solução e a lógica de evitar conflitos com Markdown através da sintaxe de _double-colon_ são de minha autoria.
+- **Impacto:** Ciclo de revisão com "manutenção zero". O sistema garante que nada saia do radar.
 
 ---
 

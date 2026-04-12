@@ -1,6 +1,6 @@
-"tasks": {
-        "version": "2.0.0",
-        "tasks": [
+{
+    "version": "2.0.0",
+    "tasks": [
             {
                 "label": "🚀 Script: Check Revisions",
                 "type": "shell",
@@ -33,5 +33,5 @@
                     "clear": true
                 }
             }
-        ]
+            ]
     }

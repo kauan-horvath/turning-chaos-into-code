@@ -1,17 +1,19 @@
 # 🕒 The Underrated Time Spent
 
-### 🚀 The Quick "Fix"
+## 🚀 The Quick "Fix"
 
 Today, I was about to start my study session when, on a whim, I decided to build a navigation system to interlink my course modules. Since I am at the very beginning of this journey, I figured: **the sooner, the better.** This is the result of that "small" task:
 
-#### 🌐 Fast Navigation
-| **🏠 HOME** | [Return Home ](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md) |
-| :--- | :--- |
-| &#8657; **Anterior** | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md) |
-| &#8659; **Próximo** | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md) |
-*Note: For testing purposes, all links currently target the main Home file.*
+### 🌐 Fast Navigation
 
------
+| **🏠 HOME**          | [Return Home](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md) |
+| :------------------- | :----------------------------------------------------------------------------------------- |
+| &#8657; **Anterior** | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md)  |
+| &#8659; **Próximo**  | [NAMEMODULE](../01-automation\udemy-python-artigas\0-organization\python-artigas-home.md)  |
+
+_Note: For testing purposes, all links currently target the main Home file._
+
+---
 
 ### 🛠️ Showcase: Relative Navigation Logic
 
@@ -19,14 +21,15 @@ Today, I was about to start my study session when, on a whim, I decided to build
 
 ```markdown
 # "Deep Linking" logic breakdown:
-[Home]     -> ../../    (Exit current sub-folder -> Exit parent -> Reach root)
-[Previous] -> ../s00/   (Exit current folder -> Enter sibling folder)
-[Next]     -> ../s01/   (Target the next chronological directory)
+
+[Home] -> ../../ (Exit current sub-folder -> Exit parent -> Reach root)
+[Previous] -> ../s00/ (Exit current folder -> Enter sibling folder)
+[Next] -> ../s01/ (Target the next chronological directory)
 ```
 
-*Status: 100% functional, portable, and scalable.*
+_Status: 100% functional, portable, and scalable._
 
------
+---
 
 ### ⚖️ The Reality Check
 
@@ -36,6 +39,6 @@ As shown in the showcase above, "small" adjustments are rarely simple. Even with
 
 For anyone wondering where their effort goes, look at the logic above: in IT, **spatial awareness of your directories** is just as important as the code itself. Even a few lines of navigation can demand a massive amount of time to reach a polished, professional, and functional result.
 
------
+---
 
 > "Take a breath and give things time; perfection is a marathon, not a sprint."

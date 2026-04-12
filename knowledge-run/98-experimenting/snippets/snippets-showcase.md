@@ -5,9 +5,11 @@ This document outlines the custom-built infrastructure used to maintain high sta
 ---
 
 ## 1. 🏗️ `.rawdoc` | The Architecture Scaffold
+
 This is the "Golden Standard" for every new Python file. It automates the generation of a complete project structure, including a rigorous documentation header and standard boilerplate.
 
 ### **Final Result Preview:**
+
 ```python
 """
 ####################
@@ -51,6 +53,7 @@ if __name__ == "__main__":
 ```
 
 ### **Snippet Source (JSON):**
+
 ```json
 "Rigor Document Standard (Blank)": {
   "prefix": ".rawdoc",
@@ -90,7 +93,7 @@ if __name__ == "__main__":
     "def logic_function():",
     "\tpass",
     "",
-    "# MAIN LOOP", 
+    "# MAIN LOOP",
     "",
     "if __name__ == \"__main__\":",
     "\t${0:pass}"
@@ -101,16 +104,19 @@ if __name__ == "__main__":
 ---
 
 ## 2. 📊 `.fprint` | Linear Debugging Log
+
 A sophisticated alternative to standard `print()`. It enforces a visual design for console logs while simultaneously declaring variables.
 
-### **Final Result Preview:**
+### Final Result Preview
+
 ```python
 user_id = 101
 status = "Active"
 print(f" ID: {user_id} | Account: {status} ")
 ```
 
-### **Snippet Source (JSON):**
+### Snippet Source (JSON)
+
 ```json
 "Formatted Print (Linear Flow)": {
   "prefix": ".fprint",
@@ -125,9 +131,11 @@ print(f" ID: {user_id} | Account: {status} ")
 ---
 
 ## 3. 🧹 `.cls` | Terminal Housekeeping
+
 A quick utility for maintaining a clean output. It detects the operating system automatically to run the correct terminal command.
 
-### **Snippet Source (JSON):**
+### Snippet Source 2 (JSON)
+
 ```json
 "Clear Terminal": {
   "prefix": ".cls",
@@ -140,6 +148,7 @@ A quick utility for maintaining a clean output. It detects the operating system 
 ---
 
 ### 🧠 Developer's Insight
-> *"Give me six hours to chop down a tree and I will spend the first four **sharpening the axe**."* — **Abraham Lincoln**
+
+> _"Give me six hours to chop down a tree and I will spend the first four **sharpening the axe**."_ — **Abraham Lincoln**
 
 By automating the structural parts of coding, I free up mental bandwidth to focus on complex logic and visual design. These snippets represent the bridge between **rigorous engineering** and **aesthetic efficiency**.
