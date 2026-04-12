@@ -1,0 +1,13 @@
+[flake8]
+# Limite de linha estendido para monitores modernos
+max-line-length = 120
+
+# E501: Ignora "Line too long"
+# F401: Ignora "Module imported but unused"
+extend-ignore = E501, F401
+
+# Ignora pastas de cache e módulos
+exclude = .git, __pycache__, .private, node_modules, audit-scripts
+
+[flake8]
+extend-ignore = E501

@@ -8,7 +8,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -17,10 +17,13 @@ app.add_middleware(
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel("gemini-1.5-flash")
+
 
 class ChatRequest(BaseModel):
+
     message: str
+
 
 @app.post("/chat")
 async def chat_endpoint(request: ChatRequest):

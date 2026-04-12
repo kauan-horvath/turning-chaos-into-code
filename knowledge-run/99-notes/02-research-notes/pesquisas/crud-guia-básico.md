@@ -36,7 +36,6 @@ Dependendo do contexto (Web ou Banco de Dados), os comandos mudam, mas a lógica
 
 ### Em APIs Web (Protocolo HTTP)
 
-
 * **Create:** Método **POST** (Envia dados para criar um novo recurso).
 * **Read:** Método **GET** (Solicita a visualização de um recurso).
 * **Update:** Métodos **PUT** ou **PATCH** (Substitui ou altera parte de um recurso).

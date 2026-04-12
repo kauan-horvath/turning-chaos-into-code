@@ -1,29 +1,29 @@
-'''
-    ####################
-    # Create an Upscaling Feature
-    ####################
+"""
+####################
+# Create an Upscaling Feature
+####################
 
-    DATE -
+DATE -
 
-    MILESTONES:
-    - Financial Calculator []
-    - Scientific Calculator []
-    - Programming Calculator []
+MILESTONES:
+- Financial Calculator []
+- Scientific Calculator []
+- Programming Calculator []
 
-    PROGRESS:
-    WHAT - SHORT EXPLAIN
-    WHAT - SHORT EXPLAIN
+PROGRESS:
+WHAT - SHORT EXPLAIN
+WHAT - SHORT EXPLAIN
 
-    FAILURES:
-    WHAT - SHORT EXPLAIN
-        RIGHT VERSION
-    WHAT - SHORT EXPLAIN
-        RIGHT VERSION
-    
-    '''
+FAILURES:
+WHAT - SHORT EXPLAIN
+    RIGHT VERSION
+WHAT - SHORT EXPLAIN
+    RIGHT VERSION
+
+"""
 
 ####################################
-import os
+import os  # noqa
 
 CONST = None
 
@@ -31,14 +31,16 @@ context = {}
 
 # FUNCTIONS
 
+
 def aux_function():
     pass
 
+
 def logic_function():
     pass
+
 
 # Main Loop
 
 if __name__ == "__main__":
     pass
-

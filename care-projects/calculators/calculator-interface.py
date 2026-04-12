@@ -1,29 +1,29 @@
-'''
-    ####################
-    # Developing an interface (GUI)
-    ####################
+"""
+####################
+# Developing an interface (GUI)
+####################
 
-    DATE -
+DATE -
 
-    MILESTONES:
-    - Discover CLI []
-    - Discover GUI (Tkinter, PyQt or Figma) []
-    - MILE3 []
+MILESTONES:
+- Discover CLI []
+- Discover GUI (Tkinter, PyQt or Figma) []
+- MILE3 []
 
-    PROGRESS:
-    WHAT - SHORT EXPLAIN
-    WHAT - SHORT EXPLAIN
+PROGRESS:
+WHAT - SHORT EXPLAIN
+WHAT - SHORT EXPLAIN
 
-    FAILURES:
-    WHAT - SHORT EXPLAIN
-        RIGHT VERSION
-    WHAT - SHORT EXPLAIN
-        RIGHT VERSION
-    
-    '''
+FAILURES:
+WHAT - SHORT EXPLAIN
+    RIGHT VERSION
+WHAT - SHORT EXPLAIN
+    RIGHT VERSION
+
+"""
 
 ####################################
-import os
+import os  # noqa
 
 CONST = None
 
@@ -31,14 +31,16 @@ context = {}
 
 # FUNCTIONS
 
+
 def aux_function():
     pass
 
+
 def logic_function():
     pass
+
 
 # Main Loop
 
 if __name__ == "__main__":
     pass
-

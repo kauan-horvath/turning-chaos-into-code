@@ -20,13 +20,14 @@ WHAT - SHORT EXPLAIN
 
 ####################################
 import os
-import time
 
 CONST = None
 
 context = {}
 
 # FUNCTIONS
+global number
+
 
 def block_div0():
     try:
@@ -44,25 +45,27 @@ def block_div0():
     except Exception as e:
         print(f"Unexpected Erros: {e}")
 
+
 def finally_function():
     try:
-        #write the path
-        number = int(input("Insert a number: "))
+        # write the path
+        int(input("Insert a number: "))
 
     except ValueError:
-        #only if there's error in try 
+        # only if there's error in try
         print("Pls insert a number")
 
     else:
-        #olny if try without error
+        # olny if try without error
         print("You've used a valid number")
-    
+
     finally:
         print("No matter what youve wrote finally always come")
+
 
 # MAIN LOOP
 
 if __name__ == "__main__":
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
     block_div0()
     finally_function()

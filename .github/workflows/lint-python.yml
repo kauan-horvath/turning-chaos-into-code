@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
       - run: pip install flake8
-      # Avalia apenas os scripts oficiais para não travar nos seus rascunhos
-      - run: flake8 .vscode/scripts/ --count --select=E9,F63,F7,F82 --show-source --statistics
+      # Avalia scripts oficiais ignorando tamanho de linha (E501)
+      - run: flake8 .vscode/scripts/ --count --extend-ignore=E501 --show-source --statistics
