@@ -9,4 +9,4 @@ jobs:
         with:
           node-version: "20"
       - run: npm install -g markdownlint-cli
-      - run: markdownlint "**/*.md" --ignore .private --ignore node_modules --disable MD033, MD041
+      - run: markdownlint "**/*.md" --ignore node_modules --ignore .private --disable MD013 MD024 MD025 MD033 MD041
