@@ -6,28 +6,28 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
-| :--- | :--- | :--- |
+| **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md)      |
+| :------------------- | :--------------------------------------------------------------------- |
 | &#8657; **Anterior** | [Primeiros Passos](../s00-intro-config\02-sintaxe-primeiros-passos.md) |
-| &#8659; **Próximo** | [Operadores](./05-operadores-logicos.md) |
+| &#8659; **Próximo**  | [Operadores](./05-operadores-logicos.md)                               |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 13](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408604#content):** [Todos os tipos primitivos] — *(10min)*
-- [✅] **[Vídeo 14](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408616#content):** [Inteiros] — *(17min)*
-- [✅] **[Vídeo 15](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408622#content):** [Casting] — *(10min)*
-- [✅] **[Vídeo 16](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408636#content):** [Strings] — *(11min)*
-- [✅] **[Vídeo 17](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408654#content):** [Fatiar Strings] — *(11min)*
-- [✅] **[Vídeo 18](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408852#content):** [Modificar Strings] — *(14min)*
-- [✅] **[Vídeo 19](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408892#content):** [Concatenação de Strings] — *(5min)*
-- [✅] **[Vídeo 20](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408908#content):** [Formatação de Strings] — *(11min)*
-- [✅] **[Vídeo 21](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408938#content):** [Caracteres de Escape] — *(21min)*
-- [✅] **[Vídeo 22](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408956#content):** [Valores Booleanos] — *(17min)*
-- [✅] **[Teste](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346072#content):** [Teste] — *(0min)*
-- [✅] **[Exercicio1](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346072#content):** [Exercicio1] — *(10min)*
-- [✅] **[Exercicio2](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346072#content):** [Exercicio2] — *(10min)*
+- [✅] **[Vídeo 13](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408604#content):** [Todos os tipos primitivos] — _(10min)_
+- [✅] **[Vídeo 14](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408616#content):** [Inteiros] — _(17min)_
+- [✅] **[Vídeo 15](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408622#content):** [Casting] — _(10min)_
+- [✅] **[Vídeo 16](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408636#content):** [Strings] — _(11min)_
+- [✅] **[Vídeo 17](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408654#content):** [Fatiar Strings] — _(11min)_
+- [✅] **[Vídeo 18](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408852#content):** [Modificar Strings] — _(14min)_
+- [✅] **[Vídeo 19](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408892#content):** [Concatenação de Strings] — _(5min)_
+- [✅] **[Vídeo 20](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408908#content):** [Formatação de Strings] — _(11min)_
+- [✅] **[Vídeo 21](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408938#content):** [Caracteres de Escape] — _(21min)_
+- [✅] **[Vídeo 22](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408956#content):** [Valores Booleanos] — _(17min)_
+- [✅] **[Teste](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346072#content):** [Teste] — _(0min)_
+- [✅] **[Exercicio1](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346072#content):** [Exercicio1] — _(10min)_
+- [✅] **[Exercicio2](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346072#content):** [Exercicio2] — _(10min)_
 
 > **Nota rápida:** [Uma aula extensa sobre as delicadezas dos tipos primitivos de Str e Int, ver restante na seção tipo primitivos 2]
 
@@ -51,11 +51,11 @@
 ```python
   #Output de cada tipo
   string_var = "um texto" #incluindo o espaço
-  
+ 
   int_var = 20 #apenas inteiros
   float_var = 20.5 #apenas numeros reais
   complex_var = 1j #apenas a letra j
-  
+ 
   bool_var = True #or False
 
   list_var = ["str_data1","str_data2"]
@@ -83,9 +83,9 @@
 - informa sobre a **notação científica** [35e3].
 - informa sobre a **letra j** do complex [5j].
 - informa a conversão **[Casting]** entre tipos numéricos:
-  - pesquisar onde exatamente é util um int(2.8) Ex-tipo como novo tipo? exceto str <> int não conheco nenhum outro uso
-  - **funções de construtor:** int(), float() etc
-  - menciona um pouco sobre os **erros de casting**, pois input incorretos geram ValueError
+    - pesquisar onde exatamente é util um int(2.8) Ex-tipo como novo tipo? exceto str <> int não conheco nenhum outro uso
+    - **funções de construtor:** int(), float() etc
+    - menciona um pouco sobre os **erros de casting**, pois input incorretos geram ValueError
 - informa sobre a geração de **random numbers**.
 - Exemplo de sintaxe ou regra:
 
@@ -97,7 +97,7 @@
 
   #randrange é Offbyone, só atinge max-1
   media_boletim = random.randrange(min, max) #reprovado safado
-  
+ 
   float(media_boletim) #6.0
   #str("seis") erro ausencia de num literal
 ```
@@ -105,13 +105,13 @@
 #### 3. [Strings]
 
 - informa sobre o **uso de aspas:**
-  - **'** simples
-  - **"** duplas
-  - **'''** multiline
+    - **'** simples
+    - **"** duplas
+    - **'''** multiline
 - informa que strings são **MATRIZES** de caracteres:
-  - acessar esses caracteres atraves do **index[num]**.
+    - acessar esses caracteres atraves do **index[num]**.
 - informa que strings são **ARRAYS**, ou seja, podem ser percorridas por um loop for:
-  - em cada value usando um **index[]** da string.
+    - em cada value usando um **index[]** da string.
 - informa sobre a medição de string com **len()**.
 - **UTIL:** cheCa se uma frase esta presente dentro do string com o **metodo in**.
 
@@ -121,18 +121,18 @@
 
   #acessando a matriz da string
   abcdario = "ABCDE"
-  
+ 
   tamanho_abc = len(abcdario) #comprimento
 
   letra_1 = abcdario[0] #index offbyone #A
   letra_1a3 = abcdario[0:3] #aula de index
   letra_final = abcdario[-1] #acho que é isso
 
-  
+ 
   #sintaxe literal: for letra in "LMFAO"
-  for letra in abcdario: 
+  for letra in abcdario:
     #soletra as letras
-    print(letra) 
+    print(letra)
     #1 loop A
     #2 loop B ...
 
@@ -209,9 +209,9 @@
 - informa sobre o **index** das entradas de dados no format:
   - **CUIDADO COM OFFBYONE:** {0},{1}
 
-  - Exemplo de Sintaxe ou regra:  
+  - Exemplo de Sintaxe ou regra:
 
-``` python
+```python
       #exemplo de uso do ponto format
       qtd_beijos = 2
       beijos_morena = "Tudo que eu preciso são {} beijos da morena"
@@ -228,19 +228,19 @@
 ##### 3.4 [Caracteres Especiais]
 
 - informa que usar alguns simbolos dao erro na string:
-  - **\\"**: retorna as aspas literais.
-  - **\\\\**: retorna uma barra invertida literal.
-  - **\\'**: retorna uma aspas simples literal.
-  - **\\n**: retorna uma quebra de linha.
-  - **\\r**: retorna uma carriage return, nova linha de baixo.
-  - **\\t**: retorna tabulação com tab.
-  - **\\b**: retorna um bascskpace e apaga o anterior.
-  - **\\x**: retorna um caractere literal a partir de um código hexadecimal \x48 = H.
-  - **\\123**: retorna um caractere literal a partir de um código Otal \x110 = H.
+    - **\\"**: retorna as aspas literais.
+    - **\\\\**: retorna uma barra invertida literal.
+    - **\\'**: retorna uma aspas simples literal.
+    - **\\n**: retorna uma quebra de linha.
+    - **\\r**: retorna uma carriage return, nova linha de baixo.
+    - **\\t**: retorna tabulação com tab.
+    - **\\b**: retorna um bascskpace e apaga o anterior.
+    - **\\x**: retorna um caractere literal a partir de um código hexadecimal \x48 = H.
+    - **\\123**: retorna um caractere literal a partir de um código Otal \x110 = H.
 
 - Exemplo de Sintaxe ou regra:
 
-``` python
+```python
     #uso do caractere especial
 
     é_bilada_cino = "eu disse que era \"SABOR\" Mulher"
@@ -251,9 +251,9 @@
 
 - informa que são valores de resultados de **expressões lógicas** e servem para inúmeras funcções e cenários.
 - informa como funciona o **casting de bool():**
-  - só retorna **False** se:
-    - string, list, etc = "" Vazios
-    - int, floar, etc = 0
+    - só retorna **False** se:
+      - string, list, etc = "" Vazios
+      - int, floar, etc = 0
 - informa sobre o **retorno bool** de funções.
 - informa sobre a funct **isinstance()**.
 
@@ -265,7 +265,7 @@
   seu_carro = 9
 
   feministas = 1
-  
+ 
   falocentrismo = meu_carro > seu_carro #retorna True
   isinstance(falocentrismo, bool) #retorna true se for do tipo fornecido
 
@@ -287,7 +287,7 @@
 2. Em Python int, float e complex são variáveis de tipo númerico. = **True**
 
 - Exemplo de sintaxe ou regra:
-  
+
 ```python
   #EXERCICIO 1 - Calcula Triplo
   braco = 1
@@ -313,9 +313,10 @@
 [LAST-DATE: 2026-04-11] Revisão de tipos
 
 [Questionário](https://gemini.google.com/share/089bc530f8bd)
-  #Aproveitamento de 81% - revisão média
 
-````python
+> > > > Aproveitamento de 81% - revisão média
+
+```python
     '''
       - Pontos fortes
         - Manipulação e Métodos de Strings: Você demonstrou domínio excelente sobre métodos como `.strip()`, `.upper()`, `.replace()` e fatiamento negativo, além de compreender a imutabilidade das strings e o uso de caracteres de escape.
@@ -326,6 +327,6 @@
         - Sintaxe de Fatiamento (Slicing): Ao omitir o valor antes dos dois pontos em `[:6]`, o Python sempre inicia o fatiamento a partir do índice 0, e não do índice 1.
         - Estruturas de Dados (Sets vs Dicts): Ambos utilizam chaves `{}` na sintaxe, mas a diferença fundamental é estrutural: dicionários exigem pares `chave: valor`, enquanto sets contêm apenas valores únicos.
       '''
-  ````
+```
 
 ::to-review:: 18-04-2026 ::Tipos Primitivos::

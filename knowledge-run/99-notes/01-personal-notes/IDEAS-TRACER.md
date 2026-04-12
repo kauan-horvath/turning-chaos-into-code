@@ -1,6 +1,6 @@
 # 🧠 Ideas-Tracer: Roadmap
 
-*Pinpointing future technical frontiers while documenting the evolution of my personal infrastructure.*
+_Pinpointing future technical frontiers while documenting the evolution of my personal infrastructure._
 
 ---
 
@@ -55,6 +55,8 @@
 
 ---
 
-<p align="right">
-  <i>"Design is not just what it looks like. Design is how it works."</i>
-</p>
+```Html
+  <p align="right">
+    <i>"Design is not just what it looks like. Design is how it works."</i>
+  </p>
+```

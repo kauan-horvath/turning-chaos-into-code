@@ -2,11 +2,11 @@
 
 ## 1. Âncoras (`&`) e Aliases (`*`)
 
-O YAML permite que você defina um bloco de dados uma única vez e o reutilize em outros lugares. Isso evita repetição (princípio DRY - *Don't Repeat Yourself*).
+O YAML permite que você defina um bloco de dados uma única vez e o reutilize em outros lugares. Isso evita repetição (princípio DRY - _Don't Repeat Yourself_).
 
-* **`&` (Anchor):** Marca um bloco de dados com um nome.
-* **`*` (Alias):** Referencia o bloco marcado anteriormente.
-* **`<<:` (Merge Key):** Permite "copiar" o conteúdo de uma âncora e adicionar ou sobrescrever campos específicos.
+- **`&` (Anchor):** Marca um bloco de dados com um nome.
+- **`*` (Alias):** Referencia o bloco marcado anteriormente.
+- **`<<:` (Merge Key):** Permite "copiar" o conteúdo de uma âncora e adicionar ou sobrescrever campos específicos.
 
 **Exemplo de `setup.yml`:**
 
@@ -23,7 +23,7 @@ servidor_web:
 
 servidor_db:
   <<: *config_base
-  memoria: 16GB  # Sobrescrevendo a memória padrão
+  memoria: 16GB # Sobrescrevendo a memória padrão
 ```
 
 ## 2. Tratando Variáveis de Ambiente no YAML
@@ -43,12 +43,12 @@ def carregar_config_com_env(path):
     with open(path, 'r') as f:
         # Carrega o conteúdo como string primeiro
         conteudo = f.read()
-        
+
     # Substitui marcadores no formato ${VAR}
     # (Em projetos reais, costuma-se usar bibliotecas como 'python-dotenv')
     for key, value in os.environ.items():
         conteudo = conteudo.replace(f'${{{key}}}', value)
-        
+
     return yaml.safe_load(conteudo)
 
 # Exemplo de uso
@@ -81,7 +81,7 @@ print(dados['caminho'])  # Saída: /home/usuario/scripts
 
 ## 4. Boas Práticas Avançadas
 
-* **Validação de Esquema:** Utilize bibliotecas como `Cerberus` ou `Pydantic` para validar se o YAML que o usuário enviou contém todos os campos obrigatórios e tipos corretos.
-* **Ordenação:** Se a ordem das chaves for importante para você ao salvar o arquivo, utilize `sort_keys=False` no `yaml.dump()`.
+- **Validação de Esquema:** Utilize bibliotecas como `Cerberus` ou `Pydantic` para validar se o YAML que o usuário enviou contém todos os campos obrigatórios e tipos corretos.
+- **Ordenação:** Se a ordem das chaves for importante para você ao salvar o arquivo, utilize `sort_keys=False` no `yaml.dump()`.
 
 ---

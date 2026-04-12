@@ -6,18 +6,18 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](../python-artigas-home.md) |
-| :--- | :--- |
-| &#8657; **Anterior** | [ANTERIOR](./arquivo1.md) |
-| &#8659; **Próximo** | [PROXIMO](./arquivo2.md) |
+| **🏠 HOME**          | [Retornar ao Início](../python-artigas-home.md) |
+| :------------------- | :---------------------------------------------- |
+| &#8657; **Anterior** | [ANTERIOR](./arquivo1.md)                       |
+| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                        |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 01](LINKDOVIDEO):** NomeVídeo — *(Duração)*
-- [ ] **[Vídeo 02](LINKDOVIDEO):** NomeVídeo — *(Duração)*
-- [ ] **[Vídeo 03](LINKDOVIDEO):** NomeVídeo — *(Duração)*
+- [✅] **[Vídeo 01](LINKDOVIDEO):** NomeVídeo — _(Duração)_
+- [ ] **[Vídeo 02](LINKDOVIDEO):** NomeVídeo — _(Duração)_
+- [ ] **[Vídeo 03](LINKDOVIDEO):** NomeVídeo — _(Duração)_
 
 > **Nota rápida:** [Espaço para algum insight importante do conjunto de vídeos]
 
@@ -37,7 +37,7 @@
 
 ### x. 🛠️ Revisões
 
-::to-review:: 11-04-2026 ::REVISAO-PADRAO::
+::to-review:: DD-04-2026 ::REVISAO-PADRAO::
 
 💻 Notas / Código
 

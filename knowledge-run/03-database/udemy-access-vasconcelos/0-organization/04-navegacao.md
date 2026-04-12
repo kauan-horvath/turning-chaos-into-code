@@ -6,22 +6,22 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](./00-access-vasconcelos-home.md) |
-| :--- | :--- |
-| &#8657; **Anterior** | [Extração](./03-extracao.md) |
-| &#8659; **Próximo** | [Segurança](./05-seguranca-vba.md) |
+| **🏠 HOME**          | [Retornar ao Início](./00-access-vasconcelos-home.md) |
+| :------------------- | :---------------------------------------------------- |
+| &#8657; **Anterior** | [Extração](./03-extracao.md)                          |
+| &#8659; **Próximo**  | [Segurança](./05-seguranca-vba.md)                    |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-*Foco: Criar o esqueleto de navegação para que o usuário transite entre as telas.*
-- [ ] **[Vídeo 33](EMPTY):** Formulário de navegação — *( )*
-- [ ] **[Vídeo 34](EMPTY):** Criando tela inicial — *( )*
-- [ ] **[Vídeo 35](EMPTY):** Abrindo formulário automaticamente — *( )*
-- [ ] **[Vídeo 48](EMPTY):** Menu principal — *( )*
-- [ ] **[Vídeo 49](EMPTY):** Botões do Menu — *( )*
+_Foco: Criar o esqueleto de navegação para que o usuário transite entre as telas._
 
+- [ ] **[Vídeo 33](EMPTY):** Formulário de navegação — _( )_
+- [ ] **[Vídeo 34](EMPTY):** Criando tela inicial — _( )_
+- [ ] **[Vídeo 35](EMPTY):** Abrindo formulário automaticamente — _( )_
+- [ ] **[Vídeo 48](EMPTY):** Menu principal — _( )_
+- [ ] **[Vídeo 49](EMPTY):** Botões do Menu — _( )_
 
 > **Nota rápida:** [Espaço para algum insight importante do conjunto de vídeos]
 
@@ -33,6 +33,7 @@
 
 - Explicação breve...
 - Exemplo de sintaxe ou regra:
-  
+
   ```python
   # Seu código de exemplo aqui
+  ```

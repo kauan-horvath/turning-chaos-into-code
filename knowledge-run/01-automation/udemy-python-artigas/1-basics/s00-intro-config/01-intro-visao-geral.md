@@ -6,19 +6,19 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
-| :--- | :--- |
-| &#8657; **Anterior** | [Introdução](./01-intro-visao-geral.md) |
-| &#8659; **Próximo** | [Primeiros passos](./02-sintaxe-primeiros-passos.md) |
+| **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
+| :------------------- | :---------------------------------------------------------------- |
+| &#8657; **Anterior** | [Introdução](./01-intro-visao-geral.md)                           |
+| &#8659; **Próximo**  | [Primeiros passos](./02-sintaxe-primeiros-passos.md)              |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/30733888#notes):** [Apresentações] — *(5min)*
-- [✅] **[Arquivo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/30733888#notes):** [Adição de ChangeLog] — *(0min)*
-- [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408326#notes):** [Instalando Python e primeiro programa] — *(16min)*
-- [✅] **[Vídeo 04](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408342#notes):** [Instalando o VSCode] — *(15min)*
+- [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/30733888#notes):** [Apresentações] — _(5min)_
+- [✅] **[Arquivo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/30733888#notes):** [Adição de ChangeLog] — _(0min)_
+- [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408326#notes):** [Instalando Python e primeiro programa] — _(16min)_
+- [✅] **[Vídeo 04](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28408342#notes):** [Instalando o VSCode] — _(15min)_
 
 > **Nota rápida:** [Decidi documentar bem esse processo super básico para o caso de eu precisar dar aula, pois após um longo período sem mexer, eu havia esquecido de instalar o Python no sistema.]
 

@@ -6,12 +6,10 @@ This repository is a systematic log of my journey through software engineering, 
 
 The architecture is designed for **scalability**, separating raw learning from production-ready logic:
 
-* **[`/care-projects`](https://www.google.com/search?q=./care-projects)**: The "Crown Jewels." End-to-end applications and portfolio-ready solutions.
-      * *Highlights: Investment Calculators, RPG Engines, and specialized tools.*
-* **[`/knowledge-run`](https://www.google.com/search?q=./knowledge-run)**: The "Speedrun Arena." Structured study logs divided by domain (Automation, Web Stack, Database).
-      * *Contains: The core learning path from Udemy and other premium sources.*
-* **[`/experimenting`](https://www.google.com/search?q=./experimenting)**: The Laboratory. Sandbox testing, snippets, and trial-and-error using my **Blank Model** standardization.
-  * **[`/notes`](https://www.google.com/search?q=./knowledge-run/notes)**: The Think Tank. Technical reflections, architecture dilemmas (like the Dunning-Kruger effect), and decision logs.
+- **[`/care-projects`](https://www.google.com/search?q=./care-projects)**: The "Crown Jewels." End-to-end applications and portfolio-ready solutions. \* _Highlights: Investment Calculators, RPG Engines, and specialized tools._
+- **[`/knowledge-run`](https://www.google.com/search?q=./knowledge-run)**: The "Speedrun Arena." Structured study logs divided by domain (Automation, Web Stack, Database). \* _Contains: The core learning path from Udemy and other premium sources._
+- **[`/experimenting`](https://www.google.com/search?q=./experimenting)**: The Laboratory. Sandbox testing, snippets, and trial-and-error using my **Blank Model** standardization.
+  - **[`/notes`](https://www.google.com/search?q=./knowledge-run/notes)**: The Think Tank. Technical reflections, architecture dilemmas (like the Dunning-Kruger effect), and decision logs.
 
 ## 🚀 The Methodology
 
@@ -21,9 +19,9 @@ I follow a **70/30 Rule**: 70% of my time is dedicated to structured, challengin
 
 Every significant step follows a strict tracking pattern:
 
-* **Milestones**: Defining the scope to prevent aimless coding.
-* **Progress**: Celebrating small victories to maintain momentum.
-* **Failures**: Documenting the "Right Version" to turn mistakes into permanent knowledge.
+- **Milestones**: Defining the scope to prevent aimless coding.
+- **Progress**: Celebrating small victories to maintain momentum.
+- **Failures**: Documenting the "Right Version" to turn mistakes into permanent knowledge.
 
 ## 🛠️ Tech Stack and Course Progress
 
@@ -52,6 +50,6 @@ Every significant step follows a strict tracking pattern:
 [![Lint Markdown](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint-markdown.yml/badge.svg)](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint-markdown.yml)
 [![Lint HTML](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint-html.yml/badge.svg)](https://github.com/kauan-horvath/turning-chaos-into-code/actions/workflows/lint-html.yml)
 
------
+---
 
-> *“Simplicity is the soul of efficiency.”*
+> “Simplicity is the soul of efficiency.”

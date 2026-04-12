@@ -8,9 +8,9 @@ YAML (YAML Ain't Markup Language) é um formato de serialização de dados legí
 
 Diferente do JSON, o YAML depende da **indentação** para definir a hierarquia.
 
-* **Chave e Valor:** Definidos por `:`. Note o espaço obrigatório após os dois pontos.
-* **Tipos de Dados:** Suporta strings (sem necessidade de aspas, a menos que contenham caracteres especiais), números e booleanos (`true`/`false`).
-* **Listas:** Definidas por um hífen `-`.
+- **Chave e Valor:** Definidos por `:`. Note o espaço obrigatório após os dois pontos.
+- **Tipos de Dados:** Suporta strings (sem necessidade de aspas, a menos que contenham caracteres especiais), números e booleanos (`true`/`false`).
+- **Listas:** Definidas por um hífen `-`.
 
 **Exemplo de arquivo `config.yml`:**
 
@@ -50,8 +50,8 @@ print(f"Primeira pasta: {dados['pastas'][0]}")
 
 ## 4. Boas Práticas
 
-* Sempre use **espaços** para indentação, nunca o caractere TAB, pois isso quebra o interpretador YAML.
+- Sempre use **espaços** para indentação, nunca o caractere TAB, pois isso quebra o interpretador YAML.
 
-* Utilize o `yaml.safe_load()` em vez de `yaml.load()` para evitar a execução de código arbitrário e garantir a segurança do seu script.
+- Utilize o `yaml.safe_load()` em vez de `yaml.load()` para evitar a execução de código arbitrário e garantir a segurança do seu script.
 
 ---

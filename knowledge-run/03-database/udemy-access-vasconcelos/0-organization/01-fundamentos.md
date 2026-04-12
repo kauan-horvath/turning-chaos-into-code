@@ -6,28 +6,28 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](./00-access-vasconcelos-home.md) |
-| :--- | :--- |
-| &#8657; **Anterior** | [Home](./00-access-python-artigas-home.md) |
-| &#8659; **Próximo** | [Interface](./02-interface.md) |
+| **🏠 HOME**          | [Retornar ao Início](./00-access-vasconcelos-home.md) |
+| :------------------- | :---------------------------------------------------- |
+| &#8657; **Anterior** | [Home](./00-access-python-artigas-home.md)            |
+| &#8659; **Próximo**  | [Interface](./02-interface.md)                        |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-*Foco: Criar o banco, tabelas, relacionamentos e regras de integridade.*
-- [✅] **[Vídeo 01](EMPTY):** Introdução — *( )*
-- [✅] **[Vídeo 02](EMPTY):** Criando Banco de Dados — *( )*
-- [✅] **[Vídeo 03](EMPTY):** Estrutura da Tabela — *( )*
-- [✅] **[Vídeo 04](EMPTY):** Lançando valores na tabela — *( )*
-- [✅] **[Vídeo 05](EMPTY):** Criando nova tabela — *( )*
-- [✅] **[Vídeo 06](EMPTY):** Relacionando tabelas — *( )*
-- [✅] **[Vídeo 07](EMPTY):** Relacionamento um para muitos — *( )*
-- [✅] **[Vídeo 08](EMPTY):** Relacionamento um para um — *( )*
-- [✅] **[Vídeo 09](EMPTY):** Máscara de entrada — *( )*
-- [✅] **[Vídeo 12](EMPTY):** Regras de validações — *( )*
-- [ ] **[Vídeo 60](EMPTY):** Separando tabelas do banco — *( )*
+_Foco: Criar o banco, tabelas, relacionamentos e regras de integridade._
 
+- [✅] **[Vídeo 01](EMPTY):** Introdução — _( )_
+- [✅] **[Vídeo 02](EMPTY):** Criando Banco de Dados — _( )_
+- [✅] **[Vídeo 03](EMPTY):** Estrutura da Tabela — _( )_
+- [✅] **[Vídeo 04](EMPTY):** Lançando valores na tabela — _( )_
+- [✅] **[Vídeo 05](EMPTY):** Criando nova tabela — _( )_
+- [✅] **[Vídeo 06](EMPTY):** Relacionando tabelas — _( )_
+- [✅] **[Vídeo 07](EMPTY):** Relacionamento um para muitos — _( )_
+- [✅] **[Vídeo 08](EMPTY):** Relacionamento um para um — _( )_
+- [✅] **[Vídeo 09](EMPTY):** Máscara de entrada — _( )_
+- [✅] **[Vídeo 12](EMPTY):** Regras de validações — _( )_
+- [ ] **[Vídeo 60](EMPTY):** Separando tabelas do banco — _( )_
 
 > **Nota rápida:** [Espaço para algum insight importante do conjunto de vídeos]
 
@@ -39,6 +39,7 @@
 
 - Explicação breve...
 - Exemplo de sintaxe ou regra:
-  
+
   ```python
   # Seu código de exemplo aqui
+  ```

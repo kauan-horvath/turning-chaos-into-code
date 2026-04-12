@@ -87,12 +87,12 @@ projeto_2:
   nome: "Python"
 ```
 
-*O `<<: *base` diz ao YAML: "copie tudo o que está em 'base' para cá".*
+*O `<<: *base` diz ao YAML: "copie tudo o que está em 'base' para cá".\*
 
 ---
 
 ## Resumo da Parte 2
 
-* **Python -> YAML:** Aprendemos a salvar dados.
-* **YAML -> Sistema:** Aprendemos sobre `os.environ`.
-* **Robustez:** Uso de `.get()` para evitar falhas em dados ausentes.
+- **Python -> YAML:** Aprendemos a salvar dados.
+- **YAML -> Sistema:** Aprendemos sobre `os.environ`.
+- **Robustez:** Uso de `.get()` para evitar falhas em dados ausentes.

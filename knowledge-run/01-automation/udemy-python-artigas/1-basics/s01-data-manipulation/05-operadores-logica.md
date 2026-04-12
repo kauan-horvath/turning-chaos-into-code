@@ -6,23 +6,23 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME** | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
-| :--- | :--- |
-| &#8657; **Anterior** | [Tipos primitivos 1](./04-tipos-dados.md) |
-| &#8659; **Próximo** | [PROXIMO](./arquivo2.md) |
+| **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
+| :------------------- | :---------------------------------------------------------------- |
+| &#8657; **Anterior** | [Tipos primitivos 1](./04-tipos-dados.md)                         |
+| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                                          |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 25]((https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409058#content)):** [Operadodes Aritméticos] — *(12min)*
-- [✅] **[Vídeo 26](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409072#content):** [Operadores de Atribuição] — *(10min)*
-- [✅] **[Vídeo 27](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409096#content):** [Operadores de Comparação] — *(6min)*
-- [✅] **[Vídeo 28](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409124#content):** [Operadores Lógicos] — *(10min)*
-- [✅] **[Vídeo 29](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409144#content):** [Operadores de Identidade] — *(10min)*
-- [✅] **[Vídeo 30](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409178#content):** [Operadores de Associação] — *(5min)*
-- [✅] **[Vídeo 83](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28794116#content):** [Entrada de Dados do Usuário] — *(5min)*
-- [✅] **[Teste]([LINKDOVIDEO](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346078#content)):** [Teste] — *(Duração)*
+- [✅] **[Vídeo 25](<(https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409058#content)>):** [Operadodes Aritméticos] — _(12min)_
+- [✅] **[Vídeo 26](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409072#content):** [Operadores de Atribuição] — _(10min)_
+- [✅] **[Vídeo 27](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409096#content):** [Operadores de Comparação] — _(6min)_
+- [✅] **[Vídeo 28](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409124#content):** [Operadores Lógicos] — _(10min)_
+- [✅] **[Vídeo 29](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409144#content):** [Operadores de Identidade] — _(10min)_
+- [✅] **[Vídeo 30](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28409178#content):** [Operadores de Associação] — _(5min)_
+- [✅] **[Vídeo 83](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28794116#content):** [Entrada de Dados do Usuário] — _(5min)_
+- [✅] **[Teste](<[LINKDOVIDEO](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346078#content)>):** [Teste] — _(Duração)_
 
 > **Nota rápida:** [Um conjunto de definições e funções para os operadores, o básico nunca deve ser negligênciado]
 
@@ -35,11 +35,11 @@
 - Explica novamente sobre o tipo Int
 - Detalha a diferença de valores literais e operações matemáticas
 - Informa sobre a persistencia PEMDAS
-  
+
 - Exemplo de sintaxe ou regra:
-  
+
   ```python
-  # Explica sobre os operadores matemáticos 
+  # Explica sobre os operadores matemáticos
   somar = num + num
   subtrair = num - num
   dividir = num / div #tipo float
@@ -52,7 +52,7 @@
         return check
 
   expoente = base ** expoente #base
-  
+
   #arredonda pra baixo
   floor_division = 15 // 2 # retorna 7
         #regular_division =15 / 2 # retorna 7,5
@@ -66,6 +66,7 @@
         print("Brasil não vai pra frente")
     if conta == resposta_lorenzo_10anos_queremos_injustica:
         print("Brasil que eu quero")
+  ```
 
 #### 2. [Atribuição e Atribuição combinada]
 
@@ -73,11 +74,11 @@
 - Explica sobre os incrementos
 - Explica sobre o incremente em operadores de atribuição combinada
 - Retorno Booleano da comparação
-  
+
 - Exemplo de sintaxe ou regra:
-  
+
   ```python
-  # Explica sobre os operadores de atribuição combinada 
+  # Explica sobre os operadores de atribuição combinada
     #num == 10 #comparação
     num = 10 #atribuição
     num += 10 # combinada num = num + 10
@@ -93,7 +94,7 @@
     num **= 1 #num = num ** 1 (recebe o resultado)
 
     # Explica sobre os operadores de comparação
-   
+
     comparar = (num == 10) #comparação
     diferente = (num != 10) #se diff True
 
@@ -101,6 +102,7 @@
     menor_que = (num <10)
     maior_igual_que = (num >= 10)
     menor_igual_que = (num <= 10)
+  ```
 
 #### 3. [Operadores Condicionais]
 
@@ -108,9 +110,9 @@
 - informa que "and" precisa que ambas sejam True
 - informa que "or" preciso que ao menos uma seja True
 - informa que "not" é uma função de inversão
-  
+
 - Exemplo de sintaxe ou regra:
-  
+
   ```python
     num = 5
     retorno_and = num > 3 and num < 10 #retorna True
@@ -122,15 +124,16 @@
         if "any" in resposta_morena: #retorna True pra tudo
             verdade = not(resposta_morena)
             return verdade
+  ```
 
 #### 4. [Operadores Identidade e Associação]
 
 - Demonstra que o mesmo valor em outro local, não é o mesmo objeto
 - Demonstra que is e is not verificam a exatidão local
 - Demonstra que in checa se está
-  
+
 - Exemplo de sintaxe ou regra:
-  
+
   ```python
     meu_carregador = ["Branco USB-C"]
     carregador_esposa = ["Branco USB-C"]
@@ -141,7 +144,7 @@
     modelos_diferentes = (meu_carregador != carregadores_esposa) #False porque tem o mesmo valor
 
 
-    carregadorIgual_com_arranhados_e_tudo = na_borsa_da_marvada is meu_carregador 
+    carregadorIgual_com_arranhados_e_tudo = na_borsa_da_marvada is meu_carregador
     #True porque é o mesmo local atribuido
 
     carregadorPerebento_carcomido = na_borsa_da_marvada is not carregador_esposa
@@ -154,6 +157,7 @@
     na_borsa_da_marvada = cabo_meu_carregador
     Investigando = ("carcomido" in na_borsa_da_marvada) #retorna False porque é o mesmo objeto
     Confirmando = ("cuidado" not in na_borsa_da_marvada) #retorna True porque consta la dentro e não era pra constar O.O)
+  ```
 
 #### 5. Input e Entrada de Dados
 
@@ -173,4 +177,13 @@
 1. Operadores aritméticos são usados para realizar operações matemáticas | True
 2. O operador '=' é um operador de comparação de igualdade | False
 
-::to-review:: 12-04-2026 ::Operadores Lógicos::
+💻 Notas / Revisão
+
+```python
+# Seu código aqui
+```
+
+last-review:: 12-04-2026 ::Operadores Lógicos
+aproveitamento de 93% revisão distante
+
+::to-review:: 26-04-2026 ::Operadores lógicos::
