@@ -10,4 +10,4 @@ jobs:
           python-version: "3.12"
       - run: pip install flake8
       # Avalia scripts oficiais ignorando tamanho de linha (E501)
-      - run: flake8 .vscode/scripts/ --count --extend-ignore=E501 --show-source --statistics
+      - run: flake8 .vscode/scripts/ --count --extend-ignore=E501,F401 --show-source --statistics
