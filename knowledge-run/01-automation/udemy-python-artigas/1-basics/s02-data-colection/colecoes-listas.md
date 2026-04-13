@@ -1,15 +1,15 @@
-# 📂 Seção 02 : Coleção de Dados
+# 📂 **Seção 9:** Listas: Manipulação e Métodos
 
 ## 📑 Coleções e Listas
 
-> **Status:** 🟡 ANDAMENTO | **Data:** 11/04/2026
+> **Status:** 🟡 CONCLUIDO | **Data:** 11/04/2026
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME**          | [Retornar ao Início](../Home.md) |
-| :------------------- | :------------------------------- |
-| &#8657; **Anterior** | [ANTERIOR](./arquivo1.md)        |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)         |
+| **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
+| :------------------- | :---------------------------------------------------------------- |
+| &#8657; **Anterior** | [ANTERIOR](../s01-data-manipulation/05-operadores-logica.md)      |
+| &#8659; **Próximo**  | [PROXIMO](./colecoes-tuplas.md)                                   |
 
 ---
 

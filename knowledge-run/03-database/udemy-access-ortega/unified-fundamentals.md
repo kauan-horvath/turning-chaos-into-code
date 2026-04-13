@@ -57,7 +57,7 @@ Para que o banco seja relacional, as tabelas não devem existir isoladas. Elas s
 
 **Caminho para configurar:** `Guia Ferramentas de Banco de Dados` > `Grupo Relações` > `Relações`
 
-### Passos para um Relacionamento Seguro:
+### Passos para um Relacionamento Seguro
 
 1. Adicione as tabelas desejadas via `Adicionar Tabelas`.
 2. Arraste a **Chave Primária** da tabela de origem (lado "1") para a **Chave Estrangeira** da tabela relacionada (lado "Muitos").
@@ -133,4 +133,5 @@ Acompanhe os avanços práticos através do arquivo:
 `care-projects/access-table-development/creating-a-database.md`
 
 - `::last-review:: 2026-04-08` :: Only formatted the mkd.
-  ::to-review:: 2026-04-15` :: Revise Access information
+
+::to-review:: 15-04-2026 :: Revise Access information ::

@@ -2,22 +2,22 @@
 
 **[ s00 - Introdução e Configuração ]**
 
-- [✅] [**Seção 01:** Boas-vindas e Visão Geral do Curso](../1-basics/s00-intro-config/01-intro-visao-geral.md)
-- [✅] [**Seção 01.2:** Setup: Instalação e Configuração do Ambiente](../1-basics/s00-intro-config/01-intro-visao-geral.md)
-- [✅] [**Seção 02:** Primeiros Passos: Sintaxe e Convenções](../1-basics/s00-intro-config/02-sintaxe-primeiros-passos.md)
+- [x] [**Seção 01:** Boas-vindas e Visão Geral do Curso](../1-basics/s00-intro-config/01-intro-visao-geral.md)
+- [x] [**Seção 01.2:** Setup: Instalação e Configuração do Ambiente](../1-basics/s00-intro-config/01-intro-visao-geral.md)
+- [x] [**Seção 02:** Primeiros Steps: Sintaxe e Convenções](../1-basics/s00-intro-config/02-sintaxe-primeiros-passos.md)
 
 **[ s01 - Manipulação de Dados ]**
 
-- [✅] [**Seção 03:** Variáveis e Atribuições](../1-basics/s01-data-manipulation/03-variaveis-atribuicoes.md)
-- [✅] [**Seção 04:** Tipos de Dados Primitivos](../1-basics/s01-data-manipulation/04-tipos-dados.md)
-- [✅] [**Seção 05:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/05-operadores-logicos.md)
-- [✅] [**Seção 05.2:** Entrada e Saída de Dados (I/O)](../1-basics/s01-data-manipulation/05-operadores-logicos.md)
-- [✅] [**Seção 5.3:** **Training 01:** Praticando Atribuições e Operadores](../1-basics/s01-data-manipulation/05-operadores-logicos.md)
+- [x] [**Seção 03:** Variáveis e Atribuições](../1-basics/s01-data-manipulation/03-variaveis-atribuicoes.md)
+- [x] [**Seção 04:** Tipos de Dados Primitivos](../1-basics/s01-data-manipulation/04-tipos-dados.md)
+- [x] [**Seção 05:** Operadores Aritméticos e Lógicos](../1-basics/s01-data-manipulation/05-operadores-logica.md)
+- [x] [**Seção 05.2:** Entrada e Saída de Dados (I/O)](../1-basics/s01-data-manipulation/05-operadores-logica.md)
+- [x] [**Seção 5.3:** **Training 01:** Praticando Atribuições e Operadores](../1-basics/s01-data-manipulation/05-operadores-logica.md)
 
 **[ s02 - Coleções de Dados ]**
 
-- [ ] [**Seção 9:** Listas: Manipulação e Métodos](../1-basics/s02-data-colection/colecoes-listas.md)
-- [ ] [**Seção 10:** Tuplas: Imutabilidade e Performance](../1-basics/s02-data-colection/colecoes-tuplas.md)
+- [x] [**Seção 9:** Listas: Manipulação e Métodos](../1-basics/s02-data-colection/colecoes-listas.md)
+- [x] [**Seção 10:** Tuplas: Imutabilidade e Performance](../1-basics/s02-data-colection/colecoes-tuplas.md)
 - [ ] [**Seção 11:** Sets: Conjuntos e Operações Matemáticas](../1-basics/s02-data-colection/colecoes-sets.md)
 - [ ] [**Seção 12:** Dicionários: Estruturas de Chave-Valor](../1-basics/s02-data-colection/colecoes-dicts.md)
 - [ ] [**Seção 18:** Matrizes e Coleções Multidimensionais](../1-basics/s02-data-colection/matrizes-arrays.md)
@@ -43,14 +43,14 @@
 
 **[ s05 - Utilitários e Tratamento de Dados ]**
 
-- [ ] [**Seção 27:** Gerenciamento de Dependências com PIP](../2-intermediate/s05-data-treatment/pip-dependencias.md)
-- [ ] [**Seção 28:** Tratamento de Exceções e Debugging (Try/Except)](../2-intermediate/s05-data-treatment/erros-excecoes.md)
-- [ ] [**Seção 23:** Manipulação de Datas e Fusos Horários](../2-intermediate/s05-data-treatment/datas-horarios.md)
-- [ ] [**Seção 24:** Funções Matemáticas e Estatística Básica](../2-intermediate/s05-data-treatment/matematica-estatistica.md)
-- [ ] [**Seção 25:** Serialização de Dados: Trabalhando com JSON](../2-intermediate/s05-data-treatment/json-python.md)
-- [ ] [**Seção 26:** RegEx: Busca e Validação com Expressões Regulares](../2-intermediate/s05-data-treatment/regex-expressoes-regulares.md)
-- [ ] [**Seção 29:** I/O de Arquivos: Leitura e Escrita de TXT/CSV](../2-intermediate/s05-data-treatment/manipulacao-arquivos.md)
-- [ ] [**Seção 30:** Persistência de Dados: Integração com MySQL](../2-intermediate/s05-data-treatment/banco-dados-mysql.md)
+- [ ] [**Seção 27:** Gerenciamento de Dependências com PIP](../2-intermediate/s05%20-data-treatment/pip-dependencias.md)
+- [ ] [**Seção 28:** Tratamento de Exceções e Debugging (Try/Except)](../2-intermediate/s05%20-data-treatment/erros-excecoes.md)
+- [ ] [**Seção 23:** Manipulação de Datas e Fusos Horários](../2-intermediate/s05%20-data-treatment/datas-horarios.md)
+- [ ] [**Seção 24:** Funções Matemáticas e Estatística Básica](../2-intermediate/s05%20-data-treatment/matematica-estatistica.md)
+- [ ] [**Seção 25:** Serialização de Dados: Trabalhando com JSON](../2-intermediate/s05%20-data-treatment/json-python.md)
+- [ ] [**Seção 26:** RegEx: Busca e Validação com Expressões Regulares](../2-intermediate/s05%20-data-treatment/regex-expressoes-regulares.md)
+- [ ] [**Seção 29:** I/O de Arquivos: Leitura e Escrita de TXT/CSV](../2-intermediate/s05%20-data-treatment/manipulacao-arquivos.md)
+- [ ] [**Seção 30:** Persistência de Dados: Integração com MySQL](../2-intermediate/s05%20-data-treatment/banco-dados-mysql.md)
 
 ---
 

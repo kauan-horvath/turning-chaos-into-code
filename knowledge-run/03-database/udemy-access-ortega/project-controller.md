@@ -108,4 +108,4 @@ Idade = Int((Data() - [DataNascimento]) / 365,25)
 
 > Enfrentei uma boa dificuldade por demorar muitos dias depois de assistir às aulas. Finalizei este módulo e vou revisar para manter o fundamento fresco.
 
-::to-review:: 2026-04-20 :: Refazer as tabelas para fixação
+::to-review:: 20-04-2026 :: Refazer as tabelas para fixação ::

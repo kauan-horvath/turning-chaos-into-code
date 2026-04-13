@@ -1,8 +1,8 @@
-# 📂 Seção 01: [Manipulação de Dados]
+# **Seção 04:** Tipos de Dados Primitivo
 
 ## 📑 [Tipos primitivos 1]
 
-> **Status:** 🟢 Concluido | **Data:** 09/04/2026
+> **Status:** 🟢 CONCLUIDO | **Data:** 09/04/2026
 
 ### 🌐 Navegação rápida
 

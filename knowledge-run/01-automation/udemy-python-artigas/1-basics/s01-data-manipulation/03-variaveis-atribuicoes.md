@@ -1,8 +1,8 @@
-# 📂 Seção 01: [Manipulação de Dados]
+# 📂 **Seção 03:** Variáveis e Atribuições
 
 ## 📑 [Variaveis e Atribuições]
 
-> **Status:** 🟢 Concluída | **Data:** 08/04/2026
+> **Status:** 🟢 CONCLUIDO | **Data:** 08/04/2026
 
 | **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :------------------- | :---------------------------------------------------------------- |

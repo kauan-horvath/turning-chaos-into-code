@@ -1,8 +1,8 @@
-# 📂 Seção 00: Introdução e Configuração
+# 📂 Seção 01: Boas-vindas e Visão Geral do Curso
 
 ## 📑 [Setup e Ambiente de Desenvolvimento]
 
-> **Status:** 🟢 Concluída | **Data:** 07/04/2026
+> **Status:** 🟢 CONCLUIDO | **Data:** 07/04/2026
 
 ### 🌐 Navegação rápida
 
