@@ -408,12 +408,21 @@ concatenar_listas = lista_original + copia_lista #["Agente A", "Agente A", "Agen
 
 ### x. 🛠️ Revisões
 
-::to-review:: 14-04-2026 ::Listas::
+::Last-review:: 14-04-2026 ::Listas::
+Aproveitamento 93% - Revisão distante: [Teste](https://gemini.google.com/share/c51b6da897ee)
+
+#### Resumo:
+
+**Pontos fortes**
+**Manipulação e Métodos de Lista**: Você demonstrou domínio excelente sobre métodos fundamentais como pop(), clear(), reverse() e a diferença entre remove() e pop().
+Ordenação e Lógica de Python: Sua compreensão de como o sort() lida com maiúsculas/minúsculas e o uso de chaves personalizadas (key) é de nível avançado.
+**List Comprehension e Slicing**: Você acertou todas as questões sobre compressão de listas, inclusive as que envolvem lógica condicional complexa e fatiamento (slicing).
+Gerenciamento de Memória: Entende perfeitamente a diferença entre criar um 'apelido' (referência) e uma cópia real de uma lista.
+
+**Áreas a melhorar**
+**Construtores e Sintaxe de Tuplas**: Ao usar o construtor list(), lembre-se que ele aceita um único iterável. Para passar múltiplos itens diretamente, você deve usar parênteses duplos list((item1, item2)) para criar uma tupla interna, em vez de colchetes.
+Inserção vs. Adição: Houve uma pequena confusão entre append() e insert(). O append() sempre adiciona ao final, enquanto o insert() exige um índice específico para posicionar o item.
 
 <!-- Criar memes melhores para 8 e 9 quando tiver cerebro pra isso-->
 
-💻 Notas / Código
-
-```python
-# Seu código aqui
-```
+::to-review:: 24-04-2026 ::Listas::
