@@ -1,0 +1,15 @@
+name: Check Concierge Activity
+on: [push]
+
+jobs:
+  ping-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aguardar deploy e checar atividade
+        run: |
+          # Aumentamos para 120s porque o primeiro deploy no Render é mais lento
+          echo "Aguardando o deploy no Render finalizar..."
+          sleep 120
+
+          # Tenta pingar a sua URL real. Se falhar, ele tenta mais 2 vezes antes de desistir.
+          curl --retry 2 --retry-delay 5 -f https://ai-concierge-motor.onrender.com/health || exit 1

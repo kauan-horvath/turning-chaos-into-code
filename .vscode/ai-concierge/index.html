@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concierge de Portfólio</title>
+    <style>
+        /* Reset básico de formatação */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f9;
+            color: #1f1f1f;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* BARRA LATERAL */
+        .sidebar {
+            width: 300px;
+            background-color: #e3e3e3;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-right: 1px solid #dcdcdc;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .info-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #555;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .contact-btn {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #f0f4f9;
+            border-color: #aaa;
+        }
+
+        .contact-btn.full-width {
+            grid-column: span 2;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+        }
+
+        .contact-btn.full-width:hover {
+            background-color: #1557b0;
+        }
+
+        .quick-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .quick-btn {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 10px 12px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 13px;
+            color: #444;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .quick-btn:hover {
+            background-color: #f8fafd;
+            border-color: #c4d7f5;
+            color: #1a73e8;
+        }
+
+        .arcade-btn {
+            background-color: #fdf5e6;
+            border: 1px solid #f9ce8c;
+            color: #d88100;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .arcade-btn:hover {
+            background-color: #fcf0d8;
+            border-color: #d88100;
+            color: #b06900;
+        }
+
+        /* ÁREA PRINCIPAL DO CHAT */
+        .main-chat {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .chat-history {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .message.user {
+            background-color: #f0f4f9;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.ai {
+            background-color: transparent;
+            align-self: flex-start;
+        }
+
+        .input-container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            background-color: #f0f4f9;
+            border-radius: 30px;
+            padding: 8px 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .input-wrapper input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 12px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .input-wrapper button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+
+        .input-wrapper button:hover {
+            background-color: #e3e3e3;
+        }
+
+        .send-icon {
+            width: 24px;
+            height: 24px;
+            fill: #444746;
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div>
+            <h2>Perfil</h2>
+            <div class="info-card">
+                <strong>Dados do Kauan</strong><br><br>
+                <p>Cargo: Desenvolvedor</p>
+                <p>Status: Aberto a propostas</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Conecte-se</h2>
+            <div class="contact-grid">
+                <a href="#" target="_blank" class="contact-btn">LinkedIn</a>
+                <a href="#" target="_blank" class="contact-btn">GitHub</a>
+                <a href="mailto:seuemail@exemplo.com" class="contact-btn full-width">Enviar E-mail</a>
+            </div>
+        </div>
+
+        <div>
+            <h2>Perguntas Rápidas</h2>
+            <div class="quick-questions">
+                <button class="quick-btn" onclick="sendQuickMessage('Quais são as suas principais habilidades e ferramentas?')">
+                    ⚙️ Stack e Ferramentas
+                </button>
+                <button class="quick-btn" onclick="sendQuickMessage('Me fale sobre sua experiência com Python e automações.')">
+                    🐍 Experiência com Python
+                </button>
+                <button class="quick-btn" onclick="sendQuickMessage('Como posso acessar seu currículo completo em PDF?')">
+                    📄 Baixar Currículo
+                </button>
+                <button class="quick-btn" onclick="sendQuickMessage('Qual foi o seu projeto mais desafiador até agora?')">
+                    🚀 Projeto de Destaque
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <h2>Diversão</h2>
+            <button class="quick-btn arcade-btn" onclick="spawnStandaloneGame()" style="width: 100%;">
+                🕹️ Modo Arcade (Cobrinha)
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-chat">
+        <div class="chat-history" id="chat-history">
+            <div class="message ai">
+                Olá! Sou o concierge virtual. Fique à vontade para usar as perguntas rápidas ao lado ou digitar o que quiser saber.
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Pergunte ao concierge..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()" title="Enviar">
+                    <svg class="send-icon" viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // --- MOTOR DO JOGO DA COBRINHA ---
+        function startSnakeGame(canvas) {
+            const ctx = canvas.getContext('2d');
+            const box = 10;
+            let snake = [{x: 10 * box, y: 10 * box}];
+            let direction = "RIGHT";
+            let food = {
+                x: Math.floor(Math.random() * 20) * box,
+                y: Math.floor(Math.random() * 20) * box
+            };
+
+            const keyHandler = (event) => {
+                if ([37, 38, 39, 40].includes(event.keyCode)) {
+                    event.preventDefault(); // Impede scroll da página
+                }
+                if (event.keyCode == 37 && direction != "RIGHT") direction = "LEFT";
+                else if (event.keyCode == 38 && direction != "DOWN") direction = "UP";
+                else if (event.keyCode == 39 && direction != "LEFT") direction = "RIGHT";
+                else if (event.keyCode == 40 && direction != "UP") direction = "DOWN";
+            };
+            document.addEventListener("keydown", keyHandler);
+
+            function draw() {
+                ctx.clearRect(0, 0, 200, 200);
+
+                for (let i = 0; i < snake.length; i++) {
+                    ctx.fillStyle = (i == 0) ? "#1a73e8" : "#8ab4f8";
+                    ctx.fillRect(snake[i].x, snake[i].y, box, box);
+                }
+
+                ctx.fillStyle = "#ea4335";
+                ctx.fillRect(food.x, food.y, box, box);
+
+                let snakeX = snake[0].x;
+                let snakeY = snake[0].y;
+
+                if (direction == "LEFT") snakeX -= box;
+                if (direction == "UP") snakeY -= box;
+                if (direction == "RIGHT") snakeX += box;
+                if (direction == "DOWN") snakeY += box;
+
+                if (snakeX == food.x && snakeY == food.y) {
+                    food = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random() * 20) * box };
+                } else {
+                    snake.pop();
+                }
+
+                if (snakeX < 0) snakeX = 200 - box;
+                if (snakeX >= 200) snakeX = 0;
+                if (snakeY < 0) snakeY = 200 - box;
+                if (snakeY >= 200) snakeY = 0;
+
+                snake.unshift({x: snakeX, y: snakeY});
+            }
+
+            let gameInterval = setInterval(draw, 100);
+
+            // Função de limpeza (kill switch)
+            return () => {
+                clearInterval(gameInterval);
+                document.removeEventListener("keydown", keyHandler);
+            };
+        }
+
+        // --- INJEÇÃO VISUAL DO JOGO ---
+        function createSnakeGameElement(isStandalone = false) {
+            const container = document.createElement('div');
+            container.className = 'message ai';
+            if (!isStandalone) container.id = 'loading-indicator';
+
+            container.style.display = 'flex';
+            container.style.flexDirection = 'column';
+            container.style.alignItems = 'center';
+            container.style.gap = '10px';
+
+            const text = document.createElement('span');
+            text.style.fontSize = '13px';
+            text.innerHTML = isStandalone
+                ? '<b>Modo Arcade!</b> (Use as setas ⬅️⬆️⬇️➡️)'
+                : 'Processando... <b>Jogue enquanto espera! (Setas ⬅️⬆️⬇️➡️)</b>';
+
+            const canvas = document.createElement('canvas');
+            canvas.width = 200;
+            canvas.height = 200;
+            canvas.style.backgroundColor = '#f0f4f9';
+            canvas.style.borderRadius = '8px';
+            canvas.style.border = '1px solid #dcdcdc';
+
+            container.appendChild(text);
+            container.appendChild(canvas);
+            return { container, canvas };
+        }
+
+        // MODO ARCADE (Botão Lateral)
+        function spawnStandaloneGame() {
+            appendUserMessage("Quero jogar um pouco!");
+            const chatHistory = document.getElementById('chat-history');
+            const { container, canvas } = createSnakeGameElement(true);
+            chatHistory.appendChild(container);
+            scrollToBottom();
+            startSnakeGame(canvas);
+        }
+
+        // --- FUNÇÕES DE CHAT CORE ---
+        function appendUserMessage(text) {
+            const chatHistory = document.getElementById('chat-history');
+            const userMsgDiv = document.createElement('div');
+            userMsgDiv.className = 'message user';
+            userMsgDiv.textContent = text;
+            chatHistory.appendChild(userMsgDiv);
+            scrollToBottom();
+        }
+
+        function appendAiMessage(text) {
+            const chatHistory = document.getElementById('chat-history');
+            const aiMsgDiv = document.createElement('div');
+            aiMsgDiv.className = 'message ai';
+            aiMsgDiv.innerHTML = text;
+            chatHistory.appendChild(aiMsgDiv);
+            scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            const chatHistory = document.getElementById('chat-history');
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') sendMessage();
+        }
+
+        function sendQuickMessage(text) {
+            const inputField = document.getElementById('user-input');
+            inputField.value = text;
+            sendMessage();
+        }
+
+        let stopLoadingGame = null;
+
+        async function sendMessage() {
+            const inputField = document.getElementById('user-input');
+            const message = inputField.value.trim();
+
+            if (message !== "") {
+                appendUserMessage(message);
+                inputField.value = '';
+
+                // Monta o jogo de loading na tela
+                const chatHistory = document.getElementById('chat-history');
+                const { container, canvas } = createSnakeGameElement(false);
+                chatHistory.appendChild(container);
+                scrollToBottom();
+
+                stopLoadingGame = startSnakeGame(canvas);
+
+                const startTime = Date.now();
+                let isSuccess = false;
+                let finalReply = "";
+
+                try {
+                    // ATENÇÃO: Troque pelo seu link do Render!
+                    const response = await fetch('http://localhost:5000/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ message: message })
+                    });
+
+                    const data = await response.json();
+                    if (data.reply) {
+                        isSuccess = true;
+                        finalReply = data.reply.replace(/\n/g, '<br>');
+                    }
+                } catch (error) {
+                    console.error("Conexão falhou na hora:", error);
+                    isSuccess = false; // Falhou, mas o código vai continuar para forçar o tempo de jogo
+                }
+
+                // A MÁGICA DO TEMPO DE ESPERA (Obriga a jogar se der erro)
+                if (!isSuccess) {
+                    const elapsed = Date.now() - startTime;
+                    const waitTime = 30000; // 30 segundos
+                    if (elapsed < waitTime) {
+                        // Faz o script "dormir" até fechar os 30s
+                        await new Promise(resolve => setTimeout(resolve, waitTime - elapsed));
+                    }
+                }
+
+                // Tempo esgotado (ou IA respondeu). Limpa a bagunça.
+                if (stopLoadingGame) stopLoadingGame();
+                if (document.getElementById('loading-indicator')) {
+                    document.getElementById('loading-indicator').remove();
+                }
+
+                // Entrega o resultado final
+                if (isSuccess) {
+                    appendAiMessage(finalReply);
+                } else {
+                    appendAiMessage(`
+                        🤖 <b>IA temporariamente indisponível.</b><br><br>
+                        O motor do meu concierge pode estar em manutenção profunda ou cota de uso esgotada.<br><br>
+                        Enquanto o sistema é restaurado, por favor, entre em contato diretamente comigo:
+                        <br><br>👉 <a href="#" target="_blank" style="color:#1a73e8; text-decoration:none;"><b>Acessar meu LinkedIn</b></a>
+                        <br>👉 <a href="mailto:seuemail@exemplo.com" style="color:#1a73e8; text-decoration:none;"><b>Enviar E-mail Direto</b></a>
+                    `);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

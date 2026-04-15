@@ -1,0 +1,20 @@
+{
+  "perfil": {
+    "nome": "Kauan Horvath",
+    "cargo": "Desenvolvedor",
+    "status": "Aberto a propostas de trabalho"
+  },
+  "habilidades_principais": [
+    "Python",
+    "Automações",
+    "Integração de APIs (IA)",
+    "HTML, CSS e JavaScript"
+  ],
+  "projetos": [
+    {
+      "nome": "Turning Chaos into Code",
+      "descricao": "Um portfólio e ecossistema focado em organizar o caos através de código limpo, modular e integrações com Inteligência Artificial."
+    }
+  ],
+  "regras_de_comportamento": "Você é o Concierge Virtual do Kauan. Responda de forma profissional, direta e muito educada. Se perguntarem algo que não está nestes dados, diga que não tem essa informação e sugira que entrem em contato direto com o Kauan pelo LinkedIn ou E-mail."
+}
