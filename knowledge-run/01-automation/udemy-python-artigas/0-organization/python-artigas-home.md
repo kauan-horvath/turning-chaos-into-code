@@ -18,8 +18,8 @@
 
 - [x] [**Seção 9:** Listas: Manipulação e Métodos](../1-basics/s02-data-colection/colecoes-listas.md)
 - [x] [**Seção 10:** Tuplas: Imutabilidade e Performance](../1-basics/s02-data-colection/colecoes-tuplas.md)
-- [ ] [**Seção 11:** Sets: Conjuntos e Operações Matemáticas](../1-basics/s02-data-colection/colecoes-sets.md)
-- [ ] [**Seção 12:** Dicionários: Estruturas de Chave-Valor](../1-basics/s02-data-colection/colecoes-dicts.md)
+- [x] [**Seção 11:** Sets: Conjuntos e Operações Matemáticas](../1-basics/s02-data-colection/colecoes-sets.md)
+- [x] [**Seção 12:** Dicionários: Estruturas de Chave-Valor](../1-basics/s02-data-colection/colecoes-dicts.md)
 - [ ] [**Seção 18:** Matrizes e Coleções Multidimensionais](../1-basics/s02-data-colection/matrizes-arrays.md)
 - [ ] [**Seção 7:** **Training 02:** Desafios com Coleções](../1-basics/s02-data-colection/training-02.md)
 
@@ -84,3 +84,9 @@
 **[ s08 - Web Framework ]**
 
 - [ ] [**Seção 50:** Django: Introdução ao Desenvolvimento Web Moderno](../3-advanced/s08-web-framework/django-web-intro.md)
+
+### Prompt de Revisão Espaçada
+
+faça um questionario de 30 perguntas, sendo respectivamente 10 basicas, 10 intermediaria e 10 avançadas, baseadas exlcusivamente no material a seguir, o foco deve ser rememoração e desafiar a lembrança atraves de revisão espaçada.
+
+Material: [PASTE]

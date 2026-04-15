@@ -132,6 +132,18 @@ Como o projeto faz parte do repositório `turning-chaos-into-code`, e arquivos `
 Acompanhe os avanços práticos através do arquivo:
 `care-projects/access-table-development/creating-a-database.md`
 
-- `::last-review:: 2026-04-08` :: Only formatted the mkd.
+::last-review:: 2026-04-08 :: Only formatted the mkd ::
+::last-review:: 15-04-2026 :: Revise Access information ::
+Aproveitamento 87% - revisão distante
+Pontos fortes
+Estrutura de Tabelas e Tipos de Dados: Você demonstra domínio sólido sobre a criação de tabelas, uso de Chaves Primárias, comportamento do campo 'Requerido' e a importância de limitar o tamanho de campos de texto para otimização.
+Interface e Atalhos: Excelente conhecimento dos atalhos de produtividade (F4, Shift+Setas) e na navegação pelos menus de design do Access.
+Consultas e Lógica de Filtros: Você entende bem o uso de caracteres curinga para buscas aproximadas e a aplicação de critérios de data complexos entre períodos.
+Manutenção e Boas Práticas: Mostrou clareza sobre a necessidade de compactar o banco de dados, o gerenciamento de arquivos de bloqueio (.laccdb) em ambientes de versão como Git e padronização de nomenclatura.
+Áreas a melhorar
+Precisão em Tipos Numéricos e Financeiros: Lembre-se que para valores monetários, o tipo 'Moeda' é superior ao 'Número (Duplo)' porque evita erros de arredondamento em cálculos matemáticos complexos.
+Macros vs. Construtor de Expressões: O 'Construtor de Expressões' serve para criar fórmulas, enquanto as 'Macros' são a ferramenta correta para automatizar sequências de ações (como abrir formulários ou imprimir) sem usar código VBA.
+Documentação e Validação: O 'Texto de Validação' é focado na experiência do usuário final (a mensagem que ele lê), enquanto o comentário interno geralmente fica na 'Descrição' do campo no modo design da tabela.
+Lógica Booleana em Consultas: Revise os operadores lógicos: critérios na mesma linha funcionam como o operador 'E' (ambas as condições devem ser verdadeiras), enquanto critérios em linhas diferentes funcionam como 'OU'.
 
-::to-review:: 15-04-2026 :: Revise Access information ::
+::to-review:: 22-04-2026 ::Refazer Questionário - Access Fundamentals ::

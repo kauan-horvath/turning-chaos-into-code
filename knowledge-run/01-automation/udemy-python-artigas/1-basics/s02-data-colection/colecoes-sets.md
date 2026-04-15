@@ -2,14 +2,14 @@
 
 ## 📑 Sets
 
-> **Status:** 🟡 ANDAMENTO | **Data:** 14/04/2026
+> **Status:** 🟡 CONCLUIDO | **Data:** 14/04/2026
 
 ### 🌐 Navegação rápida
 
 | **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :------------------- | :---------------------------------------------------------------- |
 | &#8657; **Anterior** | [ANTERIOR](./colecoes-tuplas.md))                                 |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                                          |
+| &#8659; **Próximo**  | [PROXIMO](./colecoes-dicts.md)                                    |
 
 ---
 
@@ -220,7 +220,7 @@
 
 ### x. 🛠️ Revisões
 
-::to-review:: 16-04-2026 ::REVISAO-PADRAO::
+::to-review:: 16-04-2026 ::Coleção Sets::
 
 💻 Notas / Código
 

@@ -196,4 +196,18 @@ resposta_tupla = tuple(resposta)
 
 ### x. 🛠️ Revisões
 
-::to-review:: 15-04-2026 :: Tuplas::
+::last-review:: 15-04-2026 :: Tuplas::
+aproveitamento 80% - Revisão proxima: [revisão gemini](https://gemini.google.com/share/54c461b4a8d5)
+
+Pontos fortes
+Operações Básicas e Sintaxe: Você demonstra excelente domínio sobre a criação de tuplas, incluindo o caso especial de itens únicos (uso da vírgula) e o uso da função construtora tuple().
+Imutabilidade e Segurança: Você compreende perfeitamente que tuplas não podem ser alteradas diretamente e entende as vantagens de performance e segurança que isso traz para o código.
+Manipulação de Coleções: Mandou muito bem em conceitos de concatenação, repetição de elementos e na lógica de conversão entre listas e tuplas para contornar restrições de alteração.
+Iteração: Mostrou conhecimento sólido sobre como percorrer tuplas usando loops for e while, incluindo o controle de índices e a lógica de evitar loops infinitos.
+Áreas a melhorar
+Ordenação vs. Mutabilidade: Cuidado para não confundir 'Ordenado' com 'Mutável'. Tuplas são ordenadas (mantêm a ordem de inserção), mas são imutáveis (não podem ser alteradas). Uma das questões foi respondida incorretamente por essa confusão.
+Unpacking (Descompactação): Ao usar o asterisco (\*) na descompactação, o Python sempre agrupa os valores restantes em uma LISTA, mesmo que a origem seja uma tupla. Revise também o acesso a variáveis específicas durante o unpacking para não pular índices.
+Métodos de Sequência: Lembre-se que tuplas em Python não possuem o método .find() (comum em strings); para localizar índices em tuplas, utilizamos exclusivamente o .index().
+Identificação de Tipos: Fique atento aos parênteses: em Python, apenas colocar algo entre parênteses como ("Azul") não cria uma tupla, mas sim uma String. A presença da vírgula é o que define a estrutura de tupla.
+
+::to-review:: 19-04-2026 ::Tuplas e seus detalhes::
