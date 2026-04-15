@@ -2,14 +2,14 @@
 
 ## 📑 Tuplas
 
-> **Status:** 🟡 ANDAMENTO | **Data:** 13/04/2026
+> **Status:** 🟡 CONCLUIDO | **Data:** 13/04/2026
 
 ### 🌐 Navegação rápida
 
 | **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :------------------- | :---------------------------------------------------------------- |
 | &#8657; **Anterior** | [ANTERIOR](./colecoes-listas.md)                                  |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                                          |
+| &#8659; **Próximo**  | [PROXIMO](./colecoes-sets.md)                                     |
 
 ---
 

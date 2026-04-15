@@ -411,7 +411,7 @@ concatenar_listas = lista_original + copia_lista #["Agente A", "Agente A", "Agen
 ::Last-review:: 14-04-2026 ::Listas::
 Aproveitamento 93% - Revisão distante: [Teste](https://gemini.google.com/share/c51b6da897ee)
 
-#### Resumo:
+#### Resumo
 
 **Pontos fortes**
 **Manipulação e Métodos de Lista**: Você demonstrou domínio excelente sobre métodos fundamentais como pop(), clear(), reverse() e a diferença entre remove() e pop().
