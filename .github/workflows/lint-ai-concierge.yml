@@ -1,15 +1,48 @@
 name: Check Concierge Activity
-on: [push]
+
+on:
+  push:
+  workflow_dispatch: # Permite rodar manualmente para testar
+  schedule:
+    - cron: "*/30 * * * *" # Checa a cada 30 min para garantir que está on
 
 jobs:
   ping-check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Essencial para o bot conseguir editar o README
     steps:
-      - name: Aguardar deploy e checar atividade
-        run: |
-          # Aumentamos para 120s porque o primeiro deploy no Render é mais lento
-          echo "Aguardando o deploy no Render finalizar..."
-          sleep 120
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-          # Tenta pingar a sua URL real. Se falhar, ele tenta mais 2 vezes antes de desistir.
-          curl --retry 2 --retry-delay 5 -f https://ai-concierge-motor.onrender.com/health || exit 1
+      - name: Check Health and Update Badge
+        run: |
+          # 1. Tenta o ping
+          echo "Checking AI Concierge Health..."
+          if curl -f https://ai-concierge-motor.onrender.com/health; then
+            STATUS="operational"
+            COLOR_BG="#E8FFF0"
+            COLOR_DOT="#1DB954"
+            COLOR_TEXT="#0D683D"
+            TEXT="Ai operational"
+          else
+            STATUS="offline"
+            COLOR_BG="#FFE8E8"
+            COLOR_DOT="#FF4B4B"
+            COLOR_TEXT="#8B0000"
+            TEXT="Ai offline"
+          fi
+
+          # 2. Constrói o SVG com o link ATUALIZADO do GitHub Pages
+          SVG="<div align='center'><a href='https://kauan-horvath.github.io/turning-chaos-into-code/ai-concierge/'><svg width='180' height='40' viewBox='0 0 180 40' xmlns='http://www.w3.org/2000/svg'><defs><filter id='glow' x='-50%' y='-50%' width='200%' height='200%'><feGaussianBlur stdDeviation='2' result='blur'/><feMerge><feMergeNode in='blur'/><feMergeNode in='SourceGraphic'/></feMerge></filter></defs><rect x='2' y='2' width='176' height='36' rx='18' fill='$COLOR_BG' stroke='$COLOR_BG' stroke-width='1'/><circle cx='25' cy='20' r='4' fill='$COLOR_DOT' filter='url(#glow)'/><text x='45' y='25' font-family='sans-serif' font-size='14' font-weight='600' fill='$COLOR_TEXT'>$TEXT</text></svg></a></div>"
+
+          # 3. Injeta o SVG no README entre os marcadores exatos
+          sed -i "//,//c\\n$SVG\n" README.md
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update ai status badge [skip ci]" || echo "No changes to commit"
+          git push
