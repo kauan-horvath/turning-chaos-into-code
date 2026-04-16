@@ -5,9 +5,7 @@ from flask_cors import CORS
 import google.generativeai as genai
 
 app = Flask(__name__)
-
-# Configuração do CORS: Libera o acesso especificamente para o seu GitHub Pages
-CORS(app, resources={r"/*": {"origins": "https://kauan-horvath.github.io"}})
+CORS(app)
 
 # 1. Segurança da Chave
 api_key = os.environ.get("GEMINI_API_KEY")
