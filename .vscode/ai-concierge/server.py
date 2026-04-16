@@ -15,7 +15,7 @@ if not api_key:
     )
 
 
-# 2. DATA PIVOT: Lendo o cérebro (dados externos) com caminho absoluto
+# 2. DATA PIVOT: Lendo o cérebro INTEIRO de forma dinâmica
 def carregar_cerebro():
     try:
         # Pega a pasta onde este server.py está localizado
@@ -25,23 +25,26 @@ def carregar_cerebro():
         with open(file_path, "r", encoding="utf-8") as file:
             dados = json.load(file)
 
-        instrucao = f"""
-        {dados['regras_de_comportamento']}
+        # Extrai as regras de comportamento para colocar no topo do prompt
+        # Se por acaso a chave não existir, ele usa um fallback padrão
+        regras = dados.pop(
+            "regras_de_comportamento", "Você é o concierge virtual do Kauan."
+        )
 
-        DADOS OFICIAIS DO KAUAN:
-        - Nome: {dados['perfil']['nome']}
-        - Cargo: {dados['perfil']['cargo']}
-        - Status: {dados['perfil']['status']}
+        # Transforma o resto do JSON inteiro em texto formatado para a IA ler
+        dados_formatados = json.dumps(dados, indent=4, ensure_ascii=False)
 
-        HABILIDADES (STACK):
-        - {', '.join(dados['habilidades_principais'])}
+        instrucao_final = f"""
+        {regras}
 
-        PROJETOS DE DESTAQUE:
+        === BASE DE DADOS OFICIAL DO KAUAN ===
+        Use os dados abaixo para responder a qualquer pergunta sobre o Kauan.
+        Interprete as chaves e valores estruturados para formar suas respostas:
+
+        {dados_formatados}
         """
-        for projeto in dados["projetos"]:
-            instrucao += f"- {projeto['nome']}: {projeto['descricao']}\n"
 
-        return instrucao
+        return instrucao_final
 
     except Exception as e:
         print(f"⚠️ Erro ao carregar data.json: {e}")
@@ -51,7 +54,8 @@ def carregar_cerebro():
 # 3. Configurando a IA
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel(
-    model_name="gemini-3-flash-preview", system_instruction=carregar_cerebro()
+    model_name="gemini-1.5-flash",  # Nome estável e ultra rápido
+    system_instruction=carregar_cerebro(),
 )
 
 
