@@ -1,35 +1,34 @@
-from flask import Flask, request
+import os
+import json
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
 
 app = Flask(__name__)
+# Libera o CORS para o seu GitHub Pages conseguir fazer requisições
 CORS(app)
 
 # 1. Segurança da Chave
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     raise ValueError(
-        "⚠️ ERRO CRÍTICO: Variável de ambiente 'GEMINI_API_KEY' não encontrada."
+        "⚠️ ERRO CRÍTICO: Variável de ambiente 'GEMINI_API_KEY' não encontrada no Render."
     )
 
 
 # 2. DATA PIVOT: Lendo o cérebro INTEIRO de forma dinâmica
 def carregar_cerebro():
     try:
-        # Pega a pasta onde este server.py está localizado
         base_path = os.path.dirname(__file__)
         file_path = os.path.join(base_path, "data.json")
 
         with open(file_path, "r", encoding="utf-8") as file:
             dados = json.load(file)
 
-        # Extrai as regras de comportamento para colocar no topo do prompt
-        # Se por acaso a chave não existir, ele usa um fallback padrão
         regras = dados.pop(
             "regras_de_comportamento", "Você é o concierge virtual do Kauan."
         )
 
-        # Transforma o resto do JSON inteiro em texto formatado para a IA ler
         dados_formatados = json.dumps(dados, indent=4, ensure_ascii=False)
 
         instrucao_final = f"""
@@ -52,7 +51,7 @@ def carregar_cerebro():
 # 3. Configurando a IA
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",  # Nome estável e ultra rápido
+    model_name="gemini-1.5-flash",
     system_instruction=carregar_cerebro(),
 )
 
