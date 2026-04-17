@@ -15,16 +15,16 @@
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490448#content):** Listas Python — _(10min)_
-- [✅] **[Vídeo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490456#content):** Acessando Itens da Lista — _(12min)_
-- [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490460#content):** Alterar itens da lista — _(11min)_
-- [✅] **[Vídeo 04](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490466#content):** Adicionar itens da lista — _(7min)_
-- [✅] **[Vídeo 05](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490480#content):** Remover itens da — _(00min)_'
-- [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490494#content):** Compressão de lsitas — _(16min)_
-- [✅] **[Vídeo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490502#content):** Classificação de listas — _(16min)_
-- [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490512#content):** Copiar listas — _(7min)_
-- [✅] **[Vídeo 04](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528761#content):** Juntar listas — _(6min)_
-- [✅] **[Vídeo 05](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346082#content):** Teste — _(00min)_
+- [✅] **[Vídeo 31](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490448#content):** Listas Python — _(10min)_
+- [✅] **[Vídeo 32](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490456#content):** Acessando Itens da Lista — _(12min)_
+- [✅] **[Vídeo 33](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490460#content):** Alterar itens da lista — _(11min)_
+- [✅] **[Vídeo 34](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490466#content):** Adicionar itens da lista — _(7min)_
+- [✅] **[Vídeo 35](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490480#content):** Remover itens da — _(00min)_'
+- [✅] **[Vídeo 36](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490494#content):** Compressão de lsitas — _(16min)_
+- [✅] **[Vídeo 37](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490502#content):** Classificação de listas — _(16min)_
+- [✅] **[Vídeo 38](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28490512#content):** Copiar listas — _(7min)_
+- [✅] **[Vídeo 39](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528761#content):** Juntar listas — _(6min)_
+- [✅] **[Teste 04](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346082#content):** Teste — _(00min)_
 
 > **Nota rápida:** [Variações de uso e funções de listas, ironicamente eu ainda nao domino listas com a precisão que eu gostaria então vou anotar ostensivamente.]
 

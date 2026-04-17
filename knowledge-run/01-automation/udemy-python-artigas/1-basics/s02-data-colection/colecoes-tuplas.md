@@ -15,13 +15,13 @@
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528767#overview):** Tuplas Python — _(13min)_
-- [✅] **[Vídeo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528777#overview):** Acessando Itens — _(13min)_
-- [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528785#overview):** Atualizar Tuplas — _(12min)_
-- [✅] **[Vídeo 04](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528791#overview):** Descompactando Tuplas — _(10min)_
-- [✅] **[Vídeo 05](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528793#overview):** Loops — _(11min)_
-- [✅] **[Vídeo 06](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528803#overview):** Juntas Tuplas — _(3min)_
-- [✅] **[Vídeo 07](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346084#overview):** Teste — _(00min)_
+- [✅] **[Vídeo 41](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528767#overview):** Tuplas Python — _(13min)_
+- [✅] **[Vídeo 42](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528777#overview):** Acessando Itens — _(13min)_
+- [✅] **[Vídeo 43](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528785#overview):** Atualizar Tuplas — _(12min)_
+- [✅] **[Vídeo 44](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528791#overview):** Descompactando Tuplas — _(10min)_
+- [✅] **[Vídeo 45](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528793#overview):** Loops — _(11min)_
+- [✅] **[Vídeo 46](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28528803#overview):** Juntas Tuplas — _(3min)_
+- [✅] **[Teste 05](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346084#overview):** Teste — _(00min)_
 
 > **Nota rápida:** [Espaço para algum insight importante do conjunto de vídeos]
 

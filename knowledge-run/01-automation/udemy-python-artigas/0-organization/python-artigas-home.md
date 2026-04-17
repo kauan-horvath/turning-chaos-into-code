@@ -20,8 +20,7 @@
 - [x] [**Seção 10:** Tuplas: Imutabilidade e Performance](../1-basics/s02-data-colection/colecoes-tuplas.md)
 - [x] [**Seção 11:** Sets: Conjuntos e Operações Matemáticas](../1-basics/s02-data-colection/colecoes-sets.md)
 - [x] [**Seção 12:** Dicionários: Estruturas de Chave-Valor](../1-basics/s02-data-colection/colecoes-dicts.md)
-- [ ] [**Seção 18:** Matrizes e Coleções Multidimensionais](../1-basics/s02-data-colection/matrizes-arrays.md)
-- [ ] [**Seção 7:** **Training 02:** Desafios com Coleções](../1-basics/s02-data-colection/training-02.md)
+- [x] [**Seção 18:** Matrizes e Coleções Multidimensionais](../1-basics/s02-data-colection/matrizes-arrays.md)
 
 **[ s03 - Controle de Fluxo e Modularização ]**
 

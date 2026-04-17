@@ -15,13 +15,13 @@
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28622032#overview):** Sets em Python — _(10min)_
-- [✅] **[Vídeo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28622060#overview):** Acessando Itens — _(5min)_
-- [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28692988#overview):** Adicionando Itens — _(6min)_
-- [✅] **[Vídeo 04](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693008#overview):** Removendo Itens — _(10min)_
-- [✅] **[Vídeo 05](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693010#overview):** Loop em Set — _(5min)_
-- [✅] **[Vídeo 06](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693016#overview):** Juntando Sets — _(15min)_
-- [✅] **[Vídeo 07](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346086#overview):** Teste — _(00min)_
+- [✅] **[Vídeo 47](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28622032#overview):** Sets em Python — _(10min)_
+- [✅] **[Vídeo 48](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28622060#overview):** Acessando Itens — _(5min)_
+- [✅] **[Vídeo 49](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28692988#overview):** Adicionando Itens — _(6min)_
+- [✅] **[Vídeo 50](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693008#overview):** Removendo Itens — _(10min)_
+- [✅] **[Vídeo 51](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693010#overview):** Loop em Set — _(5min)_
+- [✅] **[Vídeo 52](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693016#overview):** Juntando Sets — _(15min)_
+- [✅] **[Teste 06](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346086#overview):** Teste — _(00min)_
 
 > **Nota rápida:** [permeando as variações de coleção de dados para os Sets]
 
@@ -66,7 +66,7 @@
 - Usando loop for
   - e pergunta se in value
   - ou obter o valor desordenado
-- informa que os valores NAO PODEM SER ALTERADOS
+- informa que os valores NAO PODEM SER ALTERADOS e NAO SAO ORDENADOS
 - Informa sobre o metodo add()
 - informa sobre o metodo update()
 
@@ -220,10 +220,16 @@
 
 ### x. 🛠️ Revisões
 
-::to-review:: 16-04-2026 ::Coleção Sets::
+::last-review:: 16-04-2026 ::Coleção Sets::
+aproveitamento 77% revisão próxima: [questionário](https://gemini.google.com/share/d1b66bc7d730)
 
-💻 Notas / Código
+Pontos fortes
 
-```python
-# Seu código aqui
-```
+Sintaxe e Características Básicas de Sets: Você demonstrou excelente compreensão sobre a sintaxe de criação de Sets (incluindo sintaxe de item único e conversões via list comprehensions), além de dominar bem a ausência de indexação, comportamento booleano e a natureza não-ordenada da estrutura.
+Manipulação Segura e Operações Lógicas: Ficou claro o seu entendimento sobre como verificar a existência de itens com 'in' e a escolha adequada entre métodos de remoção (como 'discard' para evitar erros KeyError, 'remove' e 'pop'). As operações que testam lógicas e união de variáveis também se mostraram pontos fortes.
+Áreas a melhorar
+Comportamento de Retorno e Métodos In-Place: Houve uma confusão recorrente sobre o que os métodos in-place retornam. Lembre-se sempre de que funções que alteram o Set original internamente (como 'add()' e 'update()') retornam o valor 'None'. Apenas métodos que geram novas estruturas (como 'union()') retornam o conjunto resultante para ser armazenado em variáveis.
+Fundamentos Técnicos (Hashing e Conversão de Tipos): É recomendável revisar os conceitos de baixo nível do Python. A velocidade das buscas em Sets vem das tabelas de Hashing subjacentes, e não de manipulação do GIL ou multithreading. Da mesma forma, o cast 'list()' não faz 'bypass de blindagem na memória', mas apenas converte e gera uma nova estrutura em formato de lista.
+Tratamento de Duplicatas e Contagem: Cuidado com funções como 'len()' aplicadas logo após a inicialização de um Set contendo chaves repetidas. A filtragem das duplicatas ocorre no momento exato da declaração, o que reduz automaticamente a contagem de itens (comprimento) final da coleção em relação ao que foi digitado.
+
+::to-review:: 21-04-2026 ::Coleção Sets::

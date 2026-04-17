@@ -9,21 +9,21 @@
 | **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :------------------- | :---------------------------------------------------------------- |
 | &#8657; **Anterior** | [ANTERIOR](./colecoes-sets.md)                                    |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                                          |
+| &#8659; **Próximo**  | [PROXIMO](./matrizes-arrays.md)                                   |
 
 ---
 
 ### 📺 Conteúdo em Vídeo (Udemy)
 
-- [✅] **[Vídeo 01](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693042#overview):** Dictionaries — _(15min)_
-- [✅] **[Vídeo 02](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693058#overview):** Acessando Itens — _(16min)_
-- [✅] **[Vídeo 03](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693048#overview):** Alterando itens — _(05min)_
-- [✅] **[Vídeo 04](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693070#overview):** Adicionando Itens — _(05min)_
-- [✅] **[Vídeo 05](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693076#overview):** Removendo itens — _(06min)_
-- [✅] **[Vídeo 06](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693086#overview):** Loop em Dicts — _(10min)_
-- [✅] **[Vídeo 07](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693094#overview):** Copiar dicts — _(05min)_
-- [✅] **[Vídeo 08](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693098#overview):** Aninhamento de dicts — _(10min)_
-- [✅] **[Vídeo 09](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346088#overview):** Teste — _(00min)_
+- [✅] **[Vídeo 53](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693042#overview):** Dictionaries — _(15min)_
+- [✅] **[Vídeo 54](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693058#overview):** Acessando Itens — _(16min)_
+- [✅] **[Vídeo 55](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693048#overview):** Alterando itens — _(05min)_
+- [✅] **[Vídeo 56](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693070#overview):** Adicionando Itens — _(05min)_
+- [✅] **[Vídeo 57](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693076#overview):** Removendo itens — _(06min)_
+- [✅] **[Vídeo 58](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693086#overview):** Loop em Dicts — _(10min)_
+- [✅] **[Vídeo 59](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693094#overview):** Copiar dicts — _(05min)_
+- [✅] **[Vídeo 60](https://www.udemy.com/course/python-completo-e-profissional/learn/lecture/28693098#overview):** Aninhamento de dicts — _(10min)_
+- [✅] **[Teste 07](https://www.udemy.com/course/python-completo-e-profissional/learn/quiz/5346088#overview):** Teste — _(00min)_
 
 > **Nota rápida:** [Espaço para algum insight importante do conjunto de vídeos]
 
@@ -318,4 +318,4 @@
 # Seu código aqui
 ```
 
-::to-review:: 17-04-2026 ::Dictionaries::
+::to-review:: 18-04-2026 ::Dictionaries::
