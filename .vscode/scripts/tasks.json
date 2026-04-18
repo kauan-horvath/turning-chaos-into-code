@@ -1,37 +1,56 @@
 {
     "version": "2.0.0",
     "tasks": [
-            {
-                "label": "🚀 Script: Check Revisions",
-                "type": "shell",
-                "command": "python",
-                "args": [
-                    ".vscode/scripts/check-revisions.py"
-                ],
-                "options": {
-                    "cwd": "${workspaceFolder:turning-chaos-into-code}"
-                },
-                "presentation": {
-                    "reveal": "always",
-                    "panel": "shared",
-                    "clear": true
-                }
+        {
+            "label": "🚀 Script: Check Revisions",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                ".vscode/scripts/check-revisions.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder:turning-chaos-into-code}"
             },
-            {
-                "label": "🔗 Script: Mass Replace Links",
-                "type": "shell",
-                "command": "python",
-                "args": [
-                    ".vscode/scripts/mass_replace.py"
-                ],
-                "options": {
-                    "cwd": "${workspaceFolder:turning-chaos-into-code}"
-                },
-                "presentation": {
-                    "reveal": "always",
-                    "panel": "shared",
-                    "clear": true
-                }
-            }
-            ]
-    }
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "🔗 Script: Mass Replace Links",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                ".vscode/scripts/mass_replace.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder:turning-chaos-into-code}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Dash Idiomas",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                ".vscode/scripts/languages-revisions.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder:turning-chaos-into-code}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
