@@ -6,7 +6,7 @@ from datetime import date, datetime
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
-# ================= GPS DINÂMICO (NOVO) =================
+# ================= GPS DINÂMICO =================
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
 
@@ -17,9 +17,10 @@ DIRETORIOS_PARA_BUSCA = [
 
 EXTENSOES_SUPORTADAS = (".md", ".txt")
 
-# Regex EXCLUSIVA para idiomas
+# Regex para capturar TEMA, DATA e TURNO (opcional)
 REGEX_BLOCO = re.compile(
-    r"::vocab-review::\s*(\d{2}-\d{2}-\d{4})\s*(.*?)::end-vocab::", re.DOTALL
+    r"::vocab-review::\s*(.*?)\s*::\s*(\d{2}-\d{2}-\d{4})(?:\s*::\s*(TURN\s*\d+))?\s*(.*?)::end-vocab::",
+    re.IGNORECASE | re.DOTALL,
 )
 CALENDAR_ID = "kauanhorvath1996@gmail.com"
 # ==========================================================
@@ -43,8 +44,15 @@ def buscar_revisoes():
                             conteudo = f.read()
 
                         for match in REGEX_BLOCO.finditer(conteudo):
-                            data_br = match.group(1)
-                            tabela_conteudo = match.group(2)
+                            tema = match.group(1).strip().upper()
+                            data_br = match.group(2).strip()
+
+                            turno_match = match.group(3)
+                            turno = (
+                                turno_match.strip().upper() if turno_match else "TURN 1"
+                            )
+
+                            tabela_conteudo = match.group(4)
 
                             data_rev = datetime.strptime(data_br, "%d-%m-%Y").date()
                             status = (
@@ -85,6 +93,8 @@ def buscar_revisoes():
                                                 ),
                                                 "status": status,
                                                 "idioma": idioma,
+                                                "tema": tema,
+                                                "turno": turno,
                                             }
                                         )
                     except Exception:
@@ -93,7 +103,6 @@ def buscar_revisoes():
 
 
 def processar_agenda():
-    # EXATAMENTE COMO NO CHECK-REVISIONS ORIGINAL
     creds_json = os.environ.get("GOOGLE_CALENDAR_CREDENTIAL") or os.environ.get(
         "GOOGLE_CALENDAR_CREDENTIALS"
     )
@@ -108,101 +117,127 @@ def processar_agenda():
 
     service = build("calendar", "v3", credentials=creds)
     tarefas = buscar_revisoes()
-    tarefas.sort(key=lambda x: x["date_iso"])
     hoje = date.today()
 
-    print(f"\n{'='*75}")
+    # --- Header do Dashboard ---
+    print(f"\n{'='*82}")
     print(f"🌍 DASHBOARD DE IDIOMAS HORVATH - {hoje.strftime('%d/%m/%Y')}")
-    print(f"{'='*75}")
+    print()
 
-    agrupamento = {"atrasado": {}, "hoje": {}, "futuro": {}}
-
+    # --- Cálculo e Print do Total Acumulado ---
+    total_por_idioma = {}
     for t in tarefas:
-        st = t["status"]
-        dt = t["date_iso"]
-        dt_br = t["date_br"]
-        idioma = t["idioma"]
+        idi = t["idioma"]
+        total_por_idioma[idi] = total_por_idioma.get(idi, 0) + 1
 
-        if dt not in agrupamento[st]:
-            agrupamento[st][dt] = {"date_br": dt_br, "idiomas": {}}
-        if idioma not in agrupamento[st][dt]["idiomas"]:
-            agrupamento[st][dt]["idiomas"][idioma] = []
+    if total_por_idioma:
+        print("📊 TOTAL ACUMULADO:")
+        for idi, qtd in total_por_idioma.items():
+            print(f"  • {idi.upper()}: {qtd} words")
 
-        agrupamento[st][dt]["idiomas"][idioma].append(t["termo"])
-
-    for categoria in ["atrasado", "hoje", "futuro"]:
-        if not agrupamento[categoria]:
-            continue
-
-        header = (
-            "🚨 ATRASADOS"
-            if categoria == "atrasado"
-            else ("📅 PARA HOJE" if categoria == "hoje" else "🚀 PRÓXIMAS REVISÕES")
-        )
-        print(f"\n{header}:")
-
-        for dt_iso, info_data in agrupamento[categoria].items():
-            dt_br = info_data["date_br"]
-
-            for idioma, termos in info_data["idiomas"].items():
-                quantidade = len(termos)
-
-                if categoria in ["atrasado", "hoje"]:
-                    print(f" • [{dt_br}] - {idioma} ({quantidade} palavras):")
-                    for termo in termos:
-                        print(f"    - {termo}")
-
-                elif categoria == "futuro":
-                    titulo_evento = f"🌍 Revisão de {idioma} ({quantidade} palavras)"
-                    desc_evento = (
-                        f"Suas {quantidade} palavras para revisar hoje:\n\n"
-                        + "\n".join([f"- {t}" for t in termos])
-                    )
-
-                    try:
-                        t_min, t_max = (
-                            f"{dt_iso}T00:00:00Z",
-                            f"{dt_iso}T23:59:59Z",
-                        )
-                        existente = (
-                            service.events()
-                            .list(
-                                calendarId=CALENDAR_ID,
-                                timeMin=t_min,
-                                timeMax=t_max,
-                                q=f"Revisão de {idioma}",
-                            )
-                            .execute()
-                        )
-
-                        if not existente.get("items", []):
-                            event = {
-                                "summary": titulo_evento,
-                                "description": desc_evento,
-                                "start": {
-                                    "date": dt_iso,
-                                    "timeZone": "America/Sao_Paulo",
-                                },
-                                "end": {
-                                    "date": dt_iso,
-                                    "timeZone": "America/Sao_Paulo",
-                                },
-                            }
-                            service.events().insert(
-                                calendarId=CALENDAR_ID, body=event
-                            ).execute()
-                            prefixo = f"✅ AGENDADO   - [{dt_br}]"
-                        else:
-                            prefixo = f"⏭️  EXISTENTE - [{dt_br}]"
-                    except Exception as e:
-                        prefixo = f"❌ ERRO: {e} - [{dt_br}]"
-
-                    print(f" {prefixo} - {idioma} ({quantidade} palavras aguardando)")
+    print(f"{'='*82}\n")
 
     if not tarefas:
-        print("\n 😴 Nenhuma revisão de idioma encontrada. Tudo em dia!")
+        print(" 😴 Nenhuma revisão de idioma encontrada. Tudo em dia!\n")
+        print(f"{'='*82}\n")
+        return
 
-    print(f"\n{'='*75}\n")
+    agrupamento_unico = {}
+    for t in tarefas:
+        chave = (t["idioma"], t["tema"], t["turno"], t["date_iso"])
+        if chave not in agrupamento_unico:
+            agrupamento_unico[chave] = {
+                "idioma": t["idioma"],
+                "tema": t["tema"],
+                "turno": t["turno"],
+                "date_iso": t["date_iso"],
+                "date_br": t["date_br"].replace("-", "/"),
+                "status": t["status"],
+                "termos": [],
+            }
+        agrupamento_unico[chave]["termos"].append(t["termo"])
+
+    todas_as_linhas = list(agrupamento_unico.values())
+    todas_as_linhas.sort(key=lambda x: (x["idioma"], x["date_iso"]))
+
+    # --- Print da Tabela (Label Row) ---
+    print(
+        f" {'IDIOMA':<12} | {'STATUS':<16} | {'DATA':<10} | {'TEMA':<22} | {'TRN':^3} | {'QTD':^3}"
+    )
+    print("-" * 82)
+
+    ultimo_idioma = None
+    for dados in todas_as_linhas:
+        idioma = dados["idioma"]
+
+        # Insere espaço entre diferentes idiomas
+        if ultimo_idioma and idioma != ultimo_idioma:
+            print()
+
+        tema = dados["tema"]
+        turno = dados["turno"]
+        dt_iso = dados["date_iso"]
+        dt_br = dados["date_br"]
+        status = dados["status"]
+        termos = dados["termos"]
+        quantidade = len(termos)
+
+        tema_formatado = tema[:21] + "…" if len(tema) > 22 else tema
+        turno_num = turno.replace("TURN", "").strip()
+        qtd_str = f"{quantidade:02d}"
+
+        # Prefixos formatados com largura fixa de 16 para evitar desalinhamento por emojis
+        prefixo = ""
+
+        if status == "futuro":
+            titulo_evento = (
+                f"🌍 Revisão de {idioma} ({tema} | {turno}) - {quantidade} palavras"
+            )
+            desc_evento = (
+                f"Suas {quantidade} palavras de {tema} ({turno}) para revisar hoje:\n\n"
+                + "\n".join([f"- {t}" for t in termos])
+            )
+
+            try:
+                t_min, t_max = (f"{dt_iso}T00:00:00Z", f"{dt_iso}T23:59:59Z")
+                existente = (
+                    service.events()
+                    .list(
+                        calendarId=CALENDAR_ID,
+                        timeMin=t_min,
+                        timeMax=t_max,
+                        q=f"Revisão de {idioma} ({tema} | {turno})",
+                    )
+                    .execute()
+                )
+
+                if not existente.get("items", []):
+                    event = {
+                        "summary": titulo_evento,
+                        "description": desc_evento,
+                        "start": {"date": dt_iso, "timeZone": "America/Sao_Paulo"},
+                        "end": {"date": dt_iso, "timeZone": "America/Sao_Paulo"},
+                    }
+                    service.events().insert(
+                        calendarId=CALENDAR_ID, body=event
+                    ).execute()
+                    prefixo = "✅ AGENDADO     "
+                else:
+                    prefixo = "⏩ EXISTENTE    "
+            except Exception as e:
+                prefixo = "❌ ERRO         "
+
+        elif status == "hoje":
+            prefixo = "📅 PARA HOJE    "
+        elif status == "atrasado":
+            prefixo = "🚨 ATRASADO     "
+
+        print(
+            f" {idioma:<12} | {prefixo} | {dt_br:<10} | {tema_formatado:<22} | {turno_num:^3} | {qtd_str:^3}"
+        )
+        ultimo_idioma = idioma
+
+    print(f"\n{'='*82}\n")
 
 
 if __name__ == "__main__":

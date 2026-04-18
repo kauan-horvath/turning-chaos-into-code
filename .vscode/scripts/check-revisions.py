@@ -1,7 +1,6 @@
 # =================== THIS CODE IS AI GENERATED ==============
 import os
 import re
-import yaml  # noqa
 import json
 from datetime import date, datetime
 from google.oauth2 import service_account
@@ -17,7 +16,7 @@ DIRETORIOS_PARA_BUSCA = [
     os.path.join(PROJECT_ROOT, "care-projects"),
 ]
 
-# EXTENSÕES PERMITIDAS (Refinado para incluir HTML)
+# EXTENSÕES PERMITIDAS
 EXTENSOES_SUPORTADAS = (".py", ".md", ".sql", ".vba", ".html", ".htm")
 
 REGEX_REVIEW = r"::to-review::\s*(\d{2}-\d{2}-\d{4})\s*::(.*)::"
@@ -39,7 +38,6 @@ def migrar_tags():
             continue
         for root, _, files in os.walk(diretorio):
             for file in files:
-                # Verificação de extensão atualizada
                 if file.endswith(EXTENSOES_SUPORTADAS):
                     path = os.path.join(root, file)
                     with open(path, "r", encoding="utf-8", errors="ignore") as f:
@@ -77,11 +75,9 @@ def buscar_revisoes():
             continue
         for root, _, files in os.walk(diretorio):
             for file in files:
-                # Verificação de extensão atualizada
                 if file.endswith(EXTENSOES_SUPORTADAS):
                     path = os.path.join(root, file)
                     nome_arquivo = os.path.basename(path)
-                    nome_pasta = os.path.basename(root)
 
                     try:
                         with open(path, "r", encoding="utf-8", errors="ignore") as f:
@@ -110,7 +106,6 @@ def buscar_revisoes():
                                             "date_iso": data_rev.strftime("%Y-%m-%d"),
                                             "status": status,
                                             "file": nome_arquivo,
-                                            "folder": nome_pasta,
                                         }
                                     )
                     except Exception:
@@ -133,73 +128,94 @@ def processar_agenda():
 
     service = build("calendar", "v3", credentials=creds)
     tarefas = buscar_revisoes()
-    tarefas.sort(key=lambda x: x["date_iso"])
+
+    # Ordenar PRIMEIRO por Status (Atrasado -> Hoje -> Futuro), DEPOIS por Data
+    ordem_status = {"atrasado": 0, "hoje": 1, "futuro": 2}
+    tarefas.sort(key=lambda x: (ordem_status[x["status"]], x["date_iso"]))
+
     hoje = date.today()
 
-    print(f"\n{'='*75}")
+    # --- Header do Dashboard (Largura travada em 80 chars) ---
+    print(f"\n{'='*80}")
     print(f"📊 DASHBOARD DE REVISÕES HORVATH - {hoje.strftime('%d/%m/%Y')}")
-    print(f"{'='*75}")
+    print(f"{'='*80}\n")
 
-    for categoria in ["atrasado", "hoje", "futuro"]:
-        itens = [t for t in tarefas if t["status"] == categoria]
-        if not itens:
-            continue
+    if not tarefas:
+        print(" 😴 Nenhuma revisão encontrada. Tudo em dia!\n")
+        print(f"{'='*80}\n")
+        return
 
-        header = (
-            "🚨 ATRASADOS"
-            if categoria == "atrasado"
-            else ("📅 PARA HOJE" if categoria == "hoje" else "🚀 PRÓXIMAS REVISÕES")
-        )
-        print(f"\n{header}:")
+    # --- Print da Tabela (Label Row) ---
+    # Redistribuímos para exatos 80 chars (evita quebrar a linha no terminal)
+    print(f" {'STATUS':<15} | {'DATA':<10} | {'ASSUNTO':<28} | {'ARQUIVO':<20}")
+    print("-" * 80)
 
-        for t in itens:
-            if categoria == "futuro":
-                try:
-                    t_min, t_max = (
-                        f"{t['date_iso']}T00:00:00Z",
-                        f"{t['date_iso']}T23:59:59Z",
+    ultimo_status = None
+
+    for t in tarefas:
+        status = t["status"]
+
+        # Insere espaço sempre que mudar de grupo (ex: HOJE -> FUTURO)
+        if ultimo_status and status != ultimo_status:
+            print()
+
+        dt_br = t["date_br"].replace("-", "/")
+        assunto = t["title"]
+        arquivo = t.get("file", "N/A")
+
+        # Trunca as strings limitando exatamente ao tamanho da coluna
+        assunto_fmt = assunto[:27] + "…" if len(assunto) > 28 else assunto
+        arquivo_fmt = arquivo[:19] + "…" if len(arquivo) > 20 else arquivo
+
+        # Prefixos formatados MANUALMENTE (exatos 15 caracteres visuais)
+        prefixo = ""
+
+        if status == "futuro":
+            try:
+                t_min, t_max = (
+                    f"{t['date_iso']}T00:00:00Z",
+                    f"{t['date_iso']}T23:59:59Z",
+                )
+                existente = (
+                    service.events()
+                    .list(
+                        calendarId=CALENDAR_ID,
+                        timeMin=t_min,
+                        timeMax=t_max,
+                        q=t["summary"],
                     )
-                    existente = (
-                        service.events()
-                        .list(
-                            calendarId=CALENDAR_ID,
-                            timeMin=t_min,
-                            timeMax=t_max,
-                            q=t["summary"],
-                        )
-                        .execute()
-                    )
+                    .execute()
+                )
 
-                    if not existente.get("items", []):
-                        event = {
-                            "summary": t["summary"],
-                            "start": {
-                                "date": t["date_iso"],
-                                "timeZone": "America/Sao_Paulo",
-                            },
-                            "end": {
-                                "date": t["date_iso"],
-                                "timeZone": "America/Sao_Paulo",
-                            },
-                        }
-                        service.events().insert(
-                            calendarId=CALENDAR_ID, body=event
-                        ).execute()
-                        prefixo = f"✅ AGENDADO   - [{t['date_br']}]"
-                    else:
-                        prefixo = f"⏭️  EXISTENTE - [{t['date_br']}]"
-                except Exception as e:
-                    prefixo = f"❌ ERRO: {e}      - [{t['date_br']}]"
-            else:
-                status_label = "ATRASADO" if categoria == "atrasado" else "HOJE"
-                prefixo = f"• {status_label}     - [{t['date_br']}]"
+                if not existente.get("items", []):
+                    event = {
+                        "summary": t["summary"],
+                        "start": {
+                            "date": t["date_iso"],
+                            "timeZone": "America/Sao_Paulo",
+                        },
+                        "end": {"date": t["date_iso"], "timeZone": "America/Sao_Paulo"},
+                    }
+                    service.events().insert(
+                        calendarId=CALENDAR_ID, body=event
+                    ).execute()
+                    prefixo = "✅ AGENDADO    "
+                else:
+                    prefixo = "⏩ EXISTENTE   "
+            except Exception as e:
+                prefixo = f"❌ ERRO {e}    "
 
-            print(f" {prefixo} - {t['summary']}")
-            print(
-                f"    file: ({t.get('file', 'N/A')}) | folder: ({t.get('folder', 'N/A')})"
-            )
+        elif status == "hoje":
+            prefixo = "📅 PARA HOJE   "
+        elif status == "atrasado":
+            prefixo = "🚨 ATRASADO    "
 
-    print(f"\n{'='*75}\n")
+        # Print final travado em 80 colunas
+        print(f" {prefixo} | {dt_br:<10} | {assunto_fmt:<28} | {arquivo_fmt:<20}")
+
+        ultimo_status = status
+
+    print(f"\n{'='*80}\n")
 
 
 if __name__ == "__main__":

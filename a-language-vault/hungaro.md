@@ -3,7 +3,7 @@
 ## BOAS VINDAS
 
 LAST REVIEW 15-04
-::vocab-review:: 22-04-2026
+::vocab-review:: BOAS VINDAS :: 22-04-2026 :: TURN 1
 
 | PALAVRA          |     | MNEMÔNICA                                    |     | SIGNIFICADO                                    |
 | ---------------- | --- | -------------------------------------------- | --- | ---------------------------------------------- |
@@ -28,7 +28,7 @@ LAST REVIEW 15-04
 ## MESES DO ANO
 
 Last review 17-04-2026
-::vocab-review:: 24-04-2026
+::vocab-review:: MESES DO ANO :: 24-04-2026 :: TURN 1
 
 | PALAVRA        |     | MNEMÔNICA                                    |     | SIGNIFICADO                                    |
 | -------------- | --- | -------------------------------------------- | --- | ---------------------------------------------- |
@@ -49,7 +49,7 @@ Last review 17-04-2026
 
 ## DIAS DA SEMANA
 
-::vocab-review:: 19-04-2026
+::vocab-review:: DIAS DA SEMANA :: 19-04-2026
 
 | PALAVRA       |     | MNEMÔNICA                                    |     | SIGNIFICADO                                |
 | ------------- | --- | -------------------------------------------- | --- | ------------------------------------------ |
