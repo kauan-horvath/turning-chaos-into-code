@@ -225,7 +225,7 @@ def processar_agenda():
                 else:
                     prefixo = "⏩ EXISTENTE    "
             except Exception as e:
-                prefixo = "❌ ERRO         "
+                prefixo = f"❌ ERRO {e}    "
 
         elif status == "hoje":
             prefixo = "📅 PARA HOJE    "
