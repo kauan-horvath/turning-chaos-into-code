@@ -310,9 +310,7 @@
   print(f"A multiplicação é: {massa_buraco_negro}")
 ```
 
-[LAST-DATE: 2026-04-11] Revisão de tipos
-
-[Questionário](https://gemini.google.com/share/089bc530f8bd)
+[LAST-DATE: 11-04-2026] Revisão de tipos
 
 > > > > Aproveitamento de 81% - revisão média
 
@@ -329,4 +327,19 @@
       '''
 ```
 
-::to-review:: 18-04-2026 ::Tipos Primitivos::
+[LAST-DATE: 18-04-2026] Revisão de tipos
+
+> > > > Aproveitamento de 97% - revisão distante
+
+```python
+    '''
+    Pontos fortes
+    Tipos de Dados e Estruturas: Você demonstrou um excelente entendimento sobre os tipos primitivos do Python (int, float, complex, bool) e sobre a inicialização e características de coleções como Tuplas, Dicionários e Sets.
+    Manipulação e Métodos de Strings: Suas respostas mostram um forte domínio na manipulação de texto. Você acertou perguntas difíceis sobre métodos (.strip(), .split(), .upper(), .format()), caracteres de escape e compreende perfeitamente a regra de imutabilidade das strings.
+    Conversão de Tipos (Casting) e Lógica Booleana: Você possui uma compreensão perfeita de como o Python lida com conversões e avaliações booleanas, acertando desde o comportamento de truncamento do int() até a verificação de valores 'truthy' e 'falsy', como no caso de listas não vazias.
+    Áreas a melhorar
+    Fatiamento (Slicing) de Coleções: Houve um pequeno equívoco no fatiamento indexado [2:6]. Lembre-se da regra de ouro do Python para slices: o índice de 'start' (início) é inclusivo, mas o índice de 'stop' (fim) é EXCLUSIVO. Portanto, [2:6] pega os caracteres nos índices 2, 3, 4 e 5, parando logo antes do 6. Por isso, a resposta é 'CDEF' e não 'CDEFG'.
+    '''
+```
+
+::to-review:: 24-04-2026 :: Criar questionário avançado e Teste ::

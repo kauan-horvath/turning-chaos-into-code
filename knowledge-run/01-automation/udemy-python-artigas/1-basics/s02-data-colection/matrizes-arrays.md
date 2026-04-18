@@ -9,7 +9,7 @@
 | **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :------------------- | :---------------------------------------------------------------- |
 | &#8657; **Anterior** | [ANTERIOR](./colecoes-dicts.md)                                   |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                                          |
+| &#8659; **Próximo**  | [PROXIMO](../s03-modularization/condicionais-if-else.md)          |
 
 ---
 

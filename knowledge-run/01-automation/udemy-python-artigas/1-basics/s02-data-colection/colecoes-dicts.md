@@ -312,10 +312,15 @@
 
 ### x. 🛠️ Revisões
 
-💻 Notas / Código
+::last-review:: 18-04-2026 ::Dictionaries::
 
-```python
-# Seu código aqui
-```
+> > > > aproveitamento: 93% - com consultas revisão intermediária
+> > > > Pontos fortes
+> > > > Métodos Nativos e Operações: Você demonstrou um excelente entendimento sobre o uso de métodos embutidos do Python, como .get(), .items(), .values(), .update(), .pop() e .clear(). Sabe perfeitamente qual comando utilizar para manipular, extrair ou alterar dados com segurança.
+> > > > Dicionários Aninhados e Estruturas Complexas: Você domina a manipulação de dicionários complexos, mostrando que compreende com clareza a sintaxe necessária para acessar subchaves alocadas profundamente, inclusive quando listas estão misturadas na estrutura.
+> > > > Fundamentos Lógicos: O seu conhecimento base é bastante sólido. Você compreende muito bem a natureza dos pares de chave-valor, as regras que sobrescrevem chaves duplicadas e o uso de operadores como 'in' para validação de pertinência.
+> > > > Áreas a melhorar
+> > > > Natureza da Busca por Chaves (vs. Índices): Lembre-se de que dicionários não funcionam com índices numéricos posicionais como as listas. Tentar acessar 'dict[0]' não retorna a primeira posição do dicionário; o interpretador procura por uma chave cujo nome literal seja o número inteiro '0'. Se essa chave não existir, o código resultará em um erro do tipo 'KeyError'.
+> > > > Iteração Padrão em Laços 'For': Ao iterar diretamente sobre um dicionário utilizando o laço mais simples (ex: 'for variavel in dicionario:'), o comportamento padrão do Python é atribuir apenas as chaves à variável do laço a cada iteração, e não os valores. Para iterar diretamente pelos valores, lembre-se de usar explicitamente o método .values().
 
-::to-review:: 18-04-2026 ::Dictionaries::
+::to-review::23-04-2026 ::Dicts e seus detalhes::
