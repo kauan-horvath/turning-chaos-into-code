@@ -76,9 +76,9 @@ Aqui estão as palavras (e minhas mnemônicas) que vamos usar:
 | **哥哥** | gēge   | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">IRMÃO MAIS VELHO</span> |
 | **弟弟** | dìdi   | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">IRMÃO MAIS NOVO</span>  |
 | **姐姐** | jiějie | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">IRMÃ MAIS VELHA</span>  |
-| **妹妹** | mèimei | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">IRMÃ MAIS NOVA</span>   |
-| **奶奶** | nǎinai | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">AVÓ (PATERNA)</span>    |
-| **爷爷** | yéye   | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">AVÔ (PATERNO)</span>    |
+| **妹妹** | mèimei | <span style="opacity: 0.3;">mei</span>       |     | <span style="opacity: 0.1;">IRMÃ MAIS NOVA</span>   |
+| **奶奶** | nǎinai | <span style="opacity: 0.3;">nanatsu</span>   |     | <span style="opacity: 0.1;">AVÓ (PATERNA)</span>    |
+| **爷爷** | yéye   | <span style="opacity: 0.3;">yoyo</span>      |     | <span style="opacity: 0.1;">AVÔ (PATERNO)</span>    |
 
 ::end-vocab::
 
@@ -91,13 +91,13 @@ Aqui estão as palavras (e minhas mnemônicas) que vamos usar:
 | **是**  | shì    | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">SER</span>               |
 | **吃**  | chī    | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">COMER</span>             |
 | **喝**  | hē     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">BEBER</span>             |
-| **去**  | qù     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">IR</span>                |
-| **来**  | lái    | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">VIR</span>               |
-| **看**  | kàn    | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">VER / LER / OLHAR</span> |
-| **听**  | tīng   | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">OUVIR</span>             |
+| **去**  | qù     | <span style="opacity: 0.3;">xiiii</span>     |     | <span style="opacity: 0.1;">IR</span>                |
+| **来**  | lái    | <span style="opacity: 0.3;">tia lai</span>   |     | <span style="opacity: 0.1;">VIR</span>               |
+| **看**  | kàn    | <span style="opacity: 0.3;">kan kan</span>   |     | <span style="opacity: 0.1;">VER / LER / OLHAR</span> |
+| **听**  | tīng   | <span style="opacity: 0.3;">catinga</span>   |     | <span style="opacity: 0.1;">OUVIR</span>             |
 | **说**  | shuō   | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">FALAR</span>             |
 | **要**  | yào    | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">QUERER</span>            |
-| **买**  | mǎi    | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">COMPRAR</span>           |
+| **买**  | mǎi    | <span style="opacity: 0.3;">maiô</span>      |     | <span style="opacity: 0.1;">COMPRAR</span>           |
 
 ::end-vocab::
 

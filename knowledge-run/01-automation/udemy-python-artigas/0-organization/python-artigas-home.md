@@ -25,7 +25,7 @@
 **[ s03 - Controle de Fluxo e Modularização ]**
 
 - [x] [**Seção 13:** Estruturas Condicionais (If, Else, Elif)](../1-basics/s03-modularization/condicionais-if-else.md)
-- [ ] [**Seção 14:** Estruturas de Repetição (While, For)](../1-basics/s03-modularization/loops-repeticao.md)
+- [x] [**Seção 14:** Estruturas de Repetição (While, For)](../1-basics/s03-modularization/loops-repeticao.md)
 - [ ] [**Seção 16:** Funções e Parâmetros](../1-basics/s03-modularization/funcoes-parametros.md)
 - [ ] [**Seção 21:** Escopo de Variáveis (Local vs. Global)](../1-basics/s03-modularization/escopo-variaveis.md)
 - [ ] [**Seção 15:** **Training 03:** Lógica de Programação Aplicada](../1-basics/s03-modularization/training-03.md)

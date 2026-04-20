@@ -210,4 +210,17 @@ Unpacking (Descompactação): Ao usar o asterisco (\*) na descompactação, o Py
 Métodos de Sequência: Lembre-se que tuplas em Python não possuem o método .find() (comum em strings); para localizar índices em tuplas, utilizamos exclusivamente o .index().
 Identificação de Tipos: Fique atento aos parênteses: em Python, apenas colocar algo entre parênteses como ("Azul") não cria uma tupla, mas sim uma String. A presença da vírgula é o que define a estrutura de tupla.
 
-::to-review:: 19-04-2026 ::Tuplas e seus detalhes::
+::Last-review:: 19-04-2026 ::Tuplas e seus detalhes::
+
+> > > > Aproveitamento 80% - revisão próxima
+
+Entender melhor o Range(len()):
+
+Pontos fortes
+Conceitos Fundamentais e Imutabilidade: Você demonstrou domínio total sobre a natureza imutável das tuplas e a importância dessa característica para a integridade dos dados e performance de memória.
+Métodos e Acesso a Dados: Sua compreensão sobre como acessar itens (incluindo indexação negativa), usar o método .count() e identificar índices de ocorrência está excelente.
+Iteração e Controle: Você entende bem como percorrer tuplas usando loops for e while, além de dominar a lógica de descompactação (unpacking) básica.
+Áreas a melhorar
+Operações de Repetição e Concatenação: Atenção ao operador de multiplicação (\*). Ele repete os elementos individualmente dentro da mesma estrutura, em vez de criar tuplas aninhadas.
+Sintaxe de Criação e Conversão: Lembre-se de que a função tuple() em uma string cria uma tupla de caracteres individuais, e que uma tupla pode ser criada apenas separando valores por vírgulas, mesmo sem parênteses.
+Manipulação Indireta: Embora entenda a teoria da imutabilidade, você se confundiu ao achar que métodos de lista (como .append()) funcionariam em tuplas. Tuplas não possuem métodos de alteração in-place.

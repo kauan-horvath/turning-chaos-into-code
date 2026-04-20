@@ -9,7 +9,7 @@
 | **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :------------------- | :---------------------------------------------------------------- |
 | &#8657; **Anterior** | [ANTERIOR](../s02-data-colection/matrizes-arrays.md)              |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                                          |
+| &#8659; **Próximo**  | [PROXIMO](./loops-repeticao.md)                                   |
 
 ---
 

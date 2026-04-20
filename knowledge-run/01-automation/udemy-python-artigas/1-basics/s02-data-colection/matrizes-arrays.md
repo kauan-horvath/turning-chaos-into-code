@@ -198,10 +198,8 @@ with open("arquivo.bin", "rb") as f:
 
 ### x. 🛠️ Revisões
 
-::to-review:: 19-04-2026 ::Arrays e métodos exclusivos::
+::last-review:: 19-04-2026 ::Arrays e métodos exclusivos::
 
-💻 Notas / Código
+> > > > aprovetiamento 100% (sem testes)
 
-```python
-# Seu código aqui
-```
+::to-review:: 26-04-2026 :: Arrays ::

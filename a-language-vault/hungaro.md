@@ -130,22 +130,42 @@ Aqui estão as palavras que vamos usar:
 
 ::end-vocab::
 
+## PARTES DO DIA
+
+::vocab-review:: PARTES DO DIA :: 19-04-2026 :: TURN 1
+
+| PALAVRA     |     | MNEMÔNICA                                    |     | SIGNIFICADO                                       |
+| ----------- | --- | -------------------------------------------- | --- | ------------------------------------------------- |
+| **REGGEL**  |     | <span style="opacity: 0.3;">REGATA</span>    |     | <span style="opacity: 0.1;">MANHÃ</span>          |
+| **DÉL**     |     | <span style="opacity: 0.3;">DEL</span>       |     | <span style="opacity: 0.1;">MEIO-DIA</span>       |
+| **NAP**     |     | <span style="opacity: 0.3;">SONECA</span>    |     | <span style="opacity: 0.1;">DIA</span>            |
+| **DÉLUTÁN** |     | <span style="opacity: 0.3;">DEBUTANTE</span> |     | <span style="opacity: 0.1;">À TARDE</span>        |
+| **ESTE**    |     | <span style="opacity: 0.3;">ESTER</span>     |     | <span style="opacity: 0.1;">NOITE</span>          |
+| **ÉJSZAKA** |     | <span style="opacity: 0.3;">ENSACAR</span>   |     | <span style="opacity: 0.1;">TARDE DA NOITE</span> |
+| **ÉJFÉL**   |     | <span style="opacity: 0.3;">EIFFEL</span>    |     | <span style="opacity: 0.1;">MEIA-NOITE</span>     |
+| **MA**      |     | <span style="opacity: 0.3;">MÁ</span>        |     | <span style="opacity: 0.1;">HOJE</span>           |
+| **TEGNAP**  |     | <span style="opacity: 0.3;">TECNA</span>     |     | <span style="opacity: 0.1;">ANTEONTEM</span>      |
+| **HOLNAP**  |     | <span style="opacity: 0.3;">ROLDAO</span>    |     | <span style="opacity: 0.1;">AMANHÃ</span>         |
+
+::end-vocab::
+
 ## NÚMEROS (1-10)
 
+::LAST-review:: NÚMEROS :: 19-04-2026 :: TURN 1
 ::vocab-review:: NÚMEROS :: 19-04-2026 :: TURN 1
 
-| PALAVRA    |     | MNEMÔNICA                                    |     | SIGNIFICADO                               |
-| ---------- | --- | -------------------------------------------- | --- | ----------------------------------------- |
-| **EGY**    |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">UM</span>     |
-| **KETTŐ**  |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">DOIS</span>   |
-| **HÁROM**  |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">TRÊS</span>   |
-| **NÉGY**   |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">QUATRO</span> |
-| **ÖT**     |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">CINCO</span>  |
-| **HAT**    |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">SEIS</span>   |
-| **HÉT**    |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">SETE</span>   |
-| **NYOLC**  |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">OITO</span>   |
-| **KILENC** |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">NOVE</span>   |
-| **TÍZ**    |     | <span style="opacity: 0.3;">mnemonica</span> |     | <span style="opacity: 0.1;">DEZ</span>    |
+| PALAVRA    |     | MNEMÔNICA                                  |     | SIGNIFICADO                               |
+| ---------- | --- | ------------------------------------------ | --- | ----------------------------------------- |
+| **EGY**    |     | <span style="opacity: 0.3;">EGG</span>     |     | <span style="opacity: 0.1;">UM</span>     |
+| **KETTŐ**  |     | <span style="opacity: 0.3;">GUETO</span>   |     | <span style="opacity: 0.1;">DOIS</span>   |
+| **HÁROM**  |     | <span style="opacity: 0.3;">HARÉM</span>   |     | <span style="opacity: 0.1;">TRÊS</span>   |
+| **NÉGY**   |     | <span style="opacity: 0.3;">NEGO</span>    |     | <span style="opacity: 0.1;">QUATRO</span> |
+| **ÖT**     |     | <span style="opacity: 0.3;">OUTO</span>    |     | <span style="opacity: 0.1;">CINCO</span>  |
+| **HAT**    |     | <span style="opacity: 0.3;">HOT</span>     |     | <span style="opacity: 0.1;">SEIS</span>   |
+| **HÉT**    |     | <span style="opacity: 0.3;">HAT</span>     |     | <span style="opacity: 0.1;">SETE</span>   |
+| **NYOLC**  |     | <span style="opacity: 0.3;">NOITE</span>   |     | <span style="opacity: 0.1;">OITO</span>   |
+| **KILENC** |     | <span style="opacity: 0.3;">SILENCE</span> |     | <span style="opacity: 0.1;">NOVE</span>   |
+| **TÍZ**    |     | <span style="opacity: 0.3;">ATCHIM</span>  |     | <span style="opacity: 0.1;">DEZ</span>    |
 
 ::end-vocab::
 
