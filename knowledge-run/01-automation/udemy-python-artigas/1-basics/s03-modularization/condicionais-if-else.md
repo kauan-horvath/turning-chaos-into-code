@@ -96,7 +96,7 @@
 | **Aninhado**   | `if c1: a() elif c2: b() else: c()` | `a() if c1 else b() if c2 else c()` |
 
 ```python
-    #exemplos de aninhamento PYRAMID OF DOM
+    #exemplos de aninhamento PYRAMID OF DOOM
 
     #Na pratica é assim que funciona mas não é elegante usar assim
     if a > b:
