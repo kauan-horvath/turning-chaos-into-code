@@ -221,8 +221,7 @@
 ### x. 🛠️ Revisões
 
 ::last-review:: 16-04-2026 ::Coleção Sets::
-aproveitamento 77% revisão próxima: [questionário](https://gemini.google.com/share/d1b66bc7d730)
-
+aproveitamento 77% revisão próxima
 Pontos fortes
 
 Sintaxe e Características Básicas de Sets: Você demonstrou excelente compreensão sobre a sintaxe de criação de Sets (incluindo sintaxe de item único e conversões via list comprehensions), além de dominar bem a ausência de indexação, comportamento booleano e a natureza não-ordenada da estrutura.
@@ -232,4 +231,8 @@ Comportamento de Retorno e Métodos In-Place: Houve uma confusão recorrente sob
 Fundamentos Técnicos (Hashing e Conversão de Tipos): É recomendável revisar os conceitos de baixo nível do Python. A velocidade das buscas em Sets vem das tabelas de Hashing subjacentes, e não de manipulação do GIL ou multithreading. Da mesma forma, o cast 'list()' não faz 'bypass de blindagem na memória', mas apenas converte e gera uma nova estrutura em formato de lista.
 Tratamento de Duplicatas e Contagem: Cuidado com funções como 'len()' aplicadas logo após a inicialização de um Set contendo chaves repetidas. A filtragem das duplicatas ocorre no momento exato da declaração, o que reduz automaticamente a contagem de itens (comprimento) final da coleção em relação ao que foi digitado.
 
-::to-review:: 21-04-2026 ::Coleção Sets::
+::last-review:: 21-04-2026 ::Coleção Sets 2::
+
+> > > > Aproveitamento: 87% Revisão média
+
+::to-review:: 05-05-2026 ::Coleção Sets 3::

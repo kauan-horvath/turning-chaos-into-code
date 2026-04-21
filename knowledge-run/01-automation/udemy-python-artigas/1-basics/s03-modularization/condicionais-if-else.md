@@ -166,4 +166,8 @@
 
 ### x. 🛠️ Revisões
 
-::to-review:: 20-04-2026 :: Estruturas Condicionais ::
+::last-review:: 21-04-2026 :: Estruturas Condicionais ::
+
+> > > > Aproveitamento 83% - revisão média
+
+::to-review:: 27-04-2026 ::Estruturas Condicionais 2::
