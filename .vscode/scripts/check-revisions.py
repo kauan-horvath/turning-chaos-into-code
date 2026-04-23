@@ -1,223 +1,111 @@
-# =================== THIS CODE IS AI GENERATED ==============
 import os
 import re
-import json
-from datetime import date, datetime
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-
-# ================= GPS DINÂMICO (NOVO) =================
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
+from datetime import datetime, timedelta
 
 # ================= CONFIGURAÇÕES =================
-DIRETORIOS_PARA_BUSCA = [
-    os.path.join(PROJECT_ROOT, "knowledge-run"),
-    os.path.join(PROJECT_ROOT, "care-projects"),
-]
+ARQUIVO_MD = "hungaro.md"
 
-# EXTENSÕES PERMITIDAS
-EXTENSOES_SUPORTADAS = (".py", ".md", ".sql", ".vba", ".html", ".htm")
+# Regra de saltos a partir da última revisão concluída
+# Turno atual concluído -> Dias para a próxima cobrança
+SALTOS = {
+    "Turn 1": 1,
+    "Turn 2": 3,
+    "Turn 3": 7,
+    "Turn 4": 14,
+    "Turn 5": 30,
+    "MASTER": 9999,  # Master não é cobrado por data, entra na Chave Zero
+}
 
-REGEX_REVIEW = r"::to-review::\s*(\d{2}-\d{2}-\d{4})\s*::(.*)::"
-CALENDAR_ID = "kauanhorvath1996@gmail.com"
-# =================================================
-
-DIRETORIOS = DIRETORIOS_PARA_BUSCA
-PADRAO_ANTIGO = r"#\s*TODO:\s*\[REVIEW-DATE:\s*(\d{4})-(\d{2})-(\d{2})\]\s*(.*)"
-NOVO_FORMATO = r"::to-review:: \3-\2-\1 ::\4::"
-
-
-def migrar_tags():
-    print("🛠️  Iniciando migração para o padrão ::to-review::...")
-    arquivos_alterados = 0
-    tags_convertidas = 0
-
-    for diretorio in DIRETORIOS:
-        if not os.path.exists(diretorio):
-            continue
-        for root, _, files in os.walk(diretorio):
-            for file in files:
-                if file.endswith(EXTENSOES_SUPORTADAS):
-                    path = os.path.join(root, file)
-                    with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                        linhas = f.readlines()
-
-                    novas_linhas = []
-                    mudou_arquivo = False
-
-                    for linha in linhas:
-                        if re.search(PADRAO_ANTIGO, linha):
-                            nova_linha = re.sub(PADRAO_ANTIGO, NOVO_FORMATO, linha)
-                            novas_linhas.append(nova_linha)
-                            tags_convertidas += 1
-                            mudou_arquivo = True
-                        else:
-                            novas_linhas.append(linha)
-
-                    if mudou_arquivo:
-                        with open(path, "w", encoding="utf-8") as f:
-                            f.writelines(novas_linhas)
-                        print(f"✅ Atualizado: {file}")
-                        arquivos_alterados += 1
-
-    print(
-        f"\n✨ Sucesso! {tags_convertidas} tags em {arquivos_alterados} arquivos foram migradas."
-    )
+# ================= REGEX =================
+REGEX_TEMA = re.compile(r"^##\s+(.+)", re.IGNORECASE)
+REGEX_REVIEW = re.compile(
+    r"^::\s*review\s*::\s*(\d{2}-\d{2}-\d{4})\s*::\s*(Turn \d+|MASTER)", re.IGNORECASE
+)
+REGEX_PALAVRA = re.compile(r"^-\s+(.+?)\s*:\s*(.+)")
 
 
-def buscar_revisoes():
-    revisoes = []
-    hoje = date.today()
+def processar_vocabulario():
+    hoje = datetime.now().date()
 
-    for diretorio in DIRETORIOS_PARA_BUSCA:
-        if not os.path.exists(diretorio):
-            continue
-        for root, _, files in os.walk(diretorio):
-            for file in files:
-                if file.endswith(EXTENSOES_SUPORTADAS):
-                    path = os.path.join(root, file)
-                    nome_arquivo = os.path.basename(path)
+    alvo_principal = []
+    apoio_ativo = []
+    fluente = []
+    definitiva_plus = []
 
-                    try:
-                        with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                            for line in f:
-                                m = re.search(REGEX_REVIEW, line)
-                                if m:
-                                    data_br = m.group(1)
-                                    data_rev = datetime.strptime(
-                                        data_br, "%d-%m-%Y"
-                                    ).date()
-                                    desc = m.group(2).strip()
-
-                                    status = (
-                                        "hoje"
-                                        if data_rev == hoje
-                                        else (
-                                            "atrasado" if data_rev < hoje else "futuro"
-                                        )
-                                    )
-
-                                    revisoes.append(
-                                        {
-                                            "title": desc,
-                                            "summary": f"Revisão: {desc}",
-                                            "date_br": data_br,
-                                            "date_iso": data_rev.strftime("%Y-%m-%d"),
-                                            "status": status,
-                                            "file": nome_arquivo,
-                                        }
-                                    )
-                    except Exception:
-                        continue
-    return revisoes
-
-
-def processar_agenda():
-    creds_json = os.environ.get("GOOGLE_CALENDAR_CREDENTIAL") or os.environ.get(
-        "GOOGLE_CALENDAR_CREDENTIALS"
-    )
-    if creds_json:
-        info = json.loads(creds_json)
-        creds = service_account.Credentials.from_service_account_info(info)
-    else:
-        caminho_local = os.path.join(
-            PROJECT_ROOT, ".private", "credentials", "credential-googlecalendar.json"
-        )
-        creds = service_account.Credentials.from_service_account_file(caminho_local)
-
-    service = build("calendar", "v3", credentials=creds)
-    tarefas = buscar_revisoes()
-
-    # Ordenar PRIMEIRO por Status (Atrasado -> Hoje -> Futuro), DEPOIS por Data
-    ordem_status = {"atrasado": 0, "hoje": 1, "futuro": 2}
-    tarefas.sort(key=lambda x: (ordem_status[x["status"]], x["date_iso"]))
-
-    hoje = date.today()
-
-    # --- Header do Dashboard (Largura travada em 80 chars) ---
-    print(f"\n{'='*80}")
-    print(f"📊 DASHBOARD DE REVISÕES HORVATH - {hoje.strftime('%d/%m/%Y')}")
-    print(f"{'='*80}\n")
-
-    if not tarefas:
-        print(" 😴 Nenhuma revisão encontrada. Tudo em dia!\n")
-        print(f"{'='*80}\n")
+    if not os.path.exists(ARQUIVO_MD):
+        print(f"Arquivo {ARQUIVO_MD} não encontrado.")
         return
 
-    # --- Print da Tabela (Label Row) ---
-    # Redistribuímos para exatos 80 chars (evita quebrar a linha no terminal)
-    print(f" {'STATUS':<15} | {'DATA':<10} | {'ASSUNTO':<28} | {'ARQUIVO':<20}")
-    print("-" * 80)
+    with open(ARQUIVO_MD, "r", encoding="utf-8") as f:
+        linhas = f.readlines()
 
-    ultimo_status = None
+    tema_atual = None
+    ultimo_turno = None
+    data_prox_revisao = None
 
-    for t in tarefas:
-        status = t["status"]
+    for linha in linhas:
+        linha = linha.strip()
 
-        # Insere espaço sempre que mudar de grupo (ex: HOJE -> FUTURO)
-        if ultimo_status and status != ultimo_status:
-            print()
+        # Encontra o Tema
+        match_tema = REGEX_TEMA.match(linha)
+        if match_tema:
+            tema_atual = match_tema.group(1).strip()
+            ultimo_turno = None
+            data_prox_revisao = None
+            continue
 
-        dt_br = t["date_br"].replace("-", "/")
-        assunto = t["title"]
-        arquivo = t.get("file", "N/A")
+        # Encontra a Revisão
+        match_review = REGEX_REVIEW.match(linha)
+        if match_review:
+            data_str, turno = match_review.groups()
+            data_rev = datetime.strptime(data_str, "%d-%m-%Y").date()
+            ultimo_turno = turno.upper() if turno.upper() == "MASTER" else turno.title()
 
-        # Trunca as strings limitando exatamente ao tamanho da coluna
-        assunto_fmt = assunto[:27] + "…" if len(assunto) > 28 else assunto
-        arquivo_fmt = arquivo[:19] + "…" if len(arquivo) > 20 else arquivo
+            if ultimo_turno in SALTOS:
+                data_prox_revisao = data_rev + timedelta(days=SALTOS[ultimo_turno])
+            continue
 
-        # Prefixos formatados MANUALMENTE (exatos 15 caracteres visuais)
-        prefixo = ""
+        # Encontra a Palavra
+        match_palavra = REGEX_PALAVRA.match(linha)
+        if match_palavra and tema_atual and ultimo_turno:
+            palavra_raw = match_palavra.group(1).strip()
+            mnemonica = match_palavra.group(2).strip()
 
-        if status == "futuro":
-            try:
-                t_min, t_max = (
-                    f"{t['date_iso']}T00:00:00Z",
-                    f"{t['date_iso']}T23:59:59Z",
-                )
-                existente = (
-                    service.events()
-                    .list(
-                        calendarId=CALENDAR_ID,
-                        timeMin=t_min,
-                        timeMax=t_max,
-                        q=t["summary"],
-                    )
-                    .execute()
-                )
+            tem_estrela = "*" in palavra_raw
+            palavra = palavra_raw.replace("*", "").strip()
 
-                if not existente.get("items", []):
-                    event = {
-                        "summary": t["summary"],
-                        "start": {
-                            "date": t["date_iso"],
-                            "timeZone": "America/Sao_Paulo",
-                        },
-                        "end": {"date": t["date_iso"], "timeZone": "America/Sao_Paulo"},
-                    }
-                    service.events().insert(
-                        calendarId=CALENDAR_ID, body=event
-                    ).execute()
-                    prefixo = "✅ AGENDADO    "
-                else:
-                    prefixo = "⏩ EXISTENTE   "
-            except Exception as e:
-                prefixo = f"❌ ERRO {e}    "
+            registro = f"{palavra} ({mnemonica})"
 
-        elif status == "hoje":
-            prefixo = "📅 PARA HOJE   "
-        elif status == "atrasado":
-            prefixo = "🚨 ATRASADO    "
+            if tem_estrela:
+                definitiva_plus.append(registro)
+            elif ultimo_turno == "MASTER":
+                fluente.append(registro)
+            elif data_prox_revisao and data_prox_revisao <= hoje:
+                alvo_principal.append(registro)
+            else:
+                apoio_ativo.append(registro)
 
-        # Print final travado em 80 colunas
-        print(f" {prefixo} | {dt_br:<10} | {assunto_fmt:<28} | {arquivo_fmt:<20}")
+    # ================= GERAR SAÍDA PARA O TERMINAL =================
+    print("=" * 60)
+    print("📋 COPIE O TEXTO ABAIXO E COLE NA IA")
+    print("=" * 60)
+    print("\n[ALVO PRINCIPAL - REVISÃO DO DIA]")
+    print(
+        ", ".join(alvo_principal)
+        if alvo_principal
+        else "Nenhuma palavra atrasada hoje."
+    )
 
-        ultimo_status = status
+    print("\n[APOIO ATIVO - CONSTRUÇÃO DE CONTEXTO]")
+    print(", ".join(apoio_ativo) if apoio_ativo else "Nenhuma.")
 
-    print(f"\n{'='*80}\n")
+    print("\n[VOCABULÁRIO FLUENTE - TRICKY QUESTIONS]")
+    print(", ".join(fluente) if fluente else "Nenhuma.")
+
+    print("\n[DEFINITIVAS PLUS - USO NATIVO]")
+    print(", ".join(definitiva_plus) if definitiva_plus else "Nenhuma.")
+    print("\n" + "=" * 60)
 
 
 if __name__ == "__main__":
-    os.system("cls" if os.name == "nt" else "clear")
-    processar_agenda()
+    processar_vocabulario()
