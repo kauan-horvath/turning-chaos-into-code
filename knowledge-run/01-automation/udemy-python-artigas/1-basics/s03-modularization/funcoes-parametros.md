@@ -182,6 +182,6 @@
 
 ::last-review:: 22-04-2026 :: Funções e Param/Args::
 
-> > > > aproveitamento 90% - revisao longa
+> > > > aproveitamento 77% - revisao longa
 
 ::to-review:: 29-04-2026 ::Funções e Param/Args::

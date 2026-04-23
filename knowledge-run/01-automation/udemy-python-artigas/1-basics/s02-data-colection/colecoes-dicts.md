@@ -315,12 +315,24 @@
 ::last-review:: 18-04-2026 ::Dictionaries::
 
 > > > > aproveitamento: 93% - com consultas revisão intermediária
-> > > > Pontos fortes
-> > > > Métodos Nativos e Operações: Você demonstrou um excelente entendimento sobre o uso de métodos embutidos do Python, como .get(), .items(), .values(), .update(), .pop() e .clear(). Sabe perfeitamente qual comando utilizar para manipular, extrair ou alterar dados com segurança.
-> > > > Dicionários Aninhados e Estruturas Complexas: Você domina a manipulação de dicionários complexos, mostrando que compreende com clareza a sintaxe necessária para acessar subchaves alocadas profundamente, inclusive quando listas estão misturadas na estrutura.
-> > > > Fundamentos Lógicos: O seu conhecimento base é bastante sólido. Você compreende muito bem a natureza dos pares de chave-valor, as regras que sobrescrevem chaves duplicadas e o uso de operadores como 'in' para validação de pertinência.
-> > > > Áreas a melhorar
-> > > > Natureza da Busca por Chaves (vs. Índices): Lembre-se de que dicionários não funcionam com índices numéricos posicionais como as listas. Tentar acessar 'dict[0]' não retorna a primeira posição do dicionário; o interpretador procura por uma chave cujo nome literal seja o número inteiro '0'. Se essa chave não existir, o código resultará em um erro do tipo 'KeyError'.
-> > > > Iteração Padrão em Laços 'For': Ao iterar diretamente sobre um dicionário utilizando o laço mais simples (ex: 'for variavel in dicionario:'), o comportamento padrão do Python é atribuir apenas as chaves à variável do laço a cada iteração, e não os valores. Para iterar diretamente pelos valores, lembre-se de usar explicitamente o método .values().
 
-::to-review::23-04-2026 ::Dicts e seus detalhes::
+::last-review:: 23-04-2026 ::Dictionaries::
+
+> > > > aproveitamento: 77% - sem consultas revisão próxima
+
+Pontos fortes
+Fundamentos e Estrutura Básica: Excelente compreensão da estrutura de dicionários (pares de chave-valor), como o Python lida com a ordenação a partir da versão 3.6 e o funcionamento da cópia independente de dicionários na memória.
+Acesso Seguro e Navegação em Dados: Você domina a iteração com laços `for`, o desempacotamento correto de variáveis (chaves e valores) e a extração de dados em dicionários aninhados. Sabe aplicar perfeitamente o método `.get()` e o operador `in` para evitar interrupções no código por `KeyError`.
+Remoção e Limpeza: Demonstrou grande clareza ao diferenciar e utilizar corretamente o método `.pop()` para chaves específicas, o comando `del` (tanto para chaves quanto para a variável em si) e o método `.clear()`.
+Métodos Nativos e Operações: Você demonstrou um excelente entendimento sobre o uso de métodos embutidos do Python, como .get(), .items(), .values(), .update(), .pop() e .clear(). Sabe perfeitamente qual comando utilizar para manipular, extrair ou alterar dados com segurança.
+Dicionários Aninhados e Estruturas Complexas: Você domina a manipulação de dicionários complexos, mostrando que compreende com clareza a sintaxe necessária para acessar subchaves alocadas profundamente, inclusive quando listas estão misturadas na estrutura.
+Fundamentos Lógicos: O seu conhecimento base é bastante sólido. Você compreende muito bem a natureza dos pares de chave-valor, as regras que sobrescrevem chaves duplicadas e o uso de operadores como 'in' para validação de pertinência.
+
+Áreas a melhorar
+Métodos de Atualização e Mesclagem (.update): É necessário revisar como combinar dicionários. O operador de soma (`+`) não funciona para dicionários em Python; o correto é utilizar `.update()`. Além disso, o `.update()` insere ou substitui pares no nível atual, mas não cria aninhamentos automáticos ao receber um iterável.
+Retorno de Visualizações e Métodos Nativos: Atenção ao que os métodos retornam: `dict.items()` retorna uma visualização contendo os pares originais encapsulados em tuplas, e não uma lista plana. Da mesma forma, nas versões modernas do Python, o método `.popitem()` remove sempre o último par inserido, e não um item aleatório.
+Comportamento de Chaves Inexistentes e Duplicadas: Lembre-se de que acessar diretamente uma chave que não existe via colchetes (`dict['chave']`) retorna um erro fatal (`KeyError`) ao invés de criar a chave com `None`. Também é bom notar o impacto na função `len()` ao declarar chaves duplicadas na mesma inicialização: as duplicatas são sobrescritas, diminuindo a contagem final esperada.
+Natureza da Busca por Chaves (vs. Índices): Lembre-se de que dicionários não funcionam com índices numéricos posicionais como as listas. Tentar acessar 'dict[0]' não retorna a primeira posição do dicionário; o interpretador procura por uma chave cujo nome literal seja o número inteiro '0'. Se essa chave não existir, o código resultará em um erro do tipo 'KeyError'.
+Iteração Padrão em Laços 'For': Ao iterar diretamente sobre um dicionário utilizando o laço mais simples (ex: 'for variavel in dicionario:'), o comportamento padrão do Python é atribuir apenas as chaves à variável do laço a cada iteração, e não os valores. Para iterar diretamente pelos valores, lembre-se de usar explicitamente o método .values().
+
+::to-review::07-05-2026 ::Dicts e seus detalhes::

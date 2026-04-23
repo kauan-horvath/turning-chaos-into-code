@@ -184,22 +184,97 @@ print("Mas a forma que sobrou para o mundo foi: " + new_wikus) # Acessa a global
 
 #### 8. Revisões
 
+💻 Exercícios Práticos (Desafios de Código)
+Para maximizar a sua absorção, crie um arquivo chamado exercicios_fixacao.py e tente implementar as lógicas abaixo usando tudo o que você aprendeu nas suas notas.
+
+Exercício 1: O Caos do Desempacotamento e Casting
+
+Contexto: Você recebeu um registro num sistema antigo na forma de uma lista bruta: dados = ["100", "20.5", "Kauan"].
+
+Tarefa: Utilize a técnica de desempacotamento para salvar esses 3 valores em três variáveis separadas em uma única linha.
+
+Desafio: Após desempacotar, as duas primeiras variáveis ainda serão textos (strings). Faça o casting da primeira para int, da segunda para float, some as duas em uma nova variável chamada resultado_soma, e faça um print() do resultado final e de seu tipo usando type().
+
+Exercício 2: Hackeando a Visibilidade (Local vs Global)
+
+Contexto: Vamos entender na prática como o Python bloqueia informações de funções internas.
+
+Tarefa: No escopo principal do script (lado de fora), crie uma variável sistema_ativo = False.
+
+Desafio: Crie uma função (ex: def forcar_ativacao():). Dentro dela, sem redeclarar nada como global, tente fazer sistema_ativo = True. Imprima a variável dentro da função e logo após executar a função, fora dela.
+
+Resolvendo: Perceba que a original externa não mudou. Agora, reescreva a função usando a instrução global que você anotou do material, e verifique que o script principal obedeceu à alteração interna!
+
+Exercício 3: Atribuição Coletiva e a Armadilha da Concatenação
+
+Contexto: Atribuição múltipla é útil, mas exige cuidado na manipulação mista com tipos numéricos.
+
+Tarefa: Em apenas uma linha, crie 3 variáveis (ex: a, b, c) que recebam simultaneamente a string "Python". (Atribuição coletiva).
+
+Desafio: Mude isoladamente o valor da terceira variável (c) para o número inteiro 3. Em seguida, crie uma variável versao_final concatenando a variável a com a variável c recém-alterada, mas fazendo o tratamento (casting) correto para que o terminal exiba a string "Python 3" em vez de disparar um erro TypeError.
+
 ```python
-    #Previous revisions
-    #[LAST-DATE: 2026-04-10] Review very basic functions
-    '''
-    https://gemini.google.com/share/94fe8611337a
-    Pedi uma prova com ia aproveitamento de: 80% (revisão em 1 semana)
-    teste se posso apagar o questionario 17/04 > NAO permitido! :o'''
+# 1 =================================================================
+
+num_cem, num_vinte, nome = dados
+# int(num_cem)
+# float(num_vinte) #a var não salva automaticamente o casting
+
+  #correto
+num_cem = int(num_cem)
+num_vinte = float(num_vinte)
+
+resultado_soma = num_cem + num_vinte
+print(f" o reultado é {resultado_soma} do tipo {type(resultado_soma)}")
+
+# 2 =================================================================
+
+sistema_ativo = False
+
+def forcar_ativ():
+     sistema_ativo = True
+     print(f"a var sistema ativo internamente é: {sistema_ativo}") #deve retornar True
+
+#não esquecer de chamar a função
+forcar_ativ()
+print(f"a var sistema ativo externamente é: {sistema_ativo}") #deve retornar False
+
+novo_sistema_ativo = False
+def forcar_ativ_glob():
+     global novo_sistema_ativo
+     novo_sistema_ativo = True
+     print(f"a var sistema ativo internamente é: {novo_sistema_ativo}") #deve retornar True
+forcar_ativ_glob()
+print(f"a var sistema ativo externamente é: {novo_sistema_ativo}") #deve retornar True
+
+# 3 =================================================================
+
+a = b = c = "Python"
+c = 3
+versao_final = a + str(c)
+print(versao_final)
 ```
 
-Resultado revisão:
+===================================================================
 
-- Regras de Nomenclatura e Tipagem Dinâmica: Você tem um excelente entendimento das regras básicas para criar variáveis no Python, incluindo o uso do padrão Snakecase e as restrições de formatação. Além disso, dominou os conceitos de tipagem dinâmica, conversão de tipos (casting) e o uso da função type().
-- Operações com Coleções e Tratamento de Erros: Você demonstrou grande clareza sobre como descompactar elementos de listas em múltiplas variáveis simultaneamente e conseguiu identificar corretamente as exceções geradas pelo interpretador (como ValueError e erros de tipagem) em operações inválidas.
+Resultado revisão:
+Pontos fortes
+Atribuição e Desempacotamento de Variáveis: Você demonstrou um excelente entendimento sobre atribuições múltiplas, lógicas de incremento e o comportamento do interpretador ao desempacotar listas, identificando com precisão a ocorrência de 'ValueError' devido à incompatibilidade de valores.
+Tipagem Dinâmica e Casting: O conceito de tipagem dinâmica e as operações de conversão explícita (casting) de tipos primitivos estão muito consolidados. Você acertou em cheio a resolução técnica das conversões aninhadas entre strings, floats e inteiros.
+Manipulação de Escopo (Escrita): Você aplicou corretamente o conceito de escopo no Python, compreendendo de forma exata como a palavra-chave 'global' permite que o escopo local de uma função sobreponha diretamente uma variável externa.
+Regras de Nomenclatura e Tipagem Dinâmica: Você tem um excelente entendimento das regras básicas para criar variáveis no Python, incluindo o uso do padrão Snakecase e as restrições de formatação. Além disso, dominou os conceitos de tipagem dinâmica, conversão de tipos (casting) e o uso da função type().
+Operações com Coleções e Tratamento de Erros: Você demonstrou grande clareza sobre como descompactar elementos de listas em múltiplas variáveis simultaneamente e conseguiu identificar corretamente as exceções geradas pelo interpretador (como ValueError e erros de tipagem) em operações inválidas.
+
+Áreas a melhorar
+Interação Direta Entre Tipos Distintos: Houve uma confusão quanto à concatenação de strings com inteiros. Por ser fortemente tipado, o Python não realiza a junção de forma silenciosa; ele interrompe o código com um 'TypeError'. A solução técnica correta é sempre utilizar o casting, convertendo o inteiro para string com 'str()'.
+Escopo Global (Leitura vs. Alteração): É necessário revisar a visualização de escopos. O Python permite que uma função leia e imprima uma variável global de forma nativa e sem erros. A declaração explícita da palavra-chave 'global' no interior da função só se faz obrigatória quando o objetivo é reatribuir ou modificar o valor dessa variável.
+Convenções de Nomenclatura (PEP 8): Revise o uso dos padrões (Cases) do Python. O uso de iniciais maiúsculas em todas as palavras (PascalCase, ex: StatusDeLogin) é uma convenção estrita para declarar Classes. Para variáveis que guardam estados simples, o recomendado pelo PEP 8 é continuar utilizando o padrão 'snake_case'.
 
 ::last-review:: 10-04-2026 ::Revisão de conceitos básicos::
 Aproveitamento 80%
 ::last-review:: 17-04-2026 ::Refazer prova de operadores simples::
 Aproveitamento 100%
-.::to-review:: 23-04-2026 ::Criar questionário avançado e exercícios::
+.::last-review:: 23-04-2026 ::Criar questionário avançado e exercícios::
+aproveitamento 70%
+aproveitamento teste 90% - revisão distante
+::to-review:: 23-05-2026 ::Conceitos Básicos::
