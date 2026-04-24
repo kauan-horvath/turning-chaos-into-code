@@ -418,11 +418,20 @@ Aproveitamento 93% - Revisão distante: [Teste](https://gemini.google.com/share/
 Ordenação e Lógica de Python: Sua compreensão de como o sort() lida com maiúsculas/minúsculas e o uso de chaves personalizadas (key) é de nível avançado.
 **List Comprehension e Slicing**: Você acertou todas as questões sobre compressão de listas, inclusive as que envolvem lógica condicional complexa e fatiamento (slicing).
 Gerenciamento de Memória: Entende perfeitamente a diferença entre criar um 'apelido' (referência) e uma cópia real de uma lista.
+Fundamentos, Indexação e Fatiamento: Você demonstrou um excelente domínio sobre os conceitos básicos de listas, entendendo perfeitamente que são estruturas indexadas, ordenadas e mutáveis. Também acertou em cheio as perguntas sobre como acessar elementos através de índices (positivos e negativos) e como funciona o fatiamento (slicing) com exclusão do último limite.
+Gerenciamento de Memória e Referências: Seu entendimento sobre como o Python lida com a memória das listas é notável. Você compreendeu bem a diferença entre criar um 'apelido' que compartilha a mesma memória e utilizar métodos como `.copy()` ou o operador `+` para gerar novas listas independentes.
+Adição, Remoção e Ordenação: Você mostrou forte conhecimento ao diferenciar métodos de adição (`.append()`, `.insert()`, `.extend()`) e métodos de remoção básicos (`.remove()`, `.pop()`). Além disso, domina a lógica de ordenação da função `.sort()`, entendendo as regras da tabela ASCII e o uso de funções personalizadas no parâmetro 'key'.
 
 **Áreas a melhorar**
 **Construtores e Sintaxe de Tuplas**: Ao usar o construtor list(), lembre-se que ele aceita um único iterável. Para passar múltiplos itens diretamente, você deve usar parênteses duplos list((item1, item2)) para criar uma tupla interna, em vez de colchetes.
 Inserção vs. Adição: Houve uma pequena confusão entre append() e insert(). O append() sempre adiciona ao final, enquanto o insert() exige um índice específico para posicionar o item.
+Sintaxe Avançada de Compreensão de Listas (List Comprehension): Houve confusão em algumas questões sobre List Comprehension. É importante revisar a estrutura sintática dessa ferramenta: a transformação com If/Else deve vir antes do loop 'for', e métodos aplicados aos itens (como `.upper()`) devem ser aplicados no elemento de saída (`[valor.upper() for...]`), e não na lista a ser iterada.
+Diferenciação de Métodos Específicos (.clear vs del / .reverse vs sort decrescente): Preste atenção aos detalhes de alguns métodos nativos. O método `.reverse()` apenas inverte a ordem atual dos itens de trás para frente, sem organizá-los alfabeticamente. Além disso, para esvaziar uma lista mantendo a variável viva na memória, usa-se `.clear()`, pois o comando `del` apaga a variável por completo.
+Alternativas para Cópias de Listas: Lembre-se de que não existe um método nativo chamado `.clone()` em Python. A alternativa segura e independente para copiar uma lista, além do `.copy()`, é utilizar a função construtora `list()`, passando a lista original como argumento (ex: `nova_lista = list(lista_original)`).
 
 <!-- Criar memes melhores para 8 e 9 quando tiver cerebro pra isso-->
 
-::to-review:: 24-04-2026 ::Listas::
+::last-review:: 24-04-2026 ::Listas::
+aproveitamento 80% - revisao distante
+
+::to-review:: 08-05-2026 ::Listas 3::

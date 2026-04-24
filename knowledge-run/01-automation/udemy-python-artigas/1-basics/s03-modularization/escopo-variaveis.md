@@ -6,10 +6,10 @@
 
 ### 🌐 Navegação rápida
 
-| **🏠 HOME**          | [Retornar ao Início](../Home.md) |
-| :------------------- | :------------------------------- |
-| &#8657; **Anterior** | [ANTERIOR](./arquivo1.md)        |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)         |
+| **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md)          |
+| :------------------- | :------------------------------------------------------------------------- |
+| &#8657; **Anterior** | [ANTERIOR](./funcoes-parametros.md)                                        |
+| &#8659; **Próximo**  | [PROXIMO](../../2-intermediate/s04-advanced-structures/poo-fundamentos.md) |
 
 ---
 

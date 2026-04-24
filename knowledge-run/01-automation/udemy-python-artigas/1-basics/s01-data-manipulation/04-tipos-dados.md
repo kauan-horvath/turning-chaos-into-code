@@ -337,9 +337,17 @@
     Tipos de Dados e Estruturas: Você demonstrou um excelente entendimento sobre os tipos primitivos do Python (int, float, complex, bool) e sobre a inicialização e características de coleções como Tuplas, Dicionários e Sets.
     Manipulação e Métodos de Strings: Suas respostas mostram um forte domínio na manipulação de texto. Você acertou perguntas difíceis sobre métodos (.strip(), .split(), .upper(), .format()), caracteres de escape e compreende perfeitamente a regra de imutabilidade das strings.
     Conversão de Tipos (Casting) e Lógica Booleana: Você possui uma compreensão perfeita de como o Python lida com conversões e avaliações booleanas, acertando desde o comportamento de truncamento do int() até a verificação de valores 'truthy' e 'falsy', como no caso de listas não vazias.
+    Manipulação e Comportamento de Strings: Você demonstrou um excelente entendimento sobre fatiamento (slicing), uso de métodos de string como `upper()` e `replace()`, imutabilidade de variáveis e operadores lógicos como `not in` aplicados a texto.
+    Estruturas de Dados e Tipos Primitivos: Ótima compreensão das diferenças sintáticas entre Dicionários e Sets. Além disso, você domina bem a instanciação de números complexos, o comportamento da biblioteca `random` (off-by-one) e exceções comuns como o `ValueError` em conversões mal sucedidas.
+
+
     Áreas a melhorar
-    Fatiamento (Slicing) de Coleções: Houve um pequeno equívoco no fatiamento indexado [2:6]. Lembre-se da regra de ouro do Python para slices: o índice de 'start' (início) é inclusivo, mas o índice de 'stop' (fim) é EXCLUSIVO. Portanto, [2:6] pega os caracteres nos índices 2, 3, 4 e 5, parando logo antes do 6. Por isso, a resposta é 'CDEF' e não 'CDEFG'.
+    Avaliação Booleana em Coleções (Truthiness): Na questão sobre `bool([0])`, lembre-se de que em Python, coleções (como listas) são avaliadas como falsas apenas se estiverem vazias `[]`. Como a lista `[0]` possui um elemento (mesmo que seja o número zero), ela não está vazia e, portanto, é avaliada como `True`.
+    Formatação Indexada de Strings: No uso do método `.format()`, preste atenção à numeração das chaves. O padrão `{1}` busca o segundo argumento passado na função, e `{0}` busca o primeiro. É importante mapear a ordem corretamente.
+    Caracteres de Escape: Houve confusão ao identificar a função do caractere `\x`, que se refere a valores hexadecimais literais, enquanto o comportamento de apagar a letra anterior (backspace) pertence ao escape `\b`. Uma rápida revisão na tabela de caracteres de escape ajudará bastante.
     '''
 ```
 
-::to-review:: 24-04-2026 :: Criar questionário avançado e Teste ::
+::last-review:: 24-04-2026 :: Tipos de Dados ::
+
+::to-review:: 24-05-2026 ::Tipos de Dados::

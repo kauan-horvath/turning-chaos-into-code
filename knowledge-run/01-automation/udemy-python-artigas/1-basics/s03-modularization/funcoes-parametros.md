@@ -2,14 +2,14 @@
 
 ## 📑 fUNÇÕES
 
-> **Status:** 🟡 ANDAMENTO | **Data:** 20/04/2026
+> **Status:** 🟡 CONCLUIDA | **Data:** 20/04/2026
 
 ### 🌐 Navegação rápida
 
 | **🏠 HOME**          | [Retornar ao Início](../../0-organization/python-artigas-home.md) |
 | :------------------- | :---------------------------------------------------------------- |
 | &#8657; **Anterior** | [ANTERIOR](./loops-repeticao.md)                                  |
-| &#8659; **Próximo**  | [PROXIMO](./arquivo2.md)                                          |
+| &#8659; **Próximo**  | [PROXIMO](./escopo-variaveis.md)                                  |
 
 ---
 
