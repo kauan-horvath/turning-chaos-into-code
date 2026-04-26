@@ -198,8 +198,43 @@ with open("arquivo.bin", "rb") as f:
 
 ### x. 🛠️ Revisões
 
+🟢 Pontos Fortes (O que já está dominado)
+Manipulação e Sintaxe de Arquivos: Você dominou a diferença entre "wb" (write) e "rb" (read), e sabe exatamente o que o número 3 faz em .fromfile(f, 3) ou que ler além do limite gera um EOFError.
+
+Type Codes e Limitações: Entende perfeitamente que o módulo exige respeito ao tipo declarado (sabendo prever o TypeError na questão 12) e domina a diferença de precisão entre os floats 'f' e 'd'.
+
+Acesso e Indexação: Sabe declarar e acessar posições de memória sem gaguejar (megasena[0]).
+
+Integração de Bibliotecas Básicas: Lembrou de cara da biblioteca os para lidar com tamanhos de arquivos.
+
+🔴 Pontos de Atenção (O que deu branco ou gerou confusão)
+O propósito do with open() (Erro na Q10):
+
+Sua resposta: Achou que era para ser mais rápido por salvar em binário.
+
+O correto: O with serve para segurança. Ele fecha o arquivo automaticamente no fim do bloco, evitando corrupção de dados ou que o arquivo fique "preso" na memória caso o código dê um erro no meio do caminho.
+
+A "Regra de Ouro" dos Arrays vs. Listas (Erro na Q3):
+
+Sua resposta: Achou que era a compressão binária.
+
+O correto: A regra principal que separa arrays de listas no Python é a tipagem única (arrays aceitam apenas um tipo de dado, listas aceitam tudo misturado).
+
+Gestão de Memória no Python (Erro na Q11 e Q14):
+
+Sua resposta: Achou que arrays são mais leves por "supressão de dados massivos", e que o .append() funciona de forma normal sem impacto.
+
+O correto: Arrays são leves porque guardam valores brutos, enquanto listas guardam "objetos" inteiros e pesados. Além disso, no Python, usar .append() em um array massivo é lento porque a linguagem precisa ficar realocando o tamanho da memória constantemente, já que na raiz da computação, arrays têm tamanho fixo.
+
+Confusão de Nomenclatura (Erro na Q15):
+
+Sua resposta: "write binary?".
+
+O correto: "wb" (write binary) é o modo de abertura do arquivo. O método exclusivo do array para salvar o conteúdo lá dentro é o .tofile().
+
 ::last-review:: 19-04-2026 ::Arrays e métodos exclusivos::
 
-> > > > aprovetiamento 100% (sem testes)
+::last-review:: 26-04-2026 :: Arrays ::
+aproveitamento 73% >> revisão média
 
-::to-review:: 26-04-2026 :: Arrays ::
+::to-review:: 04-05-2026 ::Arrays::

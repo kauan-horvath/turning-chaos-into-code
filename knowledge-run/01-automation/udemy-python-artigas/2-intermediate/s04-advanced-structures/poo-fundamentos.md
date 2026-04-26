@@ -295,4 +295,4 @@ Método dirigir(distancia): Cada 1km rodado consome 1 de combustível. Se o comb
 
 ### x. 🛠️ Revisões
 
-::to-review:: 26-04-2026 ::Classes, Objetos, Param/Metodos::
+::to-review:: 27-04-2026 ::Classes, Objetos, Param/Metodos::

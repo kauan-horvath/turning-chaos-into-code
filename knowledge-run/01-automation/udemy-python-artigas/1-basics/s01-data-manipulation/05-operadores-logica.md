@@ -187,4 +187,4 @@ aproveitamento de 93% revisão distante
 ::last-review:: 26-04-2026 ::Operadores lógicos::
 aproveitamento 100% - revisão distante
 
-::to-review:: 26-05-2026 ::TITLE::
+::to-review:: 26-05-2026 ::Operadores Lógicos+::
