@@ -62,4 +62,7 @@
 
 ### x. 🛠️ Revisões
 
-::to-review:: 25-04-2026 :: Escopo de Variável ::
+::last-review:: 25-04-2026 :: Escopo de Variável ::
+aproveitamento 100% - revisão distante
+
+::to-review:: 25-05-2026 ::Escopo de Variável::

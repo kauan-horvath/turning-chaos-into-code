@@ -125,6 +125,11 @@ Comece me dando 5 perguntas de aquecimento mesclando o [ALVO PRINCIPAL] com o [A
 - Eso : é chuva
 - Ho : ho-ho-ho
 - Jeg : jegue
+- Milyen az idojaras : milho e carbonara
+- Kellemes : kelly mais
+- Rossz : Arroz
+- Hideg Van : Hidan
+- Havazik : Havan zika
 
 ## FAMÍLIA
 

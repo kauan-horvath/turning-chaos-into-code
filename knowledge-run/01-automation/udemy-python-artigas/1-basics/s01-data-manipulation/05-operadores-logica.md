@@ -179,11 +179,12 @@
 
 💻 Notas / Revisão
 
-```python
-# Seu código aqui
-```
+🟢 Pontos Fortes (O que já está no "sangue")Esses são os conceitos que você dominou a lógica por trás, não apenas decorou a sintaxe. Na próxima revisão, você pode apenas passar o olho rapidamente:Identidade vs. Igualdade de Valor: Você dominou a diferença entre == (mesmo valor) e is (mesmo objeto na memória). A analogia dos carregadores e da "Borsa da Marvada" fixou muito bem.Comportamento de Lógica Booleana: Excelente compreensão de como o or salva uma condição se apenas um lado for verdadeiro, e como o not inverte o estado lógico (a ironia da "resposta_morena").Ordem de Precedência (PEMDAS): A regra matemática foi bem absorvida. Você entende que o código lê a matemática como uma equação real, o que evita bugs de cálculo estrutural.Operadores Matemáticos Básicos: O uso de % para resto (par/ímpar) e // para divisão inteira está claro e correto.🔴 Pontos de Atenção (Onde focar na próxima revisão)Esses são os detalhes sintáticos, nomenclaturas e pequenas "pegadinhas" matemáticas que precisam de reforço ativo:A Pegadinha da Atribuição com Exponente (**=): \* O erro: Achar que num**= 1 soma a base ao resultado.A correção: num \*\*= 1 é estritamente $num = num^1$. Se num é 10, o resultado permanece 10.Nomenclatura das Categorias de Operadores:O erro: Confundir os nomes dos grupos ao ser questionado.A correção: Lembrar que is/is not = Identidade (Quem você é / seu RG na memória). E que in/not in = Associação (Se você faz parte de um clube/lista).Nomenclatura de Erros Nativos do Python:O erro: Saber que o código quebra, mas não saber o nome do erro ao chamar uma variável inexistente.A correção: Variável que não existe gera um NameError.Sintaxe de Atribuição Combinada:O erro: Descrever o que o operador faz em vez de escrever a sintaxe quando o exercício pedir código.A correção: O resto da divisão atribuído à própria variável se escreve num %= 1.Sintaxe do Operador de Negação em Associações:O erro: Usar "operar in" quando se quer a negação.A correção: A sintaxe exata para verificar se algo não está na lista é not in.
 
 last-review:: 12-04-2026 ::Operadores Lógicos
 aproveitamento de 93% revisão distante
 
-::to-review:: 26-04-2026 ::Operadores lógicos::
+::last-review:: 26-04-2026 ::Operadores lógicos::
+aproveitamento 100% - revisão distante
+
+::to-review:: 26-05-2026 ::TITLE::
