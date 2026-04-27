@@ -166,8 +166,21 @@
 
 ### x. 🛠️ Revisões
 
+Pontos fortes
+Conceitos Fundamentais de Condicionais: Você demonstrou um excelente entendimento sobre o propósito das palavras-chave `elif`, `else`, `pass` e o conceito de 'truthiness' em Python.
+Estrutura de Código e Boas Práticas: Identificou corretamente problemas de legibilidade como a 'Pyramid of Doom' e como evitá-la utilizando operadores lógicos.
+Operador Ternário Básico: Sabe aplicar o operador ternário para atribuições simples e entende por que certas funções, como o `print()`, podem não ser ideais dentro dessa estrutura.
+Áreas a melhorar
+Precedência de Operadores Lógicos: Houve erros em expressões que combinam `and` e `or`. Lembre-se que, sem parênteses, o `and` tem precedência maior e é avaliado antes do `or`.
+Fluxo de Execução if-elif-else: É importante reforçar que o Python interrompe a verificação de uma estrutura condicional assim que a primeira condição verdadeira é encontrada, ignorando todos os blocos subsequentes.
+Sintaxe de Shorthand If: Você confundiu o 'Shorthand If' (`if condicao: acao`) com a estrutura do Operador Ternário. Praticar a escrita de comandos simples em uma única linha ajudará a distinguir as duas sintaxes.
+
 ::last-review:: 21-04-2026 :: Estruturas Condicionais ::
 
 > > > > Aproveitamento 83% - revisão média
 
-::to-review:: 27-04-2026 ::Estruturas Condicionais 2::
+::last-review:: 27-04-2026 ::Estruturas Condicionais 2::
+
+> > > > Aproveitamento 92% - revisão média
+
+::to-review:: 27-05-2026 ::TITLE::
