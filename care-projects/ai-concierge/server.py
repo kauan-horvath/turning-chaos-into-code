@@ -1,71 +1,51 @@
 import os
-import json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
 
 app = Flask(__name__)
-# Libera o CORS para o seu GitHub Pages conseguir fazer requisições
 CORS(app)
 
 # 1. Segurança da Chave
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
-    raise ValueError(
-        "⚠️ ERRO CRÍTICO: Variável de ambiente 'GEMINI_API_KEY' não encontrada no Render."
-    )
+    print("⚠️ AVISO: Variável 'GEMINI_API_KEY' não encontrada.")
 
-
-# 2. DATA PIVOT: Lendo o cérebro INTEIRO de forma dinâmica
-def carregar_cerebro():
-    try:
-        base_path = os.path.dirname(__file__)
-        file_path = os.path.join(base_path, "data.json")
-
-        with open(file_path, "r", encoding="utf-8") as file:
-            dados = json.load(file)
-
-        regras = dados.pop(
-            "regras_de_comportamento", "Você é o concierge virtual do Kauan."
-        )
-
-        dados_formatados = json.dumps(dados, indent=4, ensure_ascii=False)
-
-        instrucao_final = f"""
-        {regras}
-
-        === BASE DE DADOS OFICIAL DO KAUAN ===
-        Use os dados abaixo para responder a qualquer pergunta sobre o Kauan.
-        Interprete as chaves e valores estruturados para formar suas respostas:
-
-        {dados_formatados}
-        """
-
-        return instrucao_final
-
-    except Exception as e:
-        print(f"⚠️ Erro ao carregar data.json: {e}")
-        return "Você é o concierge do Kauan. Seja educado e profissional."
-
-
-# 3. Configurando a IA
 genai.configure(api_key=api_key)
+
+
+# 2. Carregamento da Alma e Dados
+def carregar_contexto():
+    base = os.path.dirname(__file__)
+    try:
+        with open(
+            os.path.join(base, "database", "concierge-soul.md"), "r", encoding="utf-8"
+        ) as f:
+            soul = f.read()
+        with open(
+            os.path.join(base, "database", "my-data.md"), "r", encoding="utf-8"
+        ) as f:
+            data = f.read()
+        return f"{soul}\n\n=== DADOS DO KAUAN ===\n{data}"
+    except Exception as e:
+        print(f"⚠️ Erro ao carregar arquivos da database: {e}")
+        return "Você é o concierge virtual do Kauan. Seja profissional e direto."
+
+
 model = genai.GenerativeModel(
-    model_name="gemini-2.5-flash",
-    system_instruction=carregar_cerebro(),
+    model_name="gemini-2.5-flash", system_instruction=carregar_contexto()
 )
 
 
-# 4. Rotas
+# 3. Rotas
 @app.route("/chat", methods=["POST"])
 def chat():
-    data = request.json
-    user_message = data.get("message", "")
-    if not user_message:
+    user_msg = request.json.get("message", "")
+    if not user_msg:
         return jsonify({"error": "Mensagem vazia"}), 400
 
     try:
-        response = model.generate_content(user_message)
+        response = model.generate_content(user_msg)
         return jsonify({"reply": response.text})
     except Exception as e:
         print(f"Erro no servidor: {e}")
