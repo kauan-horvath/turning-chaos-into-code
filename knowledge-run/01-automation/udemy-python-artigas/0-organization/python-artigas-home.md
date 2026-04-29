@@ -38,7 +38,7 @@
 
 - [x] [**Seção 19:** POO: Classes, Objetos e Pilares](../2-intermediate/s04-advanced-structures/poo-fundamentos.md)
 - [x] [**Seção 20:** Iteradores e Geradores: Otimizando Loops](../2-intermediate/s04-advanced-structures/iteradores-geradores.md)
-- [ ] [**Seção 22:** Organização de Código: Módulos e Packages](../2-intermediate/s04-advanced-structures/modulos-packages.md)
+- [x] [**Seção 22:** Organização de Código: Módulos e Packages](../2-intermediate/s04-advanced-structures/modulos-packages.md)
 
 **[ s05 - Utilitários e Tratamento de Dados ]**
 
