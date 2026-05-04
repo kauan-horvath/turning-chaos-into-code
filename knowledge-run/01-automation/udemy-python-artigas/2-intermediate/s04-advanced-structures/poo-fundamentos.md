@@ -295,4 +295,31 @@ Método dirigir(distancia): Cada 1km rodado consome 1 de combustível. Se o comb
 
 ### x. 🛠️ Revisões
 
-::to-review:: 28-04-2026 ::Classes, Objetos, Param/Metodos::
+deveria ter revisado: 28-04-2026
+::LAST-review:: 04-05-2026 ::Classes, Objetos, Param/Metodos::
+
+> > > Aproveitamento: 68%
+>
+> 🟢 Seus Pontos Fortes
+> Compreensão Conceitual e Abstrata: Você entendeu com clareza o que é uma classe, um objeto e a diferença entre atributos e métodos. A sua analogia do ninja de Konoha mostra que o conceito está enraizado e não apenas decorado.
+
+Visão Lógica de Escopo: Na questão 17, mesmo sem ter certeza absoluta, você deduziu perfeitamente a diferença entre um parâmetro temporário de uma função (turnos) e uma variável permanente do objeto (self.turnos).
+
+Tipagem e Cálculos: A percepção de que o texto "+ de 8000" quebraria o código matemático demonstra que você não perde de vista as regras básicas do Python enquanto estuda um conceito avançado como POO.
+
+🔴 Seus Pontos Fracos (Foco para a próxima revisão)
+Sintaxe e Escrita de Código: O "como funciona" você já sabe, o problema está no "como digitar". Você escorregou em sintaxes simples:
+
+O jeito certo de alterar propriedades (pessoa.name = "João" e não com parênteses).
+
+A forma exata de declarar herança (class Herdeira(Base):).
+
+A exclusão direta de propriedades (del pessoa.age).
+
+Nomenclaturas Oficiais: Confundiu CamelCase com PascalCase para a criação de classes.
+
+Comportamento Padrão do Python: Esqueceu como a linguagem reage cruamente quando não é instruída, como o caso do retorno do endereço de memória ao printar um objeto sem o método **str** configurado.
+
+O Veredito: O seu alicerce lógico está muito bem construído. A revisão espaçada agora deve focar quase que exclusivamente em fixar a sintaxe visual, ou seja, treinar os dedos para lembrarem onde colocar os parênteses, os pontos e as palavras-chave.
+
+::to-review:: 12-05-2026 ::Classes, Objetos, Param/Metodos::
