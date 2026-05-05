@@ -43,7 +43,7 @@
 **[ s05 - Utilitários e Tratamento de Dados ]**
 
 - [x] [**Seção 27:** Gerenciamento de Dependências com PIP](../2-intermediate/s05%20-data-treatment/pip-dependencias.md)
-- [ ] [**Seção 28:** Tratamento de Exceções e Debugging (Try/Except)](../2-intermediate/s05%20-data-treatment/erros-excecoes.md)
+- [x] [**Seção 28:** Tratamento de Exceções e Debugging (Try/Except)](../2-intermediate/s05%20-data-treatment/erros-excecoes.md)
 - [ ] [**Seção 23:** Manipulação de Datas e Fusos Horários](../2-intermediate/s05%20-data-treatment/datas-horarios.md)
 - [ ] [**Seção 24:** Funções Matemáticas e Estatística Básica](../2-intermediate/s05%20-data-treatment/matematica-estatistica.md)
 - [ ] [**Seção 25:** Serialização de Dados: Trabalhando com JSON](../2-intermediate/s05%20-data-treatment/json-python.md)

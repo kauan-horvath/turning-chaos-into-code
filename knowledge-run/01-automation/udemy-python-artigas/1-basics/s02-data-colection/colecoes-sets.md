@@ -213,20 +213,23 @@
 - Depois que um a coleção de tipo Set é criada, você NÂO pode alterar seus itens, e NÂO pode adicionar novos itens.| False.
 - Exemplo de sintaxe ou regra:
 
-```python
-  # titulo do código
-
-```
-
 ### x. 🛠️ Revisões
 
 ::last-review:: 16-04-2026 ::Coleção Sets::
 aproveitamento 77% revisão próxima
+
 Pontos fortes
 
 Sintaxe e Características Básicas de Sets: Você demonstrou excelente compreensão sobre a sintaxe de criação de Sets (incluindo sintaxe de item único e conversões via list comprehensions), além de dominar bem a ausência de indexação, comportamento booleano e a natureza não-ordenada da estrutura.
 Manipulação Segura e Operações Lógicas: Ficou claro o seu entendimento sobre como verificar a existência de itens com 'in' e a escolha adequada entre métodos de remoção (como 'discard' para evitar erros KeyError, 'remove' e 'pop'). As operações que testam lógicas e união de variáveis também se mostraram pontos fortes.
+Fundamentos e Estruturas de Sets: Você demonstrou excelente domínio sobre a teoria base dos Sets em Python. Compreendeu perfeitamente que são coleções não ordenadas, não indexadas e que não permitem duplicatas, lidando inclusive com o tratamento lógico de equivalências (como 1 e True).
+Operações Básicas e Conversões: Você foi impecável nas questões envolvendo adição básica, remoção de itens, e uso do método len(). Também acertou as diferenças cruciais entre discard() e remove(), bem como o funcionamento das conversões de tipos usando list comprehension e a função list().
+
 Áreas a melhorar
+
+Retorno de Métodos (None vs Valores): Houve um pequeno deslize em relação ao que cada método retorna após a execução. Métodos que apenas alteram a estrutura, como add(), retornam implicitamente 'None'. Já métodos como pop() efetivamente retornam o valor que foi removido do Set.
+Modificação In-Place vs Criação de Novos Sets: Suas respostas incorretas nas questões 17 e 19 indicam uma troca de conceitos nas operações de conjuntos. É fundamental diferenciar métodos que alteram a coleção original (como 'symmetric_difference_update') daqueles que mantêm a coleção original intacta e retornam um novo Set (como 'symmetric_difference').
+
 Comportamento de Retorno e Métodos In-Place: Houve uma confusão recorrente sobre o que os métodos in-place retornam. Lembre-se sempre de que funções que alteram o Set original internamente (como 'add()' e 'update()') retornam o valor 'None'. Apenas métodos que geram novas estruturas (como 'union()') retornam o conjunto resultante para ser armazenado em variáveis.
 Fundamentos Técnicos (Hashing e Conversão de Tipos): É recomendável revisar os conceitos de baixo nível do Python. A velocidade das buscas em Sets vem das tabelas de Hashing subjacentes, e não de manipulação do GIL ou multithreading. Da mesma forma, o cast 'list()' não faz 'bypass de blindagem na memória', mas apenas converte e gera uma nova estrutura em formato de lista.
 Tratamento de Duplicatas e Contagem: Cuidado com funções como 'len()' aplicadas logo após a inicialização de um Set contendo chaves repetidas. A filtragem das duplicatas ocorre no momento exato da declaração, o que reduz automaticamente a contagem de itens (comprimento) final da coleção em relação ao que foi digitado.
@@ -235,4 +238,8 @@ Tratamento de Duplicatas e Contagem: Cuidado com funções como 'len()' aplicada
 
 > > > > Aproveitamento: 87% Revisão média
 
-::to-review:: 05-05-2026 ::Coleção Sets 3::
+::last-review:: 05-05-2026 ::Coleção Sets 3::
+
+> > > > Aproveitamento: 90% Ultima Revisão
+
+::to-review:: 05-06-2026 ::Coleção Sets 3::

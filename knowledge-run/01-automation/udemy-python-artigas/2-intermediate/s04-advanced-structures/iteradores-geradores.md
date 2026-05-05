@@ -111,16 +111,12 @@
         #para evitar uso de loops ou loop infinito na iteração em si
     for each_iterator in meu_iterador:
         print(each_iterator) #sem  a sintaxe StopIteration daria loop infinito
-
-
 ```
 
 ### x. 🛠️ Revisões
 
-::to-review:: 29-04-2026 ::Iteradores Python::
+::last-review:: #29-04-2026 & 05/05/20226::Iteradores Python::
 
-💻 Notas / Código
+> > aproveitamento: 80% revisão média
 
-```python
-# Seu código aqui
-```
+::to-review:: 29-05-2026 ::Iteradores Python::

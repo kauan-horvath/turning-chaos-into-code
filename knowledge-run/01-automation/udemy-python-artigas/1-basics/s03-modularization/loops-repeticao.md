@@ -194,6 +194,9 @@
 ### x. 🛠️ Revisões
 
 ::last-review:: 21-04-2026 :: Loops While e For, Nested Loop ::
-aproveitamento: 100% revisão distante
 
-::to-review:: 04-05-2026 ::Loopings 2::
+> > > aproveitamento: 100% revisão distante
+
+::last-review:: 04-05-2026 ::Loopings 2::
+
+> > > aproveitamento: 100% última revisão
