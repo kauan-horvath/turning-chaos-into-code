@@ -45,7 +45,7 @@
 - [x] [**Seção 27:** Gerenciamento de Dependências com PIP](../2-intermediate/s05%20-data-treatment/pip-dependencias.md)
 - [x] [**Seção 28:** Tratamento de Exceções e Debugging (Try/Except)](../2-intermediate/s05%20-data-treatment/erros-excecoes.md)
 - [x] [**Seção 23:** Manipulação de Datas e Fusos Horários](../2-intermediate/s05%20-data-treatment/datas-horarios.md)
-- [ ] [**Seção 24:** Funções Matemáticas e Estatística Básica](../2-intermediate/s05%20-data-treatment/matematica-estatistica.md)
+- [x] [**Seção 24:** Funções Matemáticas e Estatística Básica](../2-intermediate/s05%20-data-treatment/matematica-estatistica.md)
 - [ ] [**Seção 25:** Serialização de Dados: Trabalhando com JSON](../2-intermediate/s05%20-data-treatment/json-python.md)
 - [ ] [**Seção 26:** RegEx: Busca e Validação com Expressões Regulares](../2-intermediate/s05%20-data-treatment/regex-expressoes-regulares.md)
 - [ ] [**Seção 29:** I/O de Arquivos: Leitura e Escrita de TXT/CSV](../2-intermediate/s05%20-data-treatment/manipulacao-arquivos.md)
